@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="CoreBanking.API/CoreBanking.API.csproj" />
+  <Project Path="CoreBanking.Application/CoreBanking.Application.csproj" Id="d37850bf-5fb4-4a40-a13e-35a7d120e28f" />
+  <Project Path="CoreBanking.Domain/CoreBanking.Domain.csproj" />
+  <Project Path="CoreBanking.Infrastructure/CoreBanking.Infrastructure.csproj" Id="1b241a34-6c20-4044-bb54-88ca1defed79" />
+</Solution>
