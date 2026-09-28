@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Tuk4yRhz5Zc=",
+  "dgSpecHash": "769Cv6etgSc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\HaykPetrosyan\\source\\repos\\C# examples\\CoreBanking\\CoreBanking.Application\\CoreBanking.Application.csproj",
+  "projectFilePath": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\CoreBanking.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HaykPetrosyan\\.nuget\\packages\\riok.mapperly\\4.3.1\\riok.mapperly.4.3.1.nupkg.sha512"
   ],

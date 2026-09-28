@@ -90,6 +90,17 @@ namespace CoreBanking.Application.Services
             await _currencyRepository.SaveChangesAsync();
         }
 
-        
+        public async Task<List<CurrencyWithAllRatesResponseModel>> GetAllCurrenciesAsync()
+        {
+            var currencies = await _currencyRepository.GetAllItemsAsync();
+            foreach (var cur in currencies)
+            {
+                Console.WriteLine("Curr");
+                foreach (var rate in cur.Rates) {
+                    Console.WriteLine(rate);
+                }
+            }
+            return _mapper.CurrencyToCurrencyWithAllRatesResponseModels(currencies.ToList());
+        }
     }
 }

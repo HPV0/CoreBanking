@@ -1,0 +1,16 @@
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\TestHelper\bin\Debug\net10.0\TestHelper.deps.json
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\TestHelper\bin\Debug\net10.0\TestHelper.dll
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\TestHelper\bin\Debug\net10.0\TestHelper.pdb
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\TestHelper\bin\Debug\net10.0\CoreBanking.Domain.dll
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\TestHelper\bin\Debug\net10.0\CoreBanking.Domain.pdb
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\TestHelper\obj\Debug\net10.0\TestHelper.csproj.AssemblyReference.cache
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\TestHelper\obj\Debug\net10.0\TestHelper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\TestHelper\obj\Debug\net10.0\TestHelper.AssemblyInfoInputs.cache
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\TestHelper\obj\Debug\net10.0\TestHelper.AssemblyInfo.cs
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\TestHelper\obj\Debug\net10.0\TestHelper.csproj.CoreCompileInputs.cache
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\TestHelper\obj\Debug\net10.0\TestHelper.sourcelink.json
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\TestHelper\obj\Debug\net10.0\TestHelper.csproj.Up2Date
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\TestHelper\obj\Debug\net10.0\TestHelper.dll
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\TestHelper\obj\Debug\net10.0\refint\TestHelper.dll
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\TestHelper\obj\Debug\net10.0\TestHelper.pdb
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\TestHelper\obj\Debug\net10.0\ref\TestHelper.dll

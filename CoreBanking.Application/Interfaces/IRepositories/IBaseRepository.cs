@@ -10,7 +10,7 @@ namespace CoreBanking.Application.Interfaces.IRepositories
     {
         public Task<TEntity?> GetByIdAsync(Guid id);
 
-        public Task<IEnumerable<TEntity>> GetByAllAsync();
+        public Task<IEnumerable<TEntity>> GetAllItemsAsync();
 
         public Task<IEnumerable<TEntity>> GetFilteredAsync(Expression<Func<TEntity, bool>> filter);
 

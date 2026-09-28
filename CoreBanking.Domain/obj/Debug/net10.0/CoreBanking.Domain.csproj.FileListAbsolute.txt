@@ -11,3 +11,16 @@ C:\Users\HaykPetrosyan\source\repos\C# examples\CoreBanking\CoreBanking.Domain\o
 C:\Users\HaykPetrosyan\source\repos\C# examples\CoreBanking\CoreBanking.Domain\obj\Debug\net10.0\CoreBanking.Domain.pdb
 C:\Users\HaykPetrosyan\source\repos\C# examples\CoreBanking\CoreBanking.Domain\obj\Debug\net10.0\ref\CoreBanking.Domain.dll
 C:\Users\HaykPetrosyan\source\repos\C# examples\CoreBanking\CoreBanking.Domain\obj\Debug\net10.0\CoreBank.D416A6AF.Up2Date
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.Domain\bin\Debug\net10.0\CoreBanking.Domain.deps.json
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.Domain\bin\Debug\net10.0\CoreBanking.Domain.dll
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.Domain\bin\Debug\net10.0\CoreBanking.Domain.pdb
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.Domain\obj\Debug\net10.0\CoreBanking.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.Domain\obj\Debug\net10.0\CoreBanking.Domain.AssemblyInfoInputs.cache
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.Domain\obj\Debug\net10.0\CoreBanking.Domain.AssemblyInfo.cs
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.Domain\obj\Debug\net10.0\CoreBanking.Domain.csproj.CoreCompileInputs.cache
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.Domain\obj\Debug\net10.0\CoreBanking.Domain.sourcelink.json
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.Domain\obj\Debug\net10.0\CoreBanking.Domain.dll
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.Domain\obj\Debug\net10.0\refint\CoreBanking.Domain.dll
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.Domain\obj\Debug\net10.0\CoreBanking.Domain.pdb
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.Domain\obj\Debug\net10.0\ref\CoreBanking.Domain.dll
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.Domain\obj\Debug\net10.0\CoreBank.D416A6AF.Up2Date

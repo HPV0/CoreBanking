@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ESDoFU8iEuo=",
+  "dgSpecHash": "hu7BfUKSNdI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\HaykPetrosyan\\source\\repos\\C# examples\\CoreBanking\\CoreBanking.API\\CoreBanking.API.csproj",
+  "projectFilePath": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\CoreBanking.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HaykPetrosyan\\.nuget\\packages\\fluentvalidation\\12.1.1\\fluentvalidation.12.1.1.nupkg.sha512",
     "C:\\Users\\HaykPetrosyan\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\12.1.1\\fluentvalidation.dependencyinjectionextensions.12.1.1.nupkg.sha512",

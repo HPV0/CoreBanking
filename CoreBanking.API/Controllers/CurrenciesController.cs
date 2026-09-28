@@ -31,6 +31,12 @@ namespace CoreBanking.API.Controllers
             return Ok(await _currencyService.GetCurrencyByIdAsync(id));
         }
 
+        [HttpGet("All")]
+        public async Task<ActionResult<List<CurrencyWithAllRatesResponseModel>>> GetAllCurrenciesAsync()
+        {
+            return Ok(await _currencyService.GetAllCurrenciesAsync());
+        }
+
         [HttpGet("Code")]
         public async Task<ActionResult<CurrencyResponseModel>> GetCurrencyByCodeAsync(GetCurrencyRateByCodeRequest code, [FromServices] IValidator<GetCurrencyRateByCodeRequest> validator)
         {

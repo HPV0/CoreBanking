@@ -14,3 +14,19 @@ C:\Users\HaykPetrosyan\source\repos\C# examples\CoreBanking\CoreBanking.Applicat
 C:\Users\HaykPetrosyan\source\repos\C# examples\CoreBanking\CoreBanking.Application\obj\Debug\net10.0\refint\CoreBanking.Application.dll
 C:\Users\HaykPetrosyan\source\repos\C# examples\CoreBanking\CoreBanking.Application\obj\Debug\net10.0\CoreBanking.Application.pdb
 C:\Users\HaykPetrosyan\source\repos\C# examples\CoreBanking\CoreBanking.Application\obj\Debug\net10.0\ref\CoreBanking.Application.dll
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.Application\bin\Debug\net10.0\CoreBanking.Application.deps.json
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.Application\bin\Debug\net10.0\CoreBanking.Application.dll
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.Application\bin\Debug\net10.0\CoreBanking.Application.pdb
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.Application\bin\Debug\net10.0\CoreBanking.Domain.dll
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.Application\bin\Debug\net10.0\CoreBanking.Domain.pdb
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.Application\obj\Debug\net10.0\CoreBanking.Application.csproj.AssemblyReference.cache
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.Application\obj\Debug\net10.0\CoreBanking.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.Application\obj\Debug\net10.0\CoreBanking.Application.AssemblyInfoInputs.cache
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.Application\obj\Debug\net10.0\CoreBanking.Application.AssemblyInfo.cs
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.Application\obj\Debug\net10.0\CoreBanking.Application.csproj.CoreCompileInputs.cache
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.Application\obj\Debug\net10.0\CoreBanking.Application.sourcelink.json
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.Application\obj\Debug\net10.0\CoreBank.F16E135B.Up2Date
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.Application\obj\Debug\net10.0\CoreBanking.Application.dll
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.Application\obj\Debug\net10.0\refint\CoreBanking.Application.dll
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.Application\obj\Debug\net10.0\CoreBanking.Application.pdb
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.Application\obj\Debug\net10.0\ref\CoreBanking.Application.dll

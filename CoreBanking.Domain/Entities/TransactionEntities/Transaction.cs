@@ -16,7 +16,7 @@ namespace CoreBanking.Domain.Entities.TransactionEntities
         private Transaction() { }
         private Transaction(Account sender, Account recevier, Account baseBankingAccount,
             decimal senderExchangeRate, decimal recevierExchangeRate,
-            decimal amount)
+            decimal amount): base()
         {
 
             Money sendingMoney = Money.Create(amount, sender.Currency.CurrencyCode);

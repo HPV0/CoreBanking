@@ -28,7 +28,7 @@ namespace CoreBanking.Domain.Entities.AccountEntities
         }
 
 
-        private Account(Client client, Currency currency) {
+        private Account(Client client, Currency currency):base() {
 
             if (currency == null) 
                 throw new ArgumentNullException("Currency cannot be null");

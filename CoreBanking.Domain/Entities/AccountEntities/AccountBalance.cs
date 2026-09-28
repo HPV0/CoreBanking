@@ -12,8 +12,9 @@ namespace CoreBanking.Domain.Entities.AccountEntities
         public decimal Amount { get; private set; }
 
         private AccountBalance() { }
-        public AccountBalance(Guid id, decimal amount) {
-            if (Amount < 0)
+        public AccountBalance(Guid id, decimal amount): base()
+        {
+            if (amount < 0)
                 throw new ArgumentException("Balance's Amount can't be negative.");
             
             Amount = amount;

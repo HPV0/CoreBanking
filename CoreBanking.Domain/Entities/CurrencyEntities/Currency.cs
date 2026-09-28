@@ -19,7 +19,8 @@ namespace CoreBanking.Domain.Entities.CurrencyEntities
             Id = id;
         }
 
-        private Currency(string currencyCode) {
+        private Currency(string currencyCode): base()
+        {
             if (string.IsNullOrEmpty(currencyCode))
             {
                 throw new ArgumentException("Currency Code cannot be null or Empty.");

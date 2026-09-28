@@ -40,7 +40,7 @@ namespace CoreBanking.Application.Services
 
         public async Task<List<ClientResponseModel>> GetClientsAsync()
         {
-            var clients = await _clientRepository.GetByAllAsync() ?? throw new EntityNotFoundException("No Client in this Table");
+            var clients = await _clientRepository.GetAllItemsAsync() ?? throw new EntityNotFoundException("No Client in this Table");
             return _mapper.ClientsToClientResponseModels(clients.ToList());
         }
 

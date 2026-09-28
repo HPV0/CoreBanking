@@ -20,8 +20,8 @@ namespace CoreBanking.Domain.Entities.TransactionEntities
 
         private TransactionDetail() { }
 
-        public TransactionDetail(Guid transactionId, Account accountFrom, Account accountTo,
-            decimal exchangeRate, Money money)
+        private TransactionDetail(Guid transactionId, Account accountFrom, Account accountTo,
+            decimal exchangeRate, Money money): base()
         {
             if (accountFrom == null) throw new ArgumentNullException("AccountFrom cannot be null.");
             if (accountTo == null) throw new ArgumentNullException("AccountTo cannot be null.");

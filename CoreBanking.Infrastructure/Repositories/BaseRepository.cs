@@ -26,7 +26,7 @@ namespace CoreBanking.Infrastructure.Repositories
         public virtual async Task<T?> GetByIdAsync(Guid id)
         => await BaseQuery.SingleOrDefaultAsync(e => e.Id == id);
 
-        public virtual async Task<IEnumerable<T>> GetByAllAsync()
+        public virtual async Task<IEnumerable<T>> GetAllItemsAsync()
         => await BaseQuery.AsNoTracking().ToListAsync();
 
         public async Task<IEnumerable<T>> GetFilteredAsync(Expression<Func<T, bool>> filter)

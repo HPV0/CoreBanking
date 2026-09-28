@@ -17,7 +17,7 @@ namespace CoreBanking.Domain.Entities.CurrencyEntities
         private CurrencyRate() { }
 
 
-        private CurrencyRate(decimal rate, Currency currency, DateTimeOffset validFrom, DateTimeOffset? validTo)
+        private CurrencyRate(decimal rate, Currency currency, DateTimeOffset validFrom, DateTimeOffset? validTo) : base()
         {
             if (validFrom > DateTimeOffset.Now)
                 throw new ArgumentException("Currnecy validFrom must be in past.");

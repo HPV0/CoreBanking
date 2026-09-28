@@ -31,7 +31,7 @@ namespace CoreBanking.Infrastructure.Repositories
                             .Where(t => t.InsertedAt >= timeFrom && t.InsertedAt < timeTo)
                             .SelectMany(t => t.Details)
                             .Where(d => d.AccountToId == a.Id)
-                            .Sum(d => (decimal?)d.Amount * d.ExchangeRate) ?? 0m,
+                            .Sum(d => (decimal?)d.Amount * d.ExchangeRate) ?? 0,
                     2)
                 })
                 .ToListAsync();
@@ -50,7 +50,7 @@ namespace CoreBanking.Infrastructure.Repositories
                         .Where(t => t.InsertedAt >= timeFrom && t.InsertedAt < timeTo)
                         .SelectMany(t => t.Details)
                         .Where(d => d.AccountFromId == a.Id)
-                        .Sum(d => (decimal?)d.Amount) ?? 0m,
+                        .Sum(d => (decimal?)d.Amount) ?? 0,
                     2)
                 })
                 .ToListAsync();

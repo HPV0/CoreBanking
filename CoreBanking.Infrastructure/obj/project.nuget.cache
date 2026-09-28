@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mbMX303pWoI=",
+  "dgSpecHash": "Ah50bhhr9/k=",
   "success": true,
-  "projectFilePath": "C:\\Users\\HaykPetrosyan\\source\\repos\\C# examples\\CoreBanking\\CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HaykPetrosyan\\.nuget\\packages\\fluentvalidation\\12.1.1\\fluentvalidation.12.1.1.nupkg.sha512",
     "C:\\Users\\HaykPetrosyan\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
