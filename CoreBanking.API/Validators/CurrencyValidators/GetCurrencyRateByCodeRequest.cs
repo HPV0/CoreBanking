@@ -12,5 +12,5 @@ namespace CoreBanking.API.Validators.CurrencyValidators
 
         }
     }
-    
+
 }

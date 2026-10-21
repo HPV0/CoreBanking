@@ -1,8 +1,4 @@
-﻿using CoreBanking.Application.DTOs.Account;
-using CoreBanking.Application.DTOs.Transaction;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using CoreBanking.Application.DTOs.Transaction;
 
 namespace CoreBanking.Application.Interfaces.IServices
 {
@@ -13,5 +9,7 @@ namespace CoreBanking.Application.Interfaces.IServices
         public Task<List<AccountCashFlowResponseModel>> GetTotalCashFlowsByAccountsAsync(DateTime timeFrom, DateTime timeTo);
         public Task<List<AccountTotalDepositesResponseModel>> GetAccountsTotalDepositBetweenDatesAsync(DateTime timeFrom, DateTime timeTo);
         public Task RemoveTransactionByIdAsync(Guid id);
+        public Task<TransactionResponseModel> GetTransactionByIdAsync(Guid id);
+        public Task<List<TransactionResponseModel>> GetAllTransactionsAsync();
     }
 }

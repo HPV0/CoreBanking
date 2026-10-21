@@ -1,13 +1,8 @@
-﻿using CoreBanking.Application.DTOs.Account;
-using CoreBanking.Application.DTOs.Currency;
+﻿using CoreBanking.API.Filters.IdempotencyFilter;
 using CoreBanking.Application.DTOs.Transaction;
 using CoreBanking.Application.Interfaces.IServices;
-using CoreBanking.Application.Services;
 using FluentValidation;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.ComponentModel.DataAnnotations;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Model;
 
 namespace CoreBanking.API.Controllers
 {
@@ -20,40 +15,74 @@ namespace CoreBanking.API.Controllers
         {
             _transactionService = transactionService;
         }
+
         [HttpPost]
-        public async Task<ActionResult<List<TransactionDetailResponseModel>>> CreateAsync(CreateTransactionRequest createTransactionRequest, [FromServices] IValidator<CreateTransactionRequest> validator)
+        [Idempotent]
+        public async Task<ActionResult<List<TransactionDetailResponseModel>>> CreateAsync(CreateTransactionRequest createTransactionRequest, 
+            [FromServices] IValidator<CreateTransactionRequest> validator)
         {
             validator.ValidateAndThrow(createTransactionRequest);
+
             var createdTransactionDetails = await _transactionService.CreateAsync(createTransactionRequest);
+            
             return Ok(createdTransactionDetails);
         }
 
-        [HttpGet("Withdrawals")]
-        public async Task<ActionResult<List<AccountTotalWithdrawalsResponseModel>>> GetTotalWithdrawalsByAccountsAsync([FromQuery]  DateRangeRequest timeRange, [FromServices] IValidator<DateRangeRequest> validator)
+        [HttpGet("{id}")]
+        public async Task<ActionResult<TransactionResponseModel>> GetTransactionById(Guid id)
         {
-            validator.ValidateAndThrow(timeRange);
-            var AccountsTotalWithdrawals = await _transactionService.GetTotalWithdrawalsByAccountsAsync(timeRange.timeFrom, timeRange.timeTo);
-            return Ok(AccountsTotalWithdrawals);
+            var transaction = await _transactionService.GetTransactionByIdAsync(id);
+
+            return Ok(transaction);
         }
-        [HttpGet("Deposits")]
-        public async Task<ActionResult<List<AccountTotalWithdrawalsResponseModel>>> GetTotalDepositsByAccountsAsync([FromQuery] DateRangeRequest timeRange, [FromServices] IValidator<DateRangeRequest> validator)
+
+
+        [HttpGet("all")]
+        public async Task<ActionResult<List<TransactionResponseModel>>> GetAllTransactionsAsync()
         {
-            validator.ValidateAndThrow(timeRange);
-            var AccountsTotalDeposites = await _transactionService.GetAccountsTotalDepositBetweenDatesAsync(timeRange.timeFrom, timeRange.timeTo);
-            return Ok(AccountsTotalDeposites);
+            var transactions = await _transactionService.GetAllTransactionsAsync();
+
+            return Ok(transactions);
         }
-        [HttpGet("CashFlow")]
-        public async Task<ActionResult<List<AccountCashFlowResponseModel>>> GetTotalCashFlowsByAccountsAsync([FromQuery]  DateRangeRequest timeRange, [FromServices] IValidator<DateRangeRequest> validator)
+
+        [HttpGet("withdrawals")]
+        public async Task<ActionResult<List<AccountTotalWithdrawalsResponseModel>>> GetTotalWithdrawalsByAccountsAsync([FromQuery] DateRangeRequest timeRange, 
+            [FromServices] IValidator<DateRangeRequest> validator)
         {
             validator.ValidateAndThrow(timeRange);
-            var AccountsTotalCashFlow = await _transactionService.GetTotalCashFlowsByAccountsAsync(timeRange.timeFrom, timeRange.timeTo);
-            return Ok(AccountsTotalCashFlow);
+
+            var accountsTotalWithdrawals = await _transactionService.GetTotalWithdrawalsByAccountsAsync(timeRange.timeFrom, timeRange.timeTo);
+            
+            return Ok(accountsTotalWithdrawals);
+        }
+
+        [HttpGet("deposits")]
+        public async Task<ActionResult<List<AccountTotalWithdrawalsResponseModel>>> GetTotalDepositsByAccountsAsync([FromQuery] DateRangeRequest timeRange,
+            [FromServices] IValidator<DateRangeRequest> validator)
+        {
+            validator.ValidateAndThrow(timeRange);
+
+            var accountsTotalDeposites = await _transactionService.GetAccountsTotalDepositBetweenDatesAsync(timeRange.timeFrom, timeRange.timeTo);
+            
+            return Ok(accountsTotalDeposites);
+        }
+
+        [HttpGet("cashFlow")]
+        public async Task<ActionResult<List<AccountCashFlowResponseModel>>> GetTotalCashFlowsByAccountsAsync([FromQuery] DateRangeRequest timeRange,
+            [FromServices] IValidator<DateRangeRequest> validator)
+        {
+            validator.ValidateAndThrow(timeRange);
+
+            var accountsTotalCashFlow = await _transactionService.GetTotalCashFlowsByAccountsAsync(timeRange.timeFrom, timeRange.timeTo);
+            
+            return Ok(accountsTotalCashFlow);
         }
 
         [HttpDelete("{id}")]
         public async Task<ActionResult> RemoveTransactionByIdAsync(Guid id)
         {
             await _transactionService.RemoveTransactionByIdAsync(id);
+            
             return Ok();
         }
     }

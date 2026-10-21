@@ -1,7 +1,4 @@
 ﻿using CoreBanking.Domain.Entities.CurrencyEntities;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CoreBanking.Domain.Constants
 {
@@ -13,7 +10,9 @@ namespace CoreBanking.Domain.Constants
         {
             var currency = Currency.Create(Id, CurrencyCode);
             var currencyRate = CurrencyRate.Create(1, currency, DateTimeOffset.UtcNow, null);
+
             currency.AddCurrencyRate(currencyRate);
+            
             return currency;
         }
     }

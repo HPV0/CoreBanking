@@ -1,13 +1,8 @@
-﻿using CoreBanking.Application.DTOs.Client;
+﻿using CoreBanking.API.Filters.IdempotencyFilter;
+using CoreBanking.Application.DTOs.Client;
 using CoreBanking.Application.DTOs.Client.CreateClient;
-using CoreBanking.Application.Interfaces.IRepositories;
 using CoreBanking.Application.Interfaces.IServices;
-using CoreBanking.Application.Mappers;
-using CoreBanking.Domain.Entities;
-using CoreBanking.Infrastructure.Data.Context;
-using CoreBanking.Infrastructure.Repositories;
 using FluentValidation;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoreBanking.API.Controllers
@@ -16,37 +11,65 @@ namespace CoreBanking.API.Controllers
     [ApiController]
     public class ClientsController : ControllerBase
     {
-        IClinetService _clientService;
-        public ClientsController(IClinetService clinetService) {
-            _clientService = clinetService;
+        private readonly IClinetService _clientService;
+
+        public ClientsController(IClinetService clientService)
+        {
+            _clientService = clientService;
         }
+
         [HttpPost]
-        public async Task<ActionResult<ClientResponseModel>> CreateAsync(CreateClientRequest createClientRequest, [FromServices] IValidator<CreateClientRequest> validator) {
-            validator.ValidateAndThrow(createClientRequest);
-            var createdClient = await _clientService.CreateAsync(createClientRequest);
+        [Idempotent]
+        public async Task<ActionResult<ClientResponseModel>> CreateAsync(
+            CreateClientRequest request,
+            [FromServices] IValidator<CreateClientRequest> validator)
+        {
+            validator.ValidateAndThrow(request);
+
+            var createdClient = await _clientService.CreateAsync(request);
+
             return Ok(createdClient);
         }
+
         [HttpGet("{id}")]
         public async Task<ActionResult<ClientResponseModel>> GetClientByIdAsync(Guid id)
         {
-            return Ok(await _clientService.GetClientByIdAsync(id));
+            var client = await _clientService.GetClientByIdAsync(id);
+
+            return Ok(client);
         }
+
         [HttpGet]
         public async Task<ActionResult<List<ClientResponseModel>>> GetClientsAsync()
         {
-            return Ok(await _clientService.GetClientsAsync());
+            var clients = await _clientService.GetClientsAsync();
+
+            return Ok(clients);
         }
+
         [HttpDelete("{id}")]
         public async Task<ActionResult> RemoveClientByIdAsync(Guid id)
         {
             await _clientService.RemoveClientByIdAsync(id);
+
             return Ok();
         }
+
         [HttpPut("{id}")]
-        public async Task<ActionResult<ClientResponseModel>> UpdateClientEmailAndPassportByIdAsync(Guid id, UpdateClientRequest update, [FromServices] IValidator<UpdateClientRequest> validator) {
-            validator.ValidateAndThrow(update);
-            var cl = await _clientService.UpdateClientEmailAndPassportNumberById(id, update);
-            return Ok(cl);
+        [Idempotent]
+        public async Task<ActionResult<ClientResponseModel>> UpdateClientEmailAndPassportByIdAsync(
+            Guid id,
+            UpdateClientRequest request,
+            [FromServices] IValidator<UpdateClientRequest> validator)
+        {
+            validator.ValidateAndThrow(request);
+
+            var updatedClient = await _clientService
+                .UpdateClientEmailAndPassportNumberById(id, request);
+
+            return Ok(updatedClient);
         }
     }
+
+
 }

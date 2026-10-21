@@ -1,12 +1,7 @@
-﻿using CoreBanking.Domain.Constants;
-using CoreBanking.Domain.Entities;
+﻿using CoreBanking.Domain.Entities;
 using CoreBanking.Domain.Entities.AccountEntities;
 using CoreBanking.Domain.Entities.CurrencyEntities;
 using CoreBanking.Domain.ValueObjects;
-using System;
-using System.Collections.Generic;
-using System.Security.Principal;
-using System.Text;
 
 namespace TestHelper
 {
@@ -18,7 +13,7 @@ namespace TestHelper
             string email = "email@mail.com",
             DateOnly? birthday = null,
             string passportNumber = "123123123123",
-            ICollection<Account>? accounts= null)
+            ICollection<Account>? accounts = null)
         {
             return Client.Create(
                name,

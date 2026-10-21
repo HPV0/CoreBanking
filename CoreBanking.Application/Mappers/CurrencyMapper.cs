@@ -1,13 +1,6 @@
-﻿using CoreBanking.Application.DTOs.Client.CreateClient;
-using CoreBanking.Application.DTOs.Currency;
-using CoreBanking.Application.DTOs.Transaction;
-using CoreBanking.Domain.Entities;
+﻿using CoreBanking.Application.DTOs.Currency;
 using CoreBanking.Domain.Entities.CurrencyEntities;
-using CoreBanking.Domain.Entities.TransactionEntities;
 using Riok.Mapperly.Abstractions;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CoreBanking.Application.Mappers
 {
@@ -15,24 +8,21 @@ namespace CoreBanking.Application.Mappers
     public partial class CurrencyMapper
     {
 
-        public partial CurrencyResponseModel CurrencyToCurrencyResponseModel(Currency currency);
-        public partial List<CurrencyResponseModel> CurrencyToCurrencyResponseModels(List<Currency> currencies);
+        public partial CurrencyResponseModel ToCurrencyResponseModel(Currency currency);
+        public partial List<CurrencyResponseModel> ToCurrencyResponseModels(List<Currency> currencies);
 
-        public partial CurrencyWithAllRatesResponseModel CurrencyToCurrencyWithAllRatesResponseModel(Currency currency);
+        public partial CurrencyWithAllRatesResponseModel ToCurrencyWithAllRatesResponseModel(Currency currency);
 
-        private partial CurrencyRateResponseModel CurrencyRateToCurrencyRateResponseModel(CurrencyRate rate);
+        private partial CurrencyRateResponseModel ToCurrencyRateResponseModel(CurrencyRate rate);
         private List<CurrencyRateResponseModel> MapRates(
         IReadOnlyCollection<CurrencyRate> rates)
         {
             return rates
                 .OrderByDescending(x => x.ValidFrom)
-                .Select(CurrencyRateToCurrencyRateResponseModel)
+                .Select(ToCurrencyRateResponseModel)
                 .ToList();
         }
 
-        public partial List<CurrencyWithAllRatesResponseModel> CurrencyToCurrencyWithAllRatesResponseModels(List<Currency> currencies);
-
-
-        //public partial void UpdateProductFromDTO(UpdateProductRequestDTO dto, Product product);
+        public partial List<CurrencyWithAllRatesResponseModel> ToCurrencyWithAllRatesResponseModels(List<Currency> currencies);
     }
 }

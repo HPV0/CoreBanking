@@ -1,9 +1,6 @@
 ﻿using CoreBanking.Application.Exceptions;
 using CoreBanking.Domain.Entities.CurrencyEntities;
 using FluentAssertions;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using TestHelper;
 
 namespace Domain.UnitTests.CurrencyTest
@@ -16,7 +13,7 @@ namespace Domain.UnitTests.CurrencyTest
             // Arrange
             var currency = TestEntityFactory.CreateCurrency("ABC");
             var timeFrom = DateTimeOffset.Parse("2026-09-27T18:08:00Z");
-            var rate = CurrencyRate.Create(1, currency, timeFrom, null); 
+            var rate = CurrencyRate.Create(1, currency, timeFrom, null);
 
             // Act
             currency.AddCurrencyRate(rate);
@@ -26,8 +23,6 @@ namespace Domain.UnitTests.CurrencyTest
             currency.Rates.Should().Contain(rate);
         }
 
-      
-
         [Fact]
         public void AddCurrencyRate_CurrentRateAlreadyExists_ThrowUnprocessableException()
         {
@@ -35,7 +30,7 @@ namespace Domain.UnitTests.CurrencyTest
             var currency = TestEntityFactory.CreateCurrency();
             var timeFrom = DateTimeOffset.Parse("2026-09-27T18:08:00Z");
 
-            var firstRate = CurrencyRate.Create( 1, 
+            var firstRate = CurrencyRate.Create(1,
                 currency,
                 timeFrom,
                 null);
@@ -74,6 +69,5 @@ namespace Domain.UnitTests.CurrencyTest
             // Assert
             result.Should().Be(currentRate);
         }
-
     }
 }

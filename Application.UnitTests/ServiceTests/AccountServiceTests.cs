@@ -5,22 +5,19 @@ using CoreBanking.Application.Mappers;
 using CoreBanking.Application.Services;
 using CoreBanking.Domain.Entities;
 using CoreBanking.Domain.Entities.AccountEntities;
-using CoreBanking.Domain.Entities.CurrencyEntities;
 using FluentAssertions;
 using Moq;
-using System;
-using System.Collections.Generic;
-using System.Security.Principal;
-using System.Text;
-using System.Timers;
 
 namespace Application.UnitTests.ServiceTests
 {
-public class AccountServiceTests
+    public class AccountServiceTests
     {
         private readonly Mock<IAccountRepository> _accountRepository = new();
+
         private readonly Mock<IClientRepository> _clientRepository = new();
+        
         private readonly Mock<ICurrencyRepository> _currencyRepository = new();
+        
         private readonly Mock<AccountMapper> _mapper = new();
 
         private AccountService CreateService()
@@ -32,12 +29,12 @@ public class AccountServiceTests
                 _mapper.Object);
         }
 
-
         [Fact]
         public async Task CreateAsync_ClientAlreadyHasAccountWithCurrency_Throw()
         {
             // Arrange
             var clientId = Guid.NewGuid();
+
             var currencyCode = "USD";
 
             var request = new CreateAccountRequest
@@ -56,6 +53,7 @@ public class AccountServiceTests
 
             // Act
             Func<Task> act = () => service.CreateAsync(request);
+            
             // Assert
             await act.Should()
                 .ThrowAsync<UnprocessableException>();
@@ -67,6 +65,7 @@ public class AccountServiceTests
         {
             // Arrange
             var clientId = Guid.NewGuid();
+
             var currencyCode = "USD";
 
             var request = new CreateAccountRequest
@@ -95,8 +94,6 @@ public class AccountServiceTests
                 .ThrowAsync<EntityNotFoundException>();
 
         }
-
-       
 
         [Fact]
         public async Task GetAccountByIdAsync_AccountDoesNotExist_Throw()
@@ -137,8 +134,6 @@ public class AccountServiceTests
             // Assert
             await act.Should()
                 .ThrowAsync<EntityNotFoundException>();
-
         }
     }
-
 }

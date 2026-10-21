@@ -1,8 +1,4 @@
 ﻿using CoreBanking.Domain.Entities;
-using CoreBanking.Domain.Entities.AccountEntities;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CoreBanking.Application.Interfaces.IRepositories
 {

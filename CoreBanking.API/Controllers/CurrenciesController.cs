@@ -1,8 +1,7 @@
-﻿using CoreBanking.Application.DTOs.Account;
+﻿using CoreBanking.API.Filters.IdempotencyFilter;
 using CoreBanking.Application.DTOs.Currency;
 using CoreBanking.Application.Interfaces.IServices;
 using FluentValidation;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoreBanking.API.Controllers
@@ -18,50 +17,73 @@ namespace CoreBanking.API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<CurrencyResponseModel>> CreateAsync(CreateCurrencyRequest createCurrencyRequest, [FromServices] IValidator<CreateCurrencyRequest> validator)
+        [Idempotent]
+        public async Task<ActionResult<CurrencyResponseModel>> CreateAsync(CreateCurrencyRequest createCurrencyRequest, 
+            [FromServices] IValidator<CreateCurrencyRequest> validator)
         {
             validator.ValidateAndThrow(createCurrencyRequest);
+            
             var createdClient = await _currencyService.CreateAsync(createCurrencyRequest);
+            
             return Ok(createdClient);
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<CurrencyResponseModel>> GetCurrencyByIdAsync(Guid id)
         {
-            return Ok(await _currencyService.GetCurrencyByIdAsync(id));
+            var currency = await _currencyService.GetCurrencyByIdAsync(id);
+            
+            return Ok(currency);
         }
 
-        [HttpGet("All")]
+        [HttpGet("all")]
         public async Task<ActionResult<List<CurrencyWithAllRatesResponseModel>>> GetAllCurrenciesAsync()
         {
-            return Ok(await _currencyService.GetAllCurrenciesAsync());
+            var currencies = await _currencyService.GetAllCurrenciesAsync();
+            
+            return Ok(currencies);
         }
 
-        [HttpGet("Code")]
-        public async Task<ActionResult<CurrencyResponseModel>> GetCurrencyByCodeAsync(GetCurrencyRateByCodeRequest code, [FromServices] IValidator<GetCurrencyRateByCodeRequest> validator)
+        [HttpGet("code")]
+        public async Task<ActionResult<CurrencyResponseModel>> GetCurrencyByCodeAsync(GetCurrencyRateByCodeRequest code, 
+            [FromServices] IValidator<GetCurrencyRateByCodeRequest> validator)
         {
             validator.ValidateAndThrow(code);
-            return Ok(await _currencyService.GetRateCurrencyByCodeAsync(code.Code));
+
+            var currency = await _currencyService.GetRateCurrencyByCodeAsync(code.Code);
+            
+            return Ok(currency);
         }
 
         [HttpPut]
-        public async Task<ActionResult<CurrencyResponseModel>> UpdateCurrencyRateByIdAsync(UpdateCurrencyRateByIdRequest updateCurrencyRateRequest, [FromServices] IValidator<UpdateCurrencyRateByIdRequest> validator)
+        [Idempotent]
+        public async Task<ActionResult<CurrencyResponseModel>> UpdateCurrencyRateByIdAsync(UpdateCurrencyRateByIdRequest updateCurrencyRateRequest, 
+            [FromServices] IValidator<UpdateCurrencyRateByIdRequest> validator)
         {
             validator.ValidateAndThrow(updateCurrencyRateRequest);
-            return Ok(await _currencyService.UpdateCurrencyRateByIdAsync(updateCurrencyRateRequest));
+
+            var updatedCurrency = await _currencyService.UpdateCurrencyRateByIdAsync(updateCurrencyRateRequest);
+            
+            return Ok(updatedCurrency);
         }
 
-        [HttpPut("Code")]
-        public async Task<ActionResult<CurrencyResponseModel>> UpdateCurrencyByCodeRateAsync(UpdateCurrencyRateByCodeRequest updateCurrencyRateRequest, [FromServices] IValidator<UpdateCurrencyRateByCodeRequest> validator)
+        [HttpPut("code")]
+        [Idempotent]
+        public async Task<ActionResult<CurrencyResponseModel>> UpdateCurrencyByCodeRateAsync(UpdateCurrencyRateByCodeRequest updateCurrencyRateRequest,
+            [FromServices] IValidator<UpdateCurrencyRateByCodeRequest> validator)
         {
             validator.ValidateAndThrow(updateCurrencyRateRequest);
-            return Ok(await _currencyService.UpdateCurrencyRateByCodeAsync(updateCurrencyRateRequest));
+
+            var updatedCurrency = await _currencyService.UpdateCurrencyRateByCodeAsync(updateCurrencyRateRequest);
+            
+            return Ok(updatedCurrency);
         }
 
         [HttpDelete("{id}")]
         public async Task<ActionResult> RemoveByIdAsync(Guid id)
         {
             await _currencyService.RemoveByIdAsync(id);
+            
             return Ok();
         }
     }

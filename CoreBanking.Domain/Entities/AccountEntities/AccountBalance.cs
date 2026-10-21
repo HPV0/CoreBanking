@@ -1,26 +1,24 @@
 ﻿using CoreBanking.Application.Exceptions;
 using CoreBanking.Domain.ValueObjects;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CoreBanking.Domain.Entities.AccountEntities
 {
     public class AccountBalance
     {
-        public Guid Id {  get; private set; }
+        public Guid Id { get; private set; }
+
         public decimal Amount { get; private set; }
 
         private AccountBalance() { }
-        public AccountBalance(Guid id, decimal amount): base()
+        
+        public AccountBalance(Guid id, decimal amount) : base()
         {
             if (amount < 0)
                 throw new ArgumentException("Balance's Amount can't be negative.");
-            
+
             Amount = amount;
             Id = id;
         }
-
 
         public void Deposit(Money money)
         {
@@ -34,7 +32,5 @@ namespace CoreBanking.Domain.Entities.AccountEntities
 
             Amount -= money.Amount;
         }
-
-
     }
 }

@@ -1,11 +1,6 @@
 ﻿using CoreBanking.Application.Exceptions;
-using CoreBanking.Domain.Entities;
-using CoreBanking.Domain.Entities.CurrencyEntities;
 using CoreBanking.Domain.Entities.TransactionEntities;
 using FluentAssertions;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using TestHelper;
 
 namespace Domain.UnitTests.TransactionTest
@@ -134,12 +129,8 @@ namespace Domain.UnitTests.TransactionTest
 
             // Act
             var transaction = Transaction.Create(
-                sender,
-                receiver,
-                baseAccount,
-                1,
-                400,
-                100);
+                sender,receiver,baseAccount,
+                1, 400, 100);
 
             // Assert
             transaction.Details.Should().HaveCount(2);
@@ -162,8 +153,6 @@ namespace Domain.UnitTests.TransactionTest
             sender.Deposit(
                 TestEntityFactory.CreateMoney(sendingAmount, "USD"));
 
-            
-
             // Act
             Transaction.Create(
                 sender,
@@ -177,6 +166,5 @@ namespace Domain.UnitTests.TransactionTest
             sender.Balance.Amount.Should().Be(0);
             receiver.Balance.Amount.Should().Be(senderExchangeRate * sendingAmount / senderExchangeRate);
         }
-
     }
 }

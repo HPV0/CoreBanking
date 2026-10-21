@@ -1,5 +1,4 @@
 ﻿using CoreBanking.API.Validators.Extensions;
-using CoreBanking.Application.DTOs.Currency;
 using CoreBanking.Application.DTOs.Transaction;
 using FluentValidation;
 
@@ -16,7 +15,7 @@ namespace CoreBanking.API.Validators.TransactionValidators
                 .NotNull().WithMessage("SenderId cannot be null");
 
             RuleFor(x => x.SenderExchangeRate).IsValidRate();
-            
+
             RuleFor(x => x.ReceiveExchangeRate).IsValidRate();
 
             RuleFor(x => x.Amount)

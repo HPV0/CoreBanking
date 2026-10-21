@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CoreBanking.Application.DTOs.Client
+﻿namespace CoreBanking.Application.DTOs.Client
 {
     public class CreateClientRequest
     {

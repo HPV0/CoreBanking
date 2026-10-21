@@ -2,37 +2,35 @@
 using CoreBanking.Domain.Common;
 using CoreBanking.Domain.Entities.CurrencyEntities;
 using CoreBanking.Domain.ValueObjects;
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Runtime.InteropServices;
-using System.Text;
 
 namespace CoreBanking.Domain.Entities.AccountEntities
 {
     public class Account : BaseEntity
     {
         public Guid ClientId { get; private set; }
+
         public Client Client { get; private set; }
+        
         public Currency Currency { get; private set; }
+        
         public Guid CurrencyId { get; private set; }
+        
         public AccountBalance Balance { get; private set; }
 
         private Account() { }
 
-        private Account(Guid id, Client client, Currency currency): this(client, currency)
+        private Account(Guid id, Client client, Currency currency) : this(client, currency)
         {
-
             Id = id;
             Balance = new AccountBalance(Id, 0);
         }
 
+        private Account(Client client, Currency currency) : base()
+        {
 
-        private Account(Client client, Currency currency):base() {
-
-            if (currency == null) 
+            if (currency == null)
                 throw new ArgumentNullException("Currency cannot be null");
-            
+
             if (client == null)
                 throw new ArgumentNullException("Client cannot be null.");
 
@@ -59,7 +57,8 @@ namespace CoreBanking.Domain.Entities.AccountEntities
             Balance.Withdraw(money);
         }
 
-        public static Account Create(Currency currency, Client client) {
+        public static Account Create(Currency currency, Client client)
+        {
             return new Account(client, currency);
         }
 
@@ -67,7 +66,5 @@ namespace CoreBanking.Domain.Entities.AccountEntities
         {
             return new Account(id, client, currency);
         }
-
-
     }
 }

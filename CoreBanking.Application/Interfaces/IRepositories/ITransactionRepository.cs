@@ -1,9 +1,5 @@
 ﻿using CoreBanking.Application.DTOs.Transaction;
-using CoreBanking.Domain.Entities.AccountEntities;
 using CoreBanking.Domain.Entities.TransactionEntities;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CoreBanking.Application.Interfaces.IRepositories
 {

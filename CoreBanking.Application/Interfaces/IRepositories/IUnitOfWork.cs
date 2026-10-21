@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CoreBanking.Application.Interfaces.IRepositories
+﻿namespace CoreBanking.Application.Interfaces.IRepositories
 {
     public interface IUnitOfWork : IDisposable
     {

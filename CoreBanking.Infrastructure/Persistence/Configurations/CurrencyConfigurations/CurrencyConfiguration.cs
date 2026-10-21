@@ -1,9 +1,6 @@
 ﻿using CoreBanking.Domain.Entities.CurrencyEntities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CoreBanking.Infrastructure.Persistence.Configurations.CurrencyConfigurations
 {
@@ -17,7 +14,7 @@ namespace CoreBanking.Infrastructure.Persistence.Configurations.CurrencyConfigur
                 .HasMaxLength(3)
                 .IsFixedLength()
                 .IsRequired();
-            
+
             builder.HasIndex(c => c.CurrencyCode)
                 .IsUnique();
 

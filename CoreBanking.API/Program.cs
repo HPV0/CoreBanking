@@ -1,38 +1,35 @@
 using CoreBanking.API.Exceptions;
-using CoreBanking.Application.DTOs.Client;
+using CoreBanking.API.Swagger;
 using CoreBanking.Application.Interfaces.IRepositories;
 using CoreBanking.Application.Interfaces.IServices;
 using CoreBanking.Application.Mappers;
 using CoreBanking.Application.Services;
 using CoreBanking.Infrastructure.Data.Context;
+using CoreBanking.Infrastructure.Persistence;
 using CoreBanking.Infrastructure.Persistence.Seed;
 using CoreBanking.Infrastructure.Repositories;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
+using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
-builder.Services.AddSwaggerGen();
 
 builder.Services.AddValidatorsFromAssembly(typeof(Program).Assembly, includeInternalTypes: true);
 
-
-
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(
-        builder.Configuration.GetConnectionString("DefaultConnection")));
+        builder.Configuration.GetConnectionString("DefaultConnection"))
+    .UseSnakeCaseNamingConvention());
 
 
 builder.Services.AddScoped<IClinetService, ClinetService>();
 builder.Services.AddScoped<ICurrencyService, CurrencyService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<ITransactionService, TransactionService>();
-
 
 builder.Services.AddScoped<IClientRepository, ClientRepository>();
 builder.Services.AddScoped<ICurrencyRepository, CurrencyRepository>();
@@ -45,33 +42,48 @@ builder.Services.AddScoped<CurrencyMapper>();
 builder.Services.AddScoped<AccountMapper>();
 builder.Services.AddScoped<TransactionMapper>();
 
-
+// We need AddProblemDetails, for better view of Custom Errors
 builder.Services.AddProblemDetails();
-builder.Services.AddExceptionHandler<ValidationExceptionHandler>();
+builder.Services.AddExceptionHandler<CustomValidationExceptionHandler>();
+builder.Services.AddExceptionHandler<FluentValidationExceptionHandler>();
 builder.Services.AddExceptionHandler<BusinessLogicExceptionHandler>();
 builder.Services.AddExceptionHandler<NotFoundExceptionHandler>();
+// We need GlobalExceptionHandler, for better view of Server Errors
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+
+
+// Redis
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    options.Configuration =
+        builder.Configuration.GetConnectionString("Redis");
+
+    options.InstanceName = "CoreBanking:";
+});
+builder.Services.AddSingleton<IConnectionMultiplexer>(_ =>
+    ConnectionMultiplexer.Connect(
+        builder.Configuration.GetConnectionString("Redis")!));
+
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.OperationFilter<IdempotencyKeyOperationFilter>();
+});
 
 
 var app = builder.Build();
 
-using (var scope = app.Services.CreateScope())
-{
-    var context = scope.ServiceProvider
-        .GetRequiredService<ApplicationDbContext>();
-
-    await context.Database.MigrateAsync();
-
-    await DbInitializer.SeedAsync(context);
-}
-
+await app.Services.InitializeDatabaseAsync();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
     app.UseSwagger();
-    app.UseSwaggerUI(options => { options.SwaggerEndpoint("/openapi/v1.json", "api"); });
+    app.UseSwaggerUI(options =>
+    {
+        options.SwaggerEndpoint("/swagger/v1/swagger.json", "Core Banking API v1");
+    });
 }
 
 app.UseHttpsRedirection();

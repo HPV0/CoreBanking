@@ -9,25 +9,24 @@ using CoreBanking.Infrastructure.Persistence.Configurations.CurrencyConfiguratio
 using CoreBanking.Infrastructure.Persistence.Configurations.TransactionConfigurations;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
-using Microsoft.Extensions.Logging.Abstractions;
-using System;
-using System.Collections.Generic;
 using System.Linq.Expressions;
-using System.Net;
-using System.Reflection.Emit;
-using System.Text;
-using System.Xml;
 
 namespace CoreBanking.Infrastructure.Data.Context
 {
     public class ApplicationDbContext : DbContext
     {
         public DbSet<Client> Clients => Set<Client>();
+
         public DbSet<Account> Accounts => Set<Account>();
+        
         public DbSet<AccountBalance> AccountBalances => Set<AccountBalance>();
+        
         public DbSet<Currency> Currencies => Set<Currency>();
+        
         public DbSet<CurrencyRate> CurrencyRates => Set<CurrencyRate>();
-        public DbSet<Transaction> Transactions=> Set<Transaction>();
+        
+        public DbSet<Transaction> Transactions => Set<Transaction>();
+        
         public DbSet<TransactionDetail> TransactionsDetails => Set<TransactionDetail>();
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
@@ -103,7 +102,7 @@ namespace CoreBanking.Infrastructure.Data.Context
                 switch (entry.State)
                 {
                     case EntityState.Deleted:
-                        entry.State = EntityState.Unchanged; 
+                        entry.State = EntityState.Unchanged;
                         entry.Property(nameof(ISoftDeletable.IsActive)).CurrentValue = false;
                         break;
                 }

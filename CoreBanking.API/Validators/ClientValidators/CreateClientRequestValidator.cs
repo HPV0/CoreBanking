@@ -1,5 +1,4 @@
 ﻿using CoreBanking.Application.DTOs.Client;
-using CoreBanking.Application.DTOs.Client.CreateClient;
 using FluentValidation;
 
 namespace CoreBanking.API.Validators.ClientValidators

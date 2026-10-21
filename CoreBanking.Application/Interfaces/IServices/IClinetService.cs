@@ -1,8 +1,5 @@
 ﻿using CoreBanking.Application.DTOs.Client;
 using CoreBanking.Application.DTOs.Client.CreateClient;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CoreBanking.Application.Interfaces.IServices
 {

@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("a6c7e40b-61dd-4278-a32d-0ddcc1e5f5c1")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("CoreBanking.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a909f35fd39d734d7b1ea87d0ffb8d0f3cac884d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+994effacef17710e86510e390ef7c7ba9541a543")]
 [assembly: System.Reflection.AssemblyProductAttribute("CoreBanking.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CoreBanking.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

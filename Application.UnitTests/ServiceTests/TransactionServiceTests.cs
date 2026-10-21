@@ -1,16 +1,11 @@
 ﻿using CoreBanking.Application.DTOs.Transaction;
-using CoreBanking.Application.Exceptions;
 using CoreBanking.Application.Interfaces.IRepositories;
 using CoreBanking.Application.Mappers;
 using CoreBanking.Application.Services;
 using CoreBanking.Domain.Constants;
-using CoreBanking.Domain.Entities.AccountEntities;
 using CoreBanking.Domain.Entities.TransactionEntities;
 using FluentAssertions;
 using Moq;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using TestHelper;
 
 namespace Application.UnitTests.ServiceTests
@@ -18,9 +13,11 @@ namespace Application.UnitTests.ServiceTests
     public class TransactionServiceTests
     {
         private readonly Mock<ITransactionRepository> _transactionRepository = new();
+
         private readonly Mock<IAccountRepository> _accountRepository = new();
+        
         private readonly Mock<ICurrencyRepository> _currencyRepository = new();
-        private readonly Mock<IUnitOfWork> _unitOfWork = new();
+        
         private readonly TransactionMapper _mapper = new();
 
         private TransactionService CreateService()
@@ -29,10 +26,8 @@ namespace Application.UnitTests.ServiceTests
                 _mapper,
                 _transactionRepository.Object,
                 _accountRepository.Object,
-                _currencyRepository.Object,
-                _unitOfWork.Object);
+                _currencyRepository.Object);
         }
-
 
         [Fact]
         public async Task CreateAsync_ShouldCreateTransactionAndCommit()
@@ -61,7 +56,7 @@ namespace Application.UnitTests.ServiceTests
             var transactionDetails = new List<TransactionDetail>();
 
             var expectedResponse = new List<TransactionDetailResponseModel> {
-                new(){ 
+                new(){
                     SenderId = sender.Id,
                     ReceiverId = BankAccount.Id,
                     ExchangeRate = 1,
@@ -95,8 +90,6 @@ namespace Application.UnitTests.ServiceTests
                 })
                 .Returns(Task.CompletedTask);
 
-            
-
             var service = CreateService();
 
             // Act
@@ -105,16 +98,10 @@ namespace Application.UnitTests.ServiceTests
             // Assert
             result.Should().BeEquivalentTo(expectedResponse);
 
-            _unitOfWork.Verify(
-                x => x.CommitTransactionAsync(),
+            _transactionRepository.Verify(
+                x => x.SaveChangesAsync(),
                 Times.Once);
-
-            _unitOfWork.Verify(
-                x => x.RollbackTransactionAsync(),
-                Times.Never);
         }
-
-
 
         [Fact]
         public async Task GetAccountsTotalDepositBetweenDatesAsync_ShouldReturnRepositoryResult()
@@ -148,9 +135,7 @@ namespace Application.UnitTests.ServiceTests
 
             // Assert
             result.Should().BeSameAs(expected);
-
         }
-
 
         [Fact]
         public async Task GetTotalWithdrawalsByAccountsAsync_ShouldReturnRepositoryResult()
@@ -183,9 +168,7 @@ namespace Application.UnitTests.ServiceTests
 
             // Assert
             result.Should().BeSameAs(expected);
-
         }
-
 
         [Fact]
         public async Task GetTotalCashFlowsByAccountsAsync_ShouldCalculateCashFlow()
@@ -242,9 +225,7 @@ namespace Application.UnitTests.ServiceTests
             result[0].CurrencyCode.Should().Be(code);
             result[0].IncomesAmount.Should().Be(totalDeposites);
             result[0].SpendingAmount.Should().Be(totalWithdrawals);
-            result[0].BalanceChangeAmount.Should().Be(totalDeposites- totalWithdrawals);
+            result[0].BalanceChangeAmount.Should().Be(totalDeposites - totalWithdrawals);
         }
-
     }
-
 }

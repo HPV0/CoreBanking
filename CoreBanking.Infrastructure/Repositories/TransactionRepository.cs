@@ -1,13 +1,8 @@
 ﻿using CoreBanking.Application.DTOs.Transaction;
 using CoreBanking.Application.Interfaces.IRepositories;
-using CoreBanking.Domain.Entities.AccountEntities;
-using CoreBanking.Domain.Entities.CurrencyEntities;
 using CoreBanking.Domain.Entities.TransactionEntities;
 using CoreBanking.Infrastructure.Data.Context;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CoreBanking.Infrastructure.Repositories
 {
@@ -18,7 +13,9 @@ namespace CoreBanking.Infrastructure.Repositories
 
         protected IQueryable<Transaction> TransactionQuery
             => _dbContext.Transactions;
+        
         public TransactionRepository(ApplicationDbContext db) : base(db) { }
+        
         public async Task<List<AccountTotalDepositesResponseModel>> GetAccountsTotalDepositBetweenDatesAsync(DateTime timeFrom, DateTime timeTo)
         {
             return await _dbContext.Accounts
@@ -26,7 +23,8 @@ namespace CoreBanking.Infrastructure.Repositories
                 {
                     AccountId = a.Id,
                     CurrencyCode = a.Currency.CurrencyCode,
-                    TotalDeposites = Math.Round( 
+                    
+                    TotalDeposites = Math.Round(
                         _dbContext.Transactions
                             .Where(t => t.InsertedAt >= timeFrom && t.InsertedAt < timeTo)
                             .SelectMany(t => t.Details)
@@ -45,6 +43,7 @@ namespace CoreBanking.Infrastructure.Repositories
                 {
                     AccountId = a.Id,
                     CurrencyCode = a.Currency.CurrencyCode,
+                    
                     TotalWithdrawals = Math.Round(
                     _dbContext.Transactions
                         .Where(t => t.InsertedAt >= timeFrom && t.InsertedAt < timeTo)

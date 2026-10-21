@@ -4,55 +4,49 @@ using CoreBanking.Application.Interfaces.IRepositories;
 using CoreBanking.Application.Interfaces.IServices;
 using CoreBanking.Application.Mappers;
 using CoreBanking.Domain.Constants;
-using CoreBanking.Domain.Entities;
 using CoreBanking.Domain.Entities.AccountEntities;
 using CoreBanking.Domain.Entities.TransactionEntities;
-using System;
-using System.Collections.Generic;
-using System.Text;
+
 
 namespace CoreBanking.Application.Services
 {
     public class TransactionService : ITransactionService
     {
         ITransactionRepository _transactionRepository;
-        readonly IUnitOfWork  _unitOfWork;
         IAccountRepository _accountRepository;
         ICurrencyRepository _currencyRepository;
         TransactionMapper _mapper;
-        public TransactionService(TransactionMapper mapper, ITransactionRepository transactionRepository, IAccountRepository accountRepository, ICurrencyRepository currencyRepository, IUnitOfWork unitOfWork)
+        public TransactionService(TransactionMapper mapper, ITransactionRepository transactionRepository, IAccountRepository accountRepository, ICurrencyRepository currencyRepository)
         {
             _transactionRepository = transactionRepository;
             _accountRepository = accountRepository;
-            _unitOfWork = unitOfWork;
             _currencyRepository = currencyRepository;
-            _mapper = mapper; 
+            _mapper = mapper;
         }
         public async Task<List<TransactionDetailResponseModel>> CreateAsync(CreateTransactionRequest createTransactionRequest)
         {
             List<TransactionDetail> details;
-            await _unitOfWork.BeginTransactionAsync();
-            try
-            {
-                var senderAccount = await _accountRepository.GetByIdAsync(createTransactionRequest.SenderId) ?? throw new EntityNotFoundException(nameof(Account), createTransactionRequest.SenderId);
-                var receiverAccount = await _accountRepository.GetByIdAsync(createTransactionRequest.ReceiverId) ?? throw new EntityNotFoundException(nameof(Account), createTransactionRequest.SenderId);
-                var baseAccount = await _accountRepository.GetByIdAsync(BankAccount.Id) ?? throw new EntityNotFoundException(nameof(Account), createTransactionRequest.SenderId);
 
-                decimal senderExchangeRate = createTransactionRequest.SenderExchangeRate ?? (await _currencyRepository.GetCurrencyWithCurrentRateByIdAsync(senderAccount.CurrencyId)).FindCurrentRate().Rate;
-                decimal receiverExchangeRate = createTransactionRequest.ReceiveExchangeRate ?? (await _currencyRepository.GetCurrencyWithCurrentRateByIdAsync(receiverAccount.CurrencyId)).FindCurrentRate().Rate;
+            var senderAccount = await _accountRepository.GetByIdAsync(createTransactionRequest.SenderId) 
+                ?? throw new EntityNotFoundException(nameof(Account), createTransactionRequest.SenderId);
+            var receiverAccount = await _accountRepository.GetByIdAsync(createTransactionRequest.ReceiverId) 
+                ?? throw new EntityNotFoundException(nameof(Account), createTransactionRequest.SenderId);
+            var baseAccount = await _accountRepository.GetByIdAsync(BankAccount.Id) 
+                ?? throw new EntityNotFoundException(nameof(Account), createTransactionRequest.SenderId);
 
-                var transaction = Transaction.Create(senderAccount, receiverAccount, baseAccount, senderExchangeRate, receiverExchangeRate, createTransactionRequest.Amount);
-                await _transactionRepository.AddAsync(transaction);
-                details = transaction.Details!.ToList();
-                await _transactionRepository.SaveChangesAsync();
-            } catch 
-            {
-                await _unitOfWork.RollbackTransactionAsync();
-                throw;
-            }
+            decimal senderExchangeRate = createTransactionRequest.SenderExchangeRate 
+                ?? (await _currencyRepository.GetCurrencyWithCurrentRateByIdAsync(senderAccount.CurrencyId)).FindCurrentRate().Rate;
+            decimal receiverExchangeRate = createTransactionRequest.ReceiveExchangeRate 
+                ?? (await _currencyRepository.GetCurrencyWithCurrentRateByIdAsync(receiverAccount.CurrencyId)).FindCurrentRate().Rate;
 
-            await _unitOfWork.CommitTransactionAsync();
-            return _mapper.TransactionDetailsToTransactionDetailResponseModels(details);
+            var transaction = Transaction.Create(senderAccount, receiverAccount, baseAccount, senderExchangeRate, receiverExchangeRate, createTransactionRequest.Amount);
+            await _transactionRepository.AddAsync(transaction);
+            
+            details = transaction.Details!.ToList();
+            
+            await _transactionRepository.SaveChangesAsync();
+
+            return _mapper.ToTransactionDetailResponseModels(details);
 
         }
 
@@ -91,9 +85,27 @@ namespace CoreBanking.Application.Services
 
         public async Task RemoveTransactionByIdAsync(Guid id)
         {
-            var tr = await _transactionRepository.GetOnlyTransactionWithNoDetailsByIdAsync(id) ?? throw new EntityNotFoundException(nameof(Transaction), id);
+            var tr = await _transactionRepository.GetOnlyTransactionWithNoDetailsByIdAsync(id) 
+                ?? throw new EntityNotFoundException(nameof(Transaction), id);
+
             _transactionRepository.Remove(tr);
+            
             await _transactionRepository.SaveChangesAsync();
+        }
+
+        public async Task<TransactionResponseModel> GetTransactionByIdAsync(Guid id)
+        {
+            var transaction = await _transactionRepository.GetByIdAsync(id)
+                ?? throw new EntityNotFoundException(nameof(Transaction), id);
+
+            return _mapper.ToTransactionResponseModel(transaction);
+        }
+
+        public async Task<List<TransactionResponseModel>> GetAllTransactionsAsync()
+        {
+            var transactions = await _transactionRepository.GetAllItemsAsync();
+
+            return _mapper.ToTransactionResponseModels(transactions.ToList());
         }
     }
 }

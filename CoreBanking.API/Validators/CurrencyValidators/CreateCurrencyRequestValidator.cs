@@ -1,5 +1,4 @@
 ﻿using CoreBanking.API.Validators.Extensions;
-using CoreBanking.Application.DTOs.Client;
 using CoreBanking.Application.DTOs.Currency;
 using FluentValidation;
 

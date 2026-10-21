@@ -1,14 +1,4 @@
-﻿using CoreBanking.Domain.Entities;
-using CoreBanking.Domain.ValueObjects;
-using CoreBanking.Domain.ValueObjects.Client;
-using System;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Text.RegularExpressions;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-
-namespace CoreBanking.Domain.ValueObjects
+﻿namespace CoreBanking.Domain.ValueObjects
 {
     public record class Money
     {
@@ -18,7 +8,7 @@ namespace CoreBanking.Domain.ValueObjects
         {
             if (amount < 0)
                 throw new ArgumentException("Money amount cannot be negative");
-            
+
             Money.ValidateCurrencyCode(currencyCode);
 
             Amount = amount;
@@ -27,7 +17,8 @@ namespace CoreBanking.Domain.ValueObjects
 
         public static void ValidateExchangeRate(decimal rate)
         {
-            if (rate <= 0) throw new ArgumentException("Rate cannot be zero or negative");
+            if (rate <= 0) 
+                throw new ArgumentException("Rate cannot be zero or negative");
         }
 
         public static void ValidateCurrencyCode(string currencyCode)
@@ -39,13 +30,14 @@ namespace CoreBanking.Domain.ValueObjects
                 throw new ArgumentException("Money currencyCode Length must be equal to 3");
         }
 
-        public Money Exchange(decimal currentRate, decimal targetRate, string targetCurrencyCode) {
+        public Money Exchange(decimal currentRate, decimal targetRate, string targetCurrencyCode)
+        {
             Money.ValidateExchangeRate(targetRate);
             Money.ValidateExchangeRate(currentRate);
 
             return Money.Create((Amount / currentRate) * targetRate, targetCurrencyCode);
         }
-        
+
         public Money ExchangeMoney(decimal exchangeRate, string currencyCode)
         {
             return Money.Create(Amount * exchangeRate, currencyCode);

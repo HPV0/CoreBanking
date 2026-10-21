@@ -1,9 +1,6 @@
 ﻿using CoreBanking.Domain.Entities.CurrencyEntities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CoreBanking.Infrastructure.Persistence.Configurations.CurrencyConfigurations
 {
@@ -12,7 +9,7 @@ namespace CoreBanking.Infrastructure.Persistence.Configurations.CurrencyConfigur
         public void Configure(EntityTypeBuilder<CurrencyRate> builder)
         {
             BaseEntityConfiguration.Configure(builder);
-            
+
             builder.Property(cr => cr.Rate)
                 .HasPrecision(18, 4)
                 .IsRequired();

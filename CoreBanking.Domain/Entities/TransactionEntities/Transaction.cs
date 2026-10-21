@@ -2,32 +2,30 @@
 using CoreBanking.Domain.Common;
 using CoreBanking.Domain.Entities.AccountEntities;
 using CoreBanking.Domain.ValueObjects;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace CoreBanking.Domain.Entities.TransactionEntities
 {
     public class Transaction : BaseEntity
     {
-
         private List<TransactionDetail> _details = new();
+        
         public IReadOnlyCollection<TransactionDetail>? Details => _details?.ToList();
+        
         private Transaction() { }
+        
         private Transaction(Account sender, Account recevier, Account baseBankingAccount,
             decimal senderExchangeRate, decimal recevierExchangeRate,
-            decimal amount): base()
+            decimal amount) : base()
         {
-
             Money sendingMoney = Money.Create(amount, sender.Currency.CurrencyCode);
 
             if (sender.Id == recevier.Id)
                 throw new UnprocessableException("Sender and Recevier accounts cannot be same.");
 
-            
             if (sender.CurrencyId == recevier.CurrencyId)
             {
-                AddTransactionDetail(sender, recevier, 1, sendingMoney,out _);
+                AddTransactionDetail(sender, recevier, 1, sendingMoney, out _);
             }
             else
             {
@@ -41,7 +39,7 @@ namespace CoreBanking.Domain.Entities.TransactionEntities
         }
 
 
-        public static Transaction Create(Account sender, Account recevier, Account baseBankingAccount, 
+        public static Transaction Create(Account sender, Account recevier, Account baseBankingAccount,
             decimal senderExchangeRate, decimal recevierExchangeRate,
             decimal amount)
         {
@@ -50,14 +48,18 @@ namespace CoreBanking.Domain.Entities.TransactionEntities
         }
 
 
-        private void AddTransactionDetail(Account AccountFrom, Account AccountTo,
-            decimal ExchangeRate, Money money, out Money AccountToMoney)
+        private void AddTransactionDetail(Account accountFrom, Account accountTo,
+            decimal exchangeRate, Money money, out Money accountToMoney)
         {
-            AccountFrom.Withdraw(money);
-            AccountToMoney = money.ExchangeMoney(ExchangeRate, AccountTo.Currency.CurrencyCode);
-            AccountTo.Deposit(AccountToMoney);
+            exchangeRate = Math.Round(exchangeRate, 4, MidpointRounding.AwayFromZero);
 
-            TransactionDetail detail = TransactionDetail.Create(Id, AccountFrom, AccountTo, ExchangeRate, money);
+            accountFrom.Withdraw(money);
+            
+            accountToMoney = money.ExchangeMoney(exchangeRate, accountTo.Currency.CurrencyCode);
+            accountTo.Deposit(accountToMoney);
+
+            TransactionDetail detail = TransactionDetail.Create(Id, accountFrom, accountTo, exchangeRate, money);
+            
             _details.Add(detail);
         }
 

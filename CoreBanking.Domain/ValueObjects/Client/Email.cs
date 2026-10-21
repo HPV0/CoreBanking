@@ -2,9 +2,10 @@
 
 namespace CoreBanking.Domain.ValueObjects.Client
 {
-    public sealed record  class Email
+    public sealed record class Email
     {
         private static readonly int MaxLength = 40;
+
         public string Value { get; }
 
         private Email(string value)

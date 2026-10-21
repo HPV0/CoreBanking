@@ -1,22 +1,26 @@
 {
-  "openapi": "3.1.1",
+  "openapi": "3.0.4",
   "info": {
-    "title": "CoreBanking.API | v1",
-    "version": "1.0.0"
+    "title": "CoreBanking.API",
+    "version": "1.0"
   },
-  "servers": [
-    {
-      "url": "https://localhost:7255"
-    },
-    {
-      "url": "http://localhost:5005"
-    }
-  ],
   "paths": {
     "/api/Accounts": {
       "post": {
         "tags": [
           "Accounts"
+        ],
+        "parameters": [
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "description": "Unique key identifying this request.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
         ],
         "requestBody": {
           "content": {
@@ -35,8 +39,7 @@
                 "$ref": "#/components/schemas/CreateAccountRequest"
               }
             }
-          },
-          "required": true
+          }
         },
         "responses": {
           "200": {
@@ -62,7 +65,7 @@
         }
       }
     },
-    "/api/Accounts/Client/{id}": {
+    "/api/Accounts/client/{id}": {
       "get": {
         "tags": [
           "Accounts"
@@ -77,6 +80,44 @@
               "format": "uuid"
             }
           }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AccountResponseModel"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AccountResponseModel"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AccountResponseModel"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Accounts/all": {
+      "get": {
+        "tags": [
+          "Accounts"
         ],
         "responses": {
           "200": {
@@ -172,7 +213,7 @@
         }
       }
     },
-    "/api/Accounts/Withdraw/{id}": {
+    "/api/Accounts/withdraw/{id}": {
       "put": {
         "tags": [
           "Accounts"
@@ -181,6 +222,16 @@
           {
             "name": "id",
             "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "description": "Unique key identifying this request.",
             "required": true,
             "schema": {
               "type": "string",
@@ -205,8 +256,7 @@
                 "$ref": "#/components/schemas/CashFlowRequest"
               }
             }
-          },
-          "required": true
+          }
         },
         "responses": {
           "200": {
@@ -232,7 +282,7 @@
         }
       }
     },
-    "/api/Accounts/Deposit/{id}": {
+    "/api/Accounts/deposit/{id}": {
       "put": {
         "tags": [
           "Accounts"
@@ -241,6 +291,16 @@
           {
             "name": "id",
             "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "description": "Unique key identifying this request.",
             "required": true,
             "schema": {
               "type": "string",
@@ -265,8 +325,7 @@
                 "$ref": "#/components/schemas/CashFlowRequest"
               }
             }
-          },
-          "required": true
+          }
         },
         "responses": {
           "200": {
@@ -297,6 +356,18 @@
         "tags": [
           "Clients"
         ],
+        "parameters": [
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "description": "Unique key identifying this request.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -314,8 +385,7 @@
                 "$ref": "#/components/schemas/CreateClientRequest"
               }
             }
-          },
-          "required": true
+          }
         },
         "responses": {
           "200": {
@@ -450,6 +520,16 @@
               "type": "string",
               "format": "uuid"
             }
+          },
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "description": "Unique key identifying this request.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
           }
         ],
         "requestBody": {
@@ -469,8 +549,7 @@
                 "$ref": "#/components/schemas/UpdateClientRequest"
               }
             }
-          },
-          "required": true
+          }
         },
         "responses": {
           "200": {
@@ -501,6 +580,18 @@
         "tags": [
           "Currencies"
         ],
+        "parameters": [
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "description": "Unique key identifying this request.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -518,8 +609,7 @@
                 "$ref": "#/components/schemas/CreateCurrencyRequest"
               }
             }
-          },
-          "required": true
+          }
         },
         "responses": {
           "200": {
@@ -548,6 +638,18 @@
         "tags": [
           "Currencies"
         ],
+        "parameters": [
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "description": "Unique key identifying this request.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -565,8 +667,7 @@
                 "$ref": "#/components/schemas/UpdateCurrencyRateByIdRequest"
               }
             }
-          },
-          "required": true
+          }
         },
         "responses": {
           "200": {
@@ -653,7 +754,7 @@
         }
       }
     },
-    "/api/Currencies/All": {
+    "/api/Currencies/all": {
       "get": {
         "tags": [
           "Currencies"
@@ -691,7 +792,7 @@
         }
       }
     },
-    "/api/Currencies/Code": {
+    "/api/Currencies/code": {
       "get": {
         "tags": [
           "Currencies"
@@ -713,8 +814,7 @@
                 "$ref": "#/components/schemas/GetCurrencyRateByCodeRequest"
               }
             }
-          },
-          "required": true
+          }
         },
         "responses": {
           "200": {
@@ -743,6 +843,18 @@
         "tags": [
           "Currencies"
         ],
+        "parameters": [
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "description": "Unique key identifying this request.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -760,8 +872,7 @@
                 "$ref": "#/components/schemas/UpdateCurrencyRateByCodeRequest"
               }
             }
-          },
-          "required": true
+          }
         },
         "responses": {
           "200": {
@@ -792,6 +903,18 @@
         "tags": [
           "Transactions"
         ],
+        "parameters": [
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "description": "Unique key identifying this request.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -809,8 +932,7 @@
                 "$ref": "#/components/schemas/CreateTransactionRequest"
               }
             }
-          },
-          "required": true
+          }
         },
         "responses": {
           "200": {
@@ -845,175 +967,45 @@
         }
       }
     },
-    "/api/Transactions/Withdrawals": {
-      "get": {
-        "tags": [
-          "Transactions"
-        ],
-        "parameters": [
-          {
-            "name": "timeFrom",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "date-time"
-            }
-          },
-          {
-            "name": "timeTo",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/AccountTotalWithdrawalsResponseModel"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/AccountTotalWithdrawalsResponseModel"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/AccountTotalWithdrawalsResponseModel"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Transactions/Deposits": {
-      "get": {
-        "tags": [
-          "Transactions"
-        ],
-        "parameters": [
-          {
-            "name": "timeFrom",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "date-time"
-            }
-          },
-          {
-            "name": "timeTo",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/AccountTotalWithdrawalsResponseModel"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/AccountTotalWithdrawalsResponseModel"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/AccountTotalWithdrawalsResponseModel"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Transactions/CashFlow": {
-      "get": {
-        "tags": [
-          "Transactions"
-        ],
-        "parameters": [
-          {
-            "name": "timeFrom",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "date-time"
-            }
-          },
-          {
-            "name": "timeTo",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/AccountCashFlowResponseModel"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/AccountCashFlowResponseModel"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/AccountCashFlowResponseModel"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/api/Transactions/{id}": {
+      "get": {
+        "tags": [
+          "Transactions"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/TransactionResponseModel"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TransactionResponseModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TransactionResponseModel"
+                }
+              }
+            }
+          }
+        }
+      },
       "delete": {
         "tags": [
           "Transactions"
@@ -1035,6 +1027,212 @@
           }
         }
       }
+    },
+    "/api/Transactions/all": {
+      "get": {
+        "tags": [
+          "Transactions"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TransactionResponseModel"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TransactionResponseModel"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TransactionResponseModel"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Transactions/withdrawals": {
+      "get": {
+        "tags": [
+          "Transactions"
+        ],
+        "parameters": [
+          {
+            "name": "timeFrom",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "timeTo",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AccountTotalWithdrawalsResponseModel"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AccountTotalWithdrawalsResponseModel"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AccountTotalWithdrawalsResponseModel"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Transactions/deposits": {
+      "get": {
+        "tags": [
+          "Transactions"
+        ],
+        "parameters": [
+          {
+            "name": "timeFrom",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "timeTo",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AccountTotalWithdrawalsResponseModel"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AccountTotalWithdrawalsResponseModel"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AccountTotalWithdrawalsResponseModel"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Transactions/cashFlow": {
+      "get": {
+        "tags": [
+          "Transactions"
+        ],
+        "parameters": [
+          {
+            "name": "timeFrom",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "timeTo",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AccountCashFlowResponseModel"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AccountCashFlowResponseModel"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AccountCashFlowResponseModel"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -1047,49 +1245,41 @@
             "format": "uuid"
           },
           "currencyCode": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "spendingAmount": {
-            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
-            "type": [
-              "number",
-              "string"
-            ],
+            "type": "number",
             "format": "double"
           },
           "incomesAmount": {
-            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
-            "type": [
-              "number",
-              "string"
-            ],
+            "type": "number",
             "format": "double"
           },
           "balanceChangeAmount": {
-            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
-            "type": [
-              "number",
-              "string"
-            ],
+            "type": "number",
             "format": "double"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "AccountResponseModel": {
         "type": "object",
         "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
           "amount": {
-            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
-            "type": [
-              "number",
-              "string"
-            ],
+            "type": "number",
             "format": "double"
           },
           "currencyCode": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           }
-        }
+        },
+        "additionalProperties": false
       },
       "AccountTotalWithdrawalsResponseModel": {
         "type": "object",
@@ -1099,54 +1289,56 @@
             "format": "uuid"
           },
           "totalWithdrawals": {
-            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
-            "type": [
-              "number",
-              "string"
-            ],
+            "type": "number",
             "format": "double"
           },
           "currencyCode": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           }
-        }
+        },
+        "additionalProperties": false
       },
       "CashFlowRequest": {
         "type": "object",
         "properties": {
           "amount": {
-            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
-            "type": [
-              "number",
-              "string"
-            ],
+            "type": "number",
             "format": "double"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "ClientResponseModel": {
         "type": "object",
         "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
           "name": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "surname": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "email": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "passportNumber": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "birthday": {
-            "type": [
-              "null",
-              "string"
-            ],
-            "format": "date"
+            "type": "string",
+            "format": "date",
+            "nullable": true
           }
-        }
+        },
+        "additionalProperties": false
       },
       "CreateAccountRequest": {
         "type": "object",
@@ -1156,49 +1348,52 @@
             "format": "uuid"
           },
           "currencyCode": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           }
-        }
+        },
+        "additionalProperties": false
       },
       "CreateClientRequest": {
         "type": "object",
         "properties": {
           "name": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "surname": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "email": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "passportNumber": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "birthday": {
-            "type": [
-              "null",
-              "string"
-            ],
-            "format": "date"
+            "type": "string",
+            "format": "date",
+            "nullable": true
           }
-        }
+        },
+        "additionalProperties": false
       },
       "CreateCurrencyRequest": {
         "type": "object",
         "properties": {
           "currencyCode": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "rate": {
-            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
-            "type": [
-              "number",
-              "string"
-            ],
+            "type": "number",
             "format": "double"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "CreateTransactionRequest": {
         "type": "object",
@@ -1212,32 +1407,21 @@
             "format": "uuid"
           },
           "senderExchangeRate": {
-            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
-            "type": [
-              "null",
-              "number",
-              "string"
-            ],
-            "format": "double"
+            "type": "number",
+            "format": "double",
+            "nullable": true
           },
           "receiveExchangeRate": {
-            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
-            "type": [
-              "null",
-              "number",
-              "string"
-            ],
-            "format": "double"
+            "type": "number",
+            "format": "double",
+            "nullable": true
           },
           "amount": {
-            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
-            "type": [
-              "number",
-              "string"
-            ],
+            "type": "number",
             "format": "double"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "CurrencyRateResponseModel": {
         "type": "object",
@@ -1247,59 +1431,57 @@
             "format": "date-time"
           },
           "validTo": {
-            "type": [
-              "null",
-              "string"
-            ],
-            "format": "date-time"
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
           },
           "rate": {
-            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
-            "type": [
-              "number",
-              "string"
-            ],
+            "type": "number",
             "format": "double"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "CurrencyResponseModel": {
         "type": "object",
         "properties": {
           "currencyCode": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "rate": {
-            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
-            "type": [
-              "number",
-              "string"
-            ],
+            "type": "number",
             "format": "double"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "CurrencyWithAllRatesResponseModel": {
         "type": "object",
         "properties": {
           "currencyCode": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "rates": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/CurrencyRateResponseModel"
-            }
+            },
+            "nullable": true
           }
-        }
+        },
+        "additionalProperties": false
       },
       "GetCurrencyRateByCodeRequest": {
         "type": "object",
         "properties": {
           "code": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           }
-        }
+        },
+        "additionalProperties": false
       },
       "TransactionDetailResponseModel": {
         "type": "object",
@@ -1313,49 +1495,60 @@
             "format": "uuid"
           },
           "exchangeRate": {
-            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
-            "type": [
-              "number",
-              "string"
-            ],
+            "type": "number",
             "format": "double"
           },
           "amount": {
-            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
-            "type": [
-              "number",
-              "string"
-            ],
+            "type": "number",
             "format": "double"
           }
-        }
+        },
+        "additionalProperties": false
+      },
+      "TransactionResponseModel": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TransactionDetailResponseModel"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       },
       "UpdateClientRequest": {
         "type": "object",
         "properties": {
           "passportNumber": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "email": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           }
-        }
+        },
+        "additionalProperties": false
       },
       "UpdateCurrencyRateByCodeRequest": {
         "type": "object",
         "properties": {
           "currencyCode": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "rate": {
-            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
-            "type": [
-              "number",
-              "string"
-            ],
+            "type": "number",
             "format": "double"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "UpdateCurrencyRateByIdRequest": {
         "type": "object",
@@ -1365,14 +1558,11 @@
             "format": "uuid"
           },
           "rate": {
-            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
-            "type": [
-              "number",
-              "string"
-            ],
+            "type": "number",
             "format": "double"
           }
-        }
+        },
+        "additionalProperties": false
       }
     }
   },

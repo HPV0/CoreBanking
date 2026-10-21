@@ -2,9 +2,6 @@
 using CoreBanking.Domain.ValueObjects.Client;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CoreBanking.Infrastructure.Persistence.Configurations
 {
@@ -20,7 +17,7 @@ namespace CoreBanking.Infrastructure.Persistence.Configurations
                 .IsRequired();
 
             builder.Property(x => x.Surname)
-                .HasMaxLength (50)
+                .HasMaxLength(50)
                 .IsRequired();
 
             builder.Property(x => x.PassportNumber).

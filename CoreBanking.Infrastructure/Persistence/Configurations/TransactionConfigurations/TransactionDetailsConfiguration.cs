@@ -1,9 +1,6 @@
 ﻿using CoreBanking.Domain.Entities.TransactionEntities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CoreBanking.Infrastructure.Persistence.Configurations.TransactionConfigurations
 {

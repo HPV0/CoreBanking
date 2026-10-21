@@ -1,15 +1,13 @@
 ﻿using CoreBanking.Application.Interfaces.IRepositories;
 using CoreBanking.Infrastructure.Data.Context;
 using Microsoft.EntityFrameworkCore.Storage;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CoreBanking.Infrastructure.Repositories
 {
     public class UnitOfWork : IUnitOfWork
     {
         private readonly ApplicationDbContext _dbContext;
+        
         private IDbContextTransaction? _currentTransaction;
 
         public ITransactionRepository Transactions { get; }

@@ -1,59 +1,50 @@
 ﻿using CoreBanking.Domain.Common;
 using CoreBanking.Domain.Entities.AccountEntities;
 using CoreBanking.Domain.ValueObjects.Client;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Net.NetworkInformation;
-using System.Text;
-using System.Xml.Linq;
 
 namespace CoreBanking.Domain.Entities
 {
     public class Client : BaseEntity
     {
         public static readonly int PassportNumberLength = 12;
+        
         public string Name { get; private set; }
+        
         public string Surname { get; private set; }
+        
         public Email Email { get; private set; }
+        
         public DateOnly? Birthday { get; private set; }
+        
         public string PassportNumber { get; private set; }
 
         private HashSet<Account> _accounts = new();
+        
         public IReadOnlyCollection<Account>? Accounts => _accounts?.ToList();
 
         private Client() { }
 
-
         private Client(
             Guid id, string name, string surname,
             string email, DateOnly? birthday,
-            string passportNumber, ICollection<Account>? accounts) 
+            string passportNumber, ICollection<Account>? accounts)
             : this(name, surname, email, birthday, passportNumber, accounts)
         {
             Id = id;
         }
 
         private Client(
-            string name,
-            string surname,
-            string email,
-            DateOnly? birthday,
-            string passportNumber,
-            ICollection<Account>? accounts)
+            string name, string surname, string email,
+            DateOnly? birthday, string passportNumber, ICollection<Account>? accounts)
         {
             _accounts = accounts?.ToHashSet() ?? new HashSet<Account>();
 
-            Update(name, surname,birthday,passportNumber, email);
+            Update(name, surname, birthday, passportNumber, email);
         }
 
         public static Client Create(
-            string name,
-            string surname,
-            string email,
-            DateOnly? birthday,
-            string passportNumber,
-            ICollection<Account>? accounts)
+            string name, string surname, string email,
+            DateOnly? birthday, string passportNumber, ICollection<Account>? accounts)
         {
             return new Client(
                 name, surname,
@@ -62,13 +53,8 @@ namespace CoreBanking.Domain.Entities
         }
 
         public static Client Create(
-            Guid id,
-            string name,
-            string surname,
-            string email,
-            DateOnly? birthday,
-            string passportNumber,
-            ICollection<Account>? accounts)
+            Guid id, string name, string surname,
+            string email, DateOnly? birthday, string passportNumber, ICollection<Account>? accounts)
         {
             return new Client(
                 id,
@@ -83,10 +69,8 @@ namespace CoreBanking.Domain.Entities
 
         // Update methods
         public void Update(
-            string name, string surname,
-            DateOnly? birthday,
-            string passportNumber,
-            string email)
+            string name, string surname, DateOnly? birthday,
+            string passportNumber, string email)
         {
             UpdateEmail(email);
             UpdateName(name);
@@ -104,6 +88,7 @@ namespace CoreBanking.Domain.Entities
         {
             if (string.IsNullOrWhiteSpace(name))
                 throw new ArgumentException("Name cannot be empty.");
+
             Name = name;
         }
 
@@ -111,6 +96,7 @@ namespace CoreBanking.Domain.Entities
         {
             if (string.IsNullOrWhiteSpace(surname))
                 throw new ArgumentException("Surname cannot be empty.");
+            
             Surname = surname;
         }
 
@@ -119,7 +105,7 @@ namespace CoreBanking.Domain.Entities
             if (string.IsNullOrWhiteSpace(passportNumber))
                 throw new ArgumentException("Name cannot be empty.");
 
-            if(passportNumber.Length != PassportNumberLength)
+            if (passportNumber.Length != PassportNumberLength)
                 throw new ArgumentException("Wrong passport number size.");
 
             PassportNumber = passportNumber;
@@ -129,6 +115,7 @@ namespace CoreBanking.Domain.Entities
         {
             if (birthday != null && birthday > DateOnly.FromDateTime(DateTime.UtcNow))
                 throw new ArgumentException("Birthday must be in past");
+            
             Birthday = birthday;
         }
 

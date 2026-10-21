@@ -2,18 +2,16 @@
 using CoreBanking.Domain.Common;
 using CoreBanking.Infrastructure.Data.Context;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
 using System.Linq.Expressions;
-using System.Text;
 
 namespace CoreBanking.Infrastructure.Repositories
 {
     public class BaseRepository<T> : IBaseRepository<T> where T : BaseEntity
     {
         protected readonly ApplicationDbContext _dbContext;
+
         protected DbSet<T> _set;
-        
+
         // This is for making default includeing all neccery data for query.
         protected virtual IQueryable<T> BaseQuery { get; }
 
