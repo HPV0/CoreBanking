@@ -91,8 +91,11 @@ namespace CoreBanking.Application.Services
             if (id == BankAccount.Id)
                 throw new Exception("Cannot remove bank account.");
 
-            var acc = await _accountRepository.GetOnlyAccountByIdAsync(id) 
+            var acc = await _accountRepository.GetByIdAsync(id) 
                 ?? throw new EntityNotFoundException(nameof(Account), id);
+
+            if (acc.Balance.Amount != 0)
+                throw new UnprocessableException("Account isn't empty, so it cannot be removed");
             
             _accountRepository.Remove(acc);
             

@@ -19,7 +19,7 @@ namespace CoreBanking.API.Validators.TransactionValidators
             RuleFor(x => x.ReceiveExchangeRate).IsValidRate();
 
             RuleFor(x => x.Amount)
-                .PrecisionScale(18, 2, true).WithMessage("Amount cannot have more than 18 digits before the decimal point and 2 decimal places.")
+                .PrecisionScale(18, 4, true).WithMessage("Amount cannot have more than 18 digits before the decimal point and 4 decimal places.")
                 .GreaterThan(0).WithMessage("Transaction amount must be positive");
 
         }

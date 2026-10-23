@@ -31,7 +31,7 @@ namespace CoreBanking.Application.Services
             
             await _currencyRepository.SaveChangesAsync();
 
-            return new CurrencyResponseModel { CurrencyCode = currency.CurrencyCode, Rate = currencyRate.Rate };
+            return new CurrencyResponseModel {Id = currency.Id, CurrencyCode = currency.CurrencyCode, Rate = currencyRate.Rate };
         }
 
 
@@ -40,7 +40,7 @@ namespace CoreBanking.Application.Services
             var currency = await _currencyRepository.GetCurrencyWithCurrentRateByIdAsync(Id);
             var currencyRate = currency.FindCurrentRate();
             
-            return new CurrencyResponseModel { CurrencyCode = currency.CurrencyCode, Rate = currencyRate.Rate };
+            return new CurrencyResponseModel { Id = Id, CurrencyCode = currency.CurrencyCode, Rate = currencyRate.Rate };
         }
 
 
@@ -58,7 +58,7 @@ namespace CoreBanking.Application.Services
 
             await _currencyRepository.SaveChangesAsync();
 
-            return new CurrencyResponseModel { CurrencyCode = currency.CurrencyCode, Rate = currRate.Rate };
+            return new CurrencyResponseModel {Id = currency.Id, CurrencyCode = currency.CurrencyCode, Rate = currRate.Rate };
         }
 
         public async Task<CurrencyResponseModel> UpdateCurrencyRateByCodeAsync(UpdateCurrencyRateByCodeRequest updateCurrencyRateRequest)
@@ -75,7 +75,7 @@ namespace CoreBanking.Application.Services
 
             await _currencyRepository.SaveChangesAsync();
 
-            return new CurrencyResponseModel { CurrencyCode = currency.CurrencyCode, Rate = currRate.Rate };
+            return new CurrencyResponseModel {Id = currency.Id, CurrencyCode = currency.CurrencyCode, Rate = currRate.Rate };
         }
 
         public async Task<CurrencyResponseModel> GetRateCurrencyByCodeAsync(string code)
@@ -86,7 +86,7 @@ namespace CoreBanking.Application.Services
             var currency = await _currencyRepository.GetCurrencyWithCurrentRateByCodeAsync(code);
             var currencyRate = currency.FindCurrentRate();
 
-            return new CurrencyResponseModel { CurrencyCode = currency.CurrencyCode, Rate = currencyRate.Rate };
+            return new CurrencyResponseModel {Id = currency.Id, CurrencyCode = currency.CurrencyCode, Rate = currencyRate.Rate };
         }
 
         public async Task RemoveByIdAsync(Guid id)

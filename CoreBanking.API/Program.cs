@@ -71,6 +71,7 @@ builder.Services.AddSwaggerGen(options =>
     options.OperationFilter<IdempotencyKeyOperationFilter>();
 });
 
+builder.Services.AddRouting(options => options.LowercaseUrls = true);
 
 var app = builder.Build();
 

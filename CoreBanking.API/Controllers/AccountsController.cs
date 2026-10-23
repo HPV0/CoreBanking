@@ -38,7 +38,7 @@ namespace CoreBanking.API.Controllers
             return Ok(accounts);
         }
 
-        [HttpGet("all")]
+        [HttpGet]
         public async Task<ActionResult<List<AccountResponseModel>>> GetAccountsAsync()
         {
             var accounts = await _accountService.GetAccountsAsync();

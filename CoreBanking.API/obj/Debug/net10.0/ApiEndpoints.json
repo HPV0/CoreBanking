@@ -2,7 +2,7 @@
   {
     "ContainingType": "CoreBanking.API.Controllers.AccountsController",
     "Method": "CreateAsync",
-    "RelativePath": "api/Accounts",
+    "RelativePath": "api/accounts",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -27,8 +27,28 @@
   },
   {
     "ContainingType": "CoreBanking.API.Controllers.AccountsController",
+    "Method": "GetAccountsAsync",
+    "RelativePath": "api/accounts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CoreBanking.Application.DTOs.Account.AccountResponseModel, CoreBanking.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CoreBanking.API.Controllers.AccountsController",
     "Method": "GetAccountByIdAsync",
-    "RelativePath": "api/Accounts/{id}",
+    "RelativePath": "api/accounts/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -54,7 +74,7 @@
   {
     "ContainingType": "CoreBanking.API.Controllers.AccountsController",
     "Method": "RemoveAccountByIdasync",
-    "RelativePath": "api/Accounts/{id}",
+    "RelativePath": "api/accounts/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -69,28 +89,8 @@
   },
   {
     "ContainingType": "CoreBanking.API.Controllers.AccountsController",
-    "Method": "GetAccountsAsync",
-    "RelativePath": "api/Accounts/all",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.List\u00601[[CoreBanking.Application.DTOs.Account.AccountResponseModel, CoreBanking.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "CoreBanking.API.Controllers.AccountsController",
     "Method": "GetAccountsByClientIdAsync",
-    "RelativePath": "api/Accounts/client/{id}",
+    "RelativePath": "api/accounts/client/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -116,7 +116,7 @@
   {
     "ContainingType": "CoreBanking.API.Controllers.AccountsController",
     "Method": "DepositCashByAccountIdAsync",
-    "RelativePath": "api/Accounts/deposit/{id}",
+    "RelativePath": "api/accounts/deposit/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -147,7 +147,7 @@
   {
     "ContainingType": "CoreBanking.API.Controllers.AccountsController",
     "Method": "WithdrawCashByAccountIdAsync",
-    "RelativePath": "api/Accounts/withdraw/{id}",
+    "RelativePath": "api/accounts/withdraw/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -178,7 +178,7 @@
   {
     "ContainingType": "CoreBanking.API.Controllers.ClientsController",
     "Method": "CreateAsync",
-    "RelativePath": "api/Clients",
+    "RelativePath": "api/clients",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -204,7 +204,7 @@
   {
     "ContainingType": "CoreBanking.API.Controllers.ClientsController",
     "Method": "GetClientsAsync",
-    "RelativePath": "api/Clients",
+    "RelativePath": "api/clients",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -224,7 +224,7 @@
   {
     "ContainingType": "CoreBanking.API.Controllers.ClientsController",
     "Method": "GetClientByIdAsync",
-    "RelativePath": "api/Clients/{id}",
+    "RelativePath": "api/clients/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -250,7 +250,7 @@
   {
     "ContainingType": "CoreBanking.API.Controllers.ClientsController",
     "Method": "RemoveClientByIdAsync",
-    "RelativePath": "api/Clients/{id}",
+    "RelativePath": "api/clients/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -265,8 +265,8 @@
   },
   {
     "ContainingType": "CoreBanking.API.Controllers.ClientsController",
-    "Method": "UpdateClientEmailAndPassportByIdAsync",
-    "RelativePath": "api/Clients/{id}",
+    "Method": "UpdateByIdAsync",
+    "RelativePath": "api/clients/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -297,7 +297,7 @@
   {
     "ContainingType": "CoreBanking.API.Controllers.CurrenciesController",
     "Method": "CreateAsync",
-    "RelativePath": "api/Currencies",
+    "RelativePath": "api/currencies",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -322,8 +322,28 @@
   },
   {
     "ContainingType": "CoreBanking.API.Controllers.CurrenciesController",
+    "Method": "GetAllCurrenciesAsync",
+    "RelativePath": "api/currencies",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CoreBanking.Application.DTOs.Currency.CurrencyWithAllRatesResponseModel, CoreBanking.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CoreBanking.API.Controllers.CurrenciesController",
     "Method": "UpdateCurrencyRateByIdAsync",
-    "RelativePath": "api/Currencies",
+    "RelativePath": "api/currencies",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -349,7 +369,7 @@
   {
     "ContainingType": "CoreBanking.API.Controllers.CurrenciesController",
     "Method": "GetCurrencyByIdAsync",
-    "RelativePath": "api/Currencies/{id}",
+    "RelativePath": "api/currencies/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -375,7 +395,7 @@
   {
     "ContainingType": "CoreBanking.API.Controllers.CurrenciesController",
     "Method": "RemoveByIdAsync",
-    "RelativePath": "api/Currencies/{id}",
+    "RelativePath": "api/currencies/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -390,28 +410,8 @@
   },
   {
     "ContainingType": "CoreBanking.API.Controllers.CurrenciesController",
-    "Method": "GetAllCurrenciesAsync",
-    "RelativePath": "api/Currencies/all",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.List\u00601[[CoreBanking.Application.DTOs.Currency.CurrencyWithAllRatesResponseModel, CoreBanking.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "CoreBanking.API.Controllers.CurrenciesController",
     "Method": "GetCurrencyByCodeAsync",
-    "RelativePath": "api/Currencies/code",
+    "RelativePath": "api/currencies/code",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -437,7 +437,7 @@
   {
     "ContainingType": "CoreBanking.API.Controllers.CurrenciesController",
     "Method": "UpdateCurrencyByCodeRateAsync",
-    "RelativePath": "api/Currencies/code",
+    "RelativePath": "api/currencies/code",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -463,7 +463,7 @@
   {
     "ContainingType": "CoreBanking.API.Controllers.TransactionsController",
     "Method": "CreateAsync",
-    "RelativePath": "api/Transactions",
+    "RelativePath": "api/transactions",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -488,8 +488,28 @@
   },
   {
     "ContainingType": "CoreBanking.API.Controllers.TransactionsController",
+    "Method": "GetAllTransactionsAsync",
+    "RelativePath": "api/transactions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CoreBanking.Application.DTOs.Transaction.TransactionResponseModel, CoreBanking.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CoreBanking.API.Controllers.TransactionsController",
     "Method": "GetTransactionById",
-    "RelativePath": "api/Transactions/{id}",
+    "RelativePath": "api/transactions/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -514,44 +534,8 @@
   },
   {
     "ContainingType": "CoreBanking.API.Controllers.TransactionsController",
-    "Method": "RemoveTransactionByIdAsync",
-    "RelativePath": "api/Transactions/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CoreBanking.API.Controllers.TransactionsController",
-    "Method": "GetAllTransactionsAsync",
-    "RelativePath": "api/Transactions/all",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.List\u00601[[CoreBanking.Application.DTOs.Transaction.TransactionResponseModel, CoreBanking.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "CoreBanking.API.Controllers.TransactionsController",
     "Method": "GetTotalCashFlowsByAccountsAsync",
-    "RelativePath": "api/Transactions/cashFlow",
+    "RelativePath": "api/transactions/cash-flow",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -582,7 +566,7 @@
   {
     "ContainingType": "CoreBanking.API.Controllers.TransactionsController",
     "Method": "GetTotalDepositsByAccountsAsync",
-    "RelativePath": "api/Transactions/deposits",
+    "RelativePath": "api/transactions/deposits",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -612,8 +596,34 @@
   },
   {
     "ContainingType": "CoreBanking.API.Controllers.TransactionsController",
+    "Method": "UndoTransactionByIdAsync",
+    "RelativePath": "api/transactions/undo-transaction/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CoreBanking.Application.DTOs.Transaction.TransactionResponseModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CoreBanking.API.Controllers.TransactionsController",
     "Method": "GetTotalWithdrawalsByAccountsAsync",
-    "RelativePath": "api/Transactions/withdrawals",
+    "RelativePath": "api/transactions/withdrawals",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

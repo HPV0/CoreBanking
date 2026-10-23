@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/Accounts": {
+    "/api/accounts": {
       "post": {
         "tags": [
           "Accounts"
@@ -63,9 +63,45 @@
             }
           }
         }
+      },
+      "get": {
+        "tags": [
+          "Accounts"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AccountResponseModel"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AccountResponseModel"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AccountResponseModel"
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     },
-    "/api/Accounts/client/{id}": {
+    "/api/accounts/client/{id}": {
       "get": {
         "tags": [
           "Accounts"
@@ -114,45 +150,7 @@
         }
       }
     },
-    "/api/Accounts/all": {
-      "get": {
-        "tags": [
-          "Accounts"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/AccountResponseModel"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/AccountResponseModel"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/AccountResponseModel"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Accounts/{id}": {
+    "/api/accounts/{id}": {
       "get": {
         "tags": [
           "Accounts"
@@ -213,7 +211,7 @@
         }
       }
     },
-    "/api/Accounts/withdraw/{id}": {
+    "/api/accounts/withdraw/{id}": {
       "put": {
         "tags": [
           "Accounts"
@@ -282,7 +280,7 @@
         }
       }
     },
-    "/api/Accounts/deposit/{id}": {
+    "/api/accounts/deposit/{id}": {
       "put": {
         "tags": [
           "Accounts"
@@ -351,7 +349,7 @@
         }
       }
     },
-    "/api/Clients": {
+    "/api/clients": {
       "post": {
         "tags": [
           "Clients"
@@ -447,7 +445,7 @@
         }
       }
     },
-    "/api/Clients/{id}": {
+    "/api/clients/{id}": {
       "get": {
         "tags": [
           "Clients"
@@ -575,7 +573,7 @@
         }
       }
     },
-    "/api/Currencies": {
+    "/api/currencies": {
       "post": {
         "tags": [
           "Currencies"
@@ -628,6 +626,42 @@
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/CurrencyResponseModel"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Currencies"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CurrencyWithAllRatesResponseModel"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CurrencyWithAllRatesResponseModel"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CurrencyWithAllRatesResponseModel"
+                  }
                 }
               }
             }
@@ -693,7 +727,7 @@
         }
       }
     },
-    "/api/Currencies/{id}": {
+    "/api/currencies/{id}": {
       "get": {
         "tags": [
           "Currencies"
@@ -754,45 +788,7 @@
         }
       }
     },
-    "/api/Currencies/all": {
-      "get": {
-        "tags": [
-          "Currencies"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/CurrencyWithAllRatesResponseModel"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/CurrencyWithAllRatesResponseModel"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/CurrencyWithAllRatesResponseModel"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Currencies/code": {
+    "/api/currencies/code": {
       "get": {
         "tags": [
           "Currencies"
@@ -898,7 +894,7 @@
         }
       }
     },
-    "/api/Transactions": {
+    "/api/transactions": {
       "post": {
         "tags": [
           "Transactions"
@@ -965,48 +961,46 @@
             }
           }
         }
-      }
-    },
-    "/api/Transactions/{id}": {
-      "get": {
-        "tags": [
-          "Transactions"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/TransactionResponseModel"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TransactionResponseModel"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TransactionResponseModel"
-                }
-              }
-            }
-          }
-        }
       },
-      "delete": {
+      "get": {
+        "tags": [
+          "Transactions"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TransactionResponseModel"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TransactionResponseModel"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TransactionResponseModel"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/transactions/{id}": {
+      "get": {
         "tags": [
           "Transactions"
         ],
@@ -1023,42 +1017,21 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Transactions/all": {
-      "get": {
-        "tags": [
-          "Transactions"
-        ],
-        "responses": {
-          "200": {
             "description": "OK",
             "content": {
               "text/plain": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/TransactionResponseModel"
-                  }
+                  "$ref": "#/components/schemas/TransactionResponseModel"
                 }
               },
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/TransactionResponseModel"
-                  }
+                  "$ref": "#/components/schemas/TransactionResponseModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/TransactionResponseModel"
-                  }
+                  "$ref": "#/components/schemas/TransactionResponseModel"
                 }
               }
             }
@@ -1066,7 +1039,7 @@
         }
       }
     },
-    "/api/Transactions/withdrawals": {
+    "/api/transactions/withdrawals": {
       "get": {
         "tags": [
           "Transactions"
@@ -1122,7 +1095,7 @@
         }
       }
     },
-    "/api/Transactions/deposits": {
+    "/api/transactions/deposits": {
       "get": {
         "tags": [
           "Transactions"
@@ -1178,7 +1151,7 @@
         }
       }
     },
-    "/api/Transactions/cashFlow": {
+    "/api/transactions/cash-flow": {
       "get": {
         "tags": [
           "Transactions"
@@ -1227,6 +1200,56 @@
                   "items": {
                     "$ref": "#/components/schemas/AccountCashFlowResponseModel"
                   }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/transactions/undo-transaction/{id}": {
+      "put": {
+        "tags": [
+          "Transactions"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "description": "Unique key identifying this request.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/TransactionResponseModel"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TransactionResponseModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TransactionResponseModel"
                 }
               }
             }
@@ -1445,6 +1468,10 @@
       "CurrencyResponseModel": {
         "type": "object",
         "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
           "currencyCode": {
             "type": "string",
             "nullable": true
@@ -1459,6 +1486,10 @@
       "CurrencyWithAllRatesResponseModel": {
         "type": "object",
         "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
           "currencyCode": {
             "type": "string",
             "nullable": true
@@ -1525,6 +1556,19 @@
       "UpdateClientRequest": {
         "type": "object",
         "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "surname": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthday": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
           "passportNumber": {
             "type": "string",
             "nullable": true

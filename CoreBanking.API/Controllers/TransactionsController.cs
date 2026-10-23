@@ -37,7 +37,7 @@ namespace CoreBanking.API.Controllers
         }
 
 
-        [HttpGet("all")]
+        [HttpGet]
         public async Task<ActionResult<List<TransactionResponseModel>>> GetAllTransactionsAsync()
         {
             var transactions = await _transactionService.GetAllTransactionsAsync();
@@ -67,7 +67,7 @@ namespace CoreBanking.API.Controllers
             return Ok(accountsTotalDeposites);
         }
 
-        [HttpGet("cashFlow")]
+        [HttpGet("cash-flow")]
         public async Task<ActionResult<List<AccountCashFlowResponseModel>>> GetTotalCashFlowsByAccountsAsync([FromQuery] DateRangeRequest timeRange,
             [FromServices] IValidator<DateRangeRequest> validator)
         {
@@ -78,12 +78,14 @@ namespace CoreBanking.API.Controllers
             return Ok(accountsTotalCashFlow);
         }
 
-        [HttpDelete("{id}")]
-        public async Task<ActionResult> RemoveTransactionByIdAsync(Guid id)
+        [Idempotent]
+        [HttpPut("undo-transaction/{id}")]
+        public async Task<ActionResult<TransactionResponseModel>> UndoTransactionByIdAsync(Guid id)
         {
-            await _transactionService.RemoveTransactionByIdAsync(id);
+            var transaction = await _transactionService.UndoTransactionByIdAsync(id);
             
-            return Ok();
+            return Ok(transaction);
         }
+
     }
 }

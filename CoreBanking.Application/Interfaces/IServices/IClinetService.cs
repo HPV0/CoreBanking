@@ -8,8 +8,8 @@ namespace CoreBanking.Application.Interfaces.IServices
         public Task<ClientResponseModel> CreateAsync(CreateClientRequest createClientRequest);
         public Task<ClientResponseModel> GetClientByIdAsync(Guid Id);
         public Task<List<ClientResponseModel>> GetClientsAsync();
-        public Task RemoveClientByIdAsync(Guid Id);
+        public Task RemoveByIdAsync(Guid Id);
 
-        public Task<ClientResponseModel> UpdateClientEmailAndPassportNumberById(Guid id, UpdateClientRequest update);
+        public Task<ClientResponseModel> UpdateByIdAsync(Guid id, UpdateClientRequest update);
     }
 }

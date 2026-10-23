@@ -36,7 +36,7 @@ namespace CoreBanking.API.Controllers
             return Ok(currency);
         }
 
-        [HttpGet("all")]
+        [HttpGet]
         public async Task<ActionResult<List<CurrencyWithAllRatesResponseModel>>> GetAllCurrenciesAsync()
         {
             var currencies = await _currencyService.GetAllCurrenciesAsync();

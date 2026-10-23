@@ -8,5 +8,7 @@ namespace CoreBanking.Application.Interfaces.IRepositories
         public Task<List<AccountTotalDepositesResponseModel>> GetAccountsTotalDepositBetweenDatesAsync(DateTime timeFrom, DateTime timeTo);
         public Task<List<AccountTotalWithdrawalsResponseModel>> GetTotalWithdrawalsByAccountsAsync(DateTime timeFrom, DateTime timeTo);
         public Task<Transaction> GetOnlyTransactionWithNoDetailsByIdAsync(Guid id);
+        public Task SoftDeleteTransactionAsync(Transaction transaction);
     }
+        
 }

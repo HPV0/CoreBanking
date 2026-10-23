@@ -10,13 +10,27 @@ namespace CoreBanking.API.Validators.ClientValidators
 
             RuleFor(x => x.Email)
                 .NotEmpty().WithMessage("Email cannot be empty.")
-                .NotNull().WithMessage("Email cannot be null.")
+                .When(x => x.Email != null)
                 .EmailAddress().WithMessage("Invalid Email format.");
 
             RuleFor(x => x.PassportNumber)
-                .NotNull().WithMessage("Passport number cannot be null.")
+                .NotEmpty().WithMessage("Passport Number cannot be empty.")
+                .When(x => x.PassportNumber != null)
                 .Length(12).WithMessage("Passport number must have length of 12.");
 
+            RuleFor(x => x.Name)
+                .NotEmpty().WithMessage("Name is requird")
+                .When(x => x.Name != null)
+                .MaximumLength(20).WithMessage("Maximum length is 20");
+
+            RuleFor(x => x.Surname)
+                .NotEmpty().WithMessage("Surname is required")
+                .When(x => x.Surname != null)
+                .MaximumLength(20).WithMessage("Maximum length of Surname is 20");
+
+            RuleFor(x => x.Birthday)
+                .Must(date => !date.HasValue || date.Value < DateOnly.FromDateTime(DateTime.Now))
+                .WithMessage("Date must be before today.");
         }
     }
 }

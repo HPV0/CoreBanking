@@ -27,5 +27,8 @@ namespace CoreBanking.Infrastructure.Repositories
         {
             return await _dbContext.Accounts.FirstOrDefaultAsync(a => a.Id == id);
         }
+
+        public override void Remove(Account entity)
+        => entity.SoftDelete();
     }
 }

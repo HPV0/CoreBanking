@@ -11,11 +11,11 @@ namespace CoreBanking.Infrastructure.Persistence.Configurations.TransactionConfi
             BaseEntityConfiguration.Configure(builder);
 
             builder.Property(t => t.Amount)
-                .HasPrecision(18, 2)
+                .HasPrecision(18, 4)
                 .IsRequired();
 
             builder.Property(t => t.ExchangeRate)
-                .HasPrecision(18, 4)
+                .HasPrecision(18, 6)
                 .IsRequired();
 
             builder.HasOne(t => t.AccountFrom)

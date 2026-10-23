@@ -11,7 +11,7 @@ namespace CoreBanking.Infrastructure.Persistence.Configurations.AccountConfigura
             builder.HasKey(x => x.Id);
 
             builder.Property(x => x.Amount)
-                .HasPrecision(18, 2)
+                .HasPrecision(18, 4)
                 .IsRequired();
 
         }

@@ -11,6 +11,8 @@
 
             Money.ValidateCurrencyCode(currencyCode);
 
+            NormalizeMoneyAmount(ref amount);
+            
             Amount = amount;
             CurrencyCode = currencyCode;
         }
@@ -30,17 +32,39 @@
                 throw new ArgumentException("Money currencyCode Length must be equal to 3");
         }
 
-        public Money Exchange(decimal currentRate, decimal targetRate, string targetCurrencyCode)
+        public static void NormalizeRate(ref decimal rate) {
+            rate = Math.Round(rate, 6);
+        }
+
+        public static void NormalizeMoneyAmount(ref decimal amount)
         {
+            amount = Math.Round(amount, 4);
+        }
+
+        public static decimal NormalizeMoneyAmount(decimal amount)
+        {
+            return Math.Round(amount, 4);
+        }
+
+        public static decimal ExchangeCalc(decimal currentRate, decimal targetRate) {
             Money.ValidateExchangeRate(targetRate);
             Money.ValidateExchangeRate(currentRate);
 
-            return Money.Create((Amount / currentRate) * targetRate, targetCurrencyCode);
+            Money.NormalizeRate(ref targetRate);
+            Money.NormalizeRate(ref currentRate);
+
+            var res = (currentRate / targetRate);
+
+            NormalizeRate(ref res);
+            
+            return res;
         }
 
-        public Money ExchangeMoney(decimal exchangeRate, string currencyCode)
+        public Money Exchange(decimal currentRate, decimal targetRate, string targetCurrencyCode, out decimal finalExchangeRate)
         {
-            return Money.Create(Amount * exchangeRate, currencyCode);
+            finalExchangeRate = ExchangeCalc(currentRate, targetRate);
+
+            return Money.Create(Amount * finalExchangeRate, targetCurrencyCode);
         }
 
         public static Money Create(decimal amount, string currencyCode)

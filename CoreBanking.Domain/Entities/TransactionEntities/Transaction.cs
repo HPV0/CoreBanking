@@ -1,7 +1,9 @@
 ﻿using CoreBanking.Application.Exceptions;
 using CoreBanking.Domain.Common;
+using CoreBanking.Domain.Constants;
 using CoreBanking.Domain.Entities.AccountEntities;
 using CoreBanking.Domain.ValueObjects;
+using System.ComponentModel.DataAnnotations;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace CoreBanking.Domain.Entities.TransactionEntities
@@ -23,17 +25,21 @@ namespace CoreBanking.Domain.Entities.TransactionEntities
             if (sender.Id == recevier.Id)
                 throw new UnprocessableException("Sender and Recevier accounts cannot be same.");
 
+            if (sender.CurrencyId == BaseCurrency.Id && senderExchangeRate != 1)
+                throw new UnprocessableException("Sender Exchange rate for base currency cannot be other then 1");
+
+            if (recevier.CurrencyId == BaseCurrency.Id && recevierExchangeRate != 1)
+                throw new UnprocessableException("Receiver Exchange rate for base currency cannot be other then 1");
+
             if (sender.CurrencyId == recevier.CurrencyId)
             {
-                AddTransactionDetail(sender, recevier, 1, sendingMoney, out _);
+                AddTransactionDetail(sender, recevier, 1, 1, sendingMoney, out _);
             }
             else
             {
                 Money baseAccountRecevingMoney;
-                AddTransactionDetail(sender, baseBankingAccount, senderExchangeRate, sendingMoney, out baseAccountRecevingMoney);
-
-                decimal recevierExchangeRateToBaseRate = 1 / recevierExchangeRate;
-                AddTransactionDetail(baseBankingAccount, recevier, recevierExchangeRateToBaseRate, baseAccountRecevingMoney, out _);
+                AddTransactionDetail(sender, baseBankingAccount, senderExchangeRate, 1, sendingMoney, out baseAccountRecevingMoney);
+                AddTransactionDetail(baseBankingAccount, recevier, 1, recevierExchangeRate, baseAccountRecevingMoney, out _);
             }
 
         }
@@ -49,20 +55,63 @@ namespace CoreBanking.Domain.Entities.TransactionEntities
 
 
         private void AddTransactionDetail(Account accountFrom, Account accountTo,
-            decimal exchangeRate, Money money, out Money accountToMoney)
+            decimal senderExchangeRate, decimal recevierExchangeRate,
+            Money money, out Money accountToMoney)
         {
-            exchangeRate = Math.Round(exchangeRate, 4, MidpointRounding.AwayFromZero);
 
             accountFrom.Withdraw(money);
-            
-            accountToMoney = money.ExchangeMoney(exchangeRate, accountTo.Currency.CurrencyCode);
+
+            decimal finalExchangeRate;
+
+            accountToMoney = money.Exchange(senderExchangeRate, recevierExchangeRate, accountTo.Currency.CurrencyCode, out finalExchangeRate);
             accountTo.Deposit(accountToMoney);
 
-            TransactionDetail detail = TransactionDetail.Create(Id, accountFrom, accountTo, exchangeRate, money);
+            TransactionDetail detail = TransactionDetail.Create(Id, accountFrom, accountTo, finalExchangeRate, money);
             
             _details.Add(detail);
         }
 
+        public void GetTransactionDetailsSenderAndReceiver(out TransactionDetail receiverAccount, out TransactionDetail senderAccount) 
+        {
+            if (_details.Count == 0)
+                throw new Exception("Cannot get Sender And Receiver, when Details count is 0");
+            
+            receiverAccount = _details[0];
+            senderAccount = _details[0];
 
+            foreach (var transactionDetail in _details)
+            {
+                if (transactionDetail.AccountFromId != BankAccount.Id)
+                {
+                    senderAccount = transactionDetail;
+                }
+                else if (transactionDetail.AccountToId != BankAccount.Id)
+                {
+                    receiverAccount = transactionDetail;
+                }
+                else {
+                    throw new Exception("No AccountFromId or AccountToId in transactions");
+                }
+            }
+
+        }
+
+        //public void DeactivateTransaction(Account senderAccount, Account reciverAccount)
+        //{
+            
+        //    foreach (var transactionDetail in _details)
+        //    {
+        //        Money sendingMoney, reciveingMoney;
+        //        if (transactionDetail.AccountFromId == senderAccount.Id) {
+        //            var sendingMoney = Money.Create(transactionDetail.Amount, senderAccount.Currency.CurrencyCode);  
+        //            senderAccount.Deposit(sendingMoney);
+        //        }
+
+        //        if (transactionDetail.AccountToId == reciverAccount.Id) {
+        //            var reciveingMoney = Money.Create(transactionDetail.Amount, senderAccount.Currency.CurrencyCode);
+        //            senderAccount.Deposit(reciveingMoney);
+        //        }
+        //    }
+        //}
     }
 }

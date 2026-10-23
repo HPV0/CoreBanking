@@ -102,7 +102,7 @@ namespace CoreBanking.Infrastructure.Data.Context
                 switch (entry.State)
                 {
                     case EntityState.Deleted:
-                        entry.State = EntityState.Unchanged;
+                        entry.State = EntityState.Modified;
                         entry.Property(nameof(ISoftDeletable.IsActive)).CurrentValue = false;
                         break;
                 }

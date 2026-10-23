@@ -68,8 +68,8 @@ namespace CoreBanking.Infrastructure.Migrations
                         .HasColumnName("id");
 
                     b.Property<decimal>("Amount")
-                        .HasPrecision(18, 2)
-                        .HasColumnType("numeric(18,2)")
+                        .HasPrecision(18, 4)
+                        .HasColumnType("numeric(18,4)")
                         .HasColumnName("amount");
 
                     b.HasKey("Id")
@@ -195,8 +195,8 @@ namespace CoreBanking.Infrastructure.Migrations
                         .HasColumnName("is_active");
 
                     b.Property<decimal>("Rate")
-                        .HasPrecision(18, 4)
-                        .HasColumnType("numeric(18,4)")
+                        .HasPrecision(18, 6)
+                        .HasColumnType("numeric(18,6)")
                         .HasColumnName("rate");
 
                     b.Property<DateTimeOffset>("ValidFrom")
@@ -257,13 +257,13 @@ namespace CoreBanking.Infrastructure.Migrations
                         .HasColumnName("account_to_id");
 
                     b.Property<decimal>("Amount")
-                        .HasPrecision(18, 2)
-                        .HasColumnType("numeric(18,2)")
+                        .HasPrecision(18, 4)
+                        .HasColumnType("numeric(18,4)")
                         .HasColumnName("amount");
 
                     b.Property<decimal>("ExchangeRate")
-                        .HasPrecision(18, 4)
-                        .HasColumnType("numeric(18,4)")
+                        .HasPrecision(18, 6)
+                        .HasColumnType("numeric(18,6)")
                         .HasColumnName("exchange_rate");
 
                     b.Property<DateTime>("InsertedAt")

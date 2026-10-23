@@ -11,7 +11,7 @@ namespace CoreBanking.Infrastructure.Persistence.Configurations.CurrencyConfigur
             BaseEntityConfiguration.Configure(builder);
 
             builder.Property(cr => cr.Rate)
-                .HasPrecision(18, 4)
+                .HasPrecision(18, 6)
                 .IsRequired();
 
             builder.Property(cr => cr.ValidFrom)
@@ -23,7 +23,6 @@ namespace CoreBanking.Infrastructure.Persistence.Configurations.CurrencyConfigur
             .HasForeignKey(cr => cr.CurrencyId)
             .OnDelete(DeleteBehavior.NoAction)
             .IsRequired();
-
 
         }
     }

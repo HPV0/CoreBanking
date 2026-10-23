@@ -6,6 +6,7 @@ using CoreBanking.Application.Mappers;
 using CoreBanking.Domain.Constants;
 using CoreBanking.Domain.Entities.AccountEntities;
 using CoreBanking.Domain.Entities.TransactionEntities;
+using CoreBanking.Domain.ValueObjects;
 
 
 namespace CoreBanking.Application.Services
@@ -23,31 +24,35 @@ namespace CoreBanking.Application.Services
             _currencyRepository = currencyRepository;
             _mapper = mapper;
         }
-        public async Task<List<TransactionDetailResponseModel>> CreateAsync(CreateTransactionRequest createTransactionRequest)
-        {
-            List<TransactionDetail> details;
 
-            var senderAccount = await _accountRepository.GetByIdAsync(createTransactionRequest.SenderId) 
+        async Task<Transaction> BuildTransactionAsync(CreateTransactionRequest createTransactionRequest) {
+            var senderAccount = await _accountRepository.GetByIdAsync(createTransactionRequest.SenderId)
                 ?? throw new EntityNotFoundException(nameof(Account), createTransactionRequest.SenderId);
-            var receiverAccount = await _accountRepository.GetByIdAsync(createTransactionRequest.ReceiverId) 
+            var receiverAccount = await _accountRepository.GetByIdAsync(createTransactionRequest.ReceiverId)
                 ?? throw new EntityNotFoundException(nameof(Account), createTransactionRequest.SenderId);
-            var baseAccount = await _accountRepository.GetByIdAsync(BankAccount.Id) 
+            var baseAccount = await _accountRepository.GetByIdAsync(BankAccount.Id)
                 ?? throw new EntityNotFoundException(nameof(Account), createTransactionRequest.SenderId);
 
-            decimal senderExchangeRate = createTransactionRequest.SenderExchangeRate 
-                ?? (await _currencyRepository.GetCurrencyWithCurrentRateByIdAsync(senderAccount.CurrencyId)).FindCurrentRate().Rate;
-            decimal receiverExchangeRate = createTransactionRequest.ReceiveExchangeRate 
+            decimal senderExchangeRate = createTransactionRequest.SenderExchangeRate
+                    ?? (await _currencyRepository.GetCurrencyWithCurrentRateByIdAsync(senderAccount.CurrencyId)).FindCurrentRate().Rate;
+
+            decimal receiverExchangeRate = createTransactionRequest.ReceiveExchangeRate
                 ?? (await _currencyRepository.GetCurrencyWithCurrentRateByIdAsync(receiverAccount.CurrencyId)).FindCurrentRate().Rate;
 
             var transaction = Transaction.Create(senderAccount, receiverAccount, baseAccount, senderExchangeRate, receiverExchangeRate, createTransactionRequest.Amount);
+
+            return transaction;
+        }
+
+        public async Task<TransactionResponseModel> CreateAsync(CreateTransactionRequest createTransactionRequest)
+        {
+            var transaction = await BuildTransactionAsync(createTransactionRequest);
+
             await _transactionRepository.AddAsync(transaction);
-            
-            details = transaction.Details!.ToList();
-            
+
             await _transactionRepository.SaveChangesAsync();
 
-            return _mapper.ToTransactionDetailResponseModels(details);
-
+            return _mapper.ToTransactionResponseModel(transaction);
         }
 
         public async Task<List<AccountTotalDepositesResponseModel>> GetAccountsTotalDepositBetweenDatesAsync(DateTime timeFrom, DateTime timeTo)
@@ -83,14 +88,41 @@ namespace CoreBanking.Application.Services
                 .ToList();
         }
 
-        public async Task RemoveTransactionByIdAsync(Guid id)
+        public async Task<TransactionResponseModel> UndoTransactionByIdAsync(Guid id)
         {
-            var tr = await _transactionRepository.GetOnlyTransactionWithNoDetailsByIdAsync(id) 
+            var originalTransaction = await _transactionRepository.GetByIdAsync(id) 
                 ?? throw new EntityNotFoundException(nameof(Transaction), id);
 
-            _transactionRepository.Remove(tr);
+            TransactionDetail senderTransactionDetail, reciverTransactionDetail;
+            originalTransaction.GetTransactionDetailsSenderAndReceiver(out reciverTransactionDetail,out senderTransactionDetail);
+
+
+            var backwordSenderExchangeRate = Money.ExchangeCalc(1, reciverTransactionDetail.ExchangeRate);
+            var backwordReceiverExchangeRate = senderTransactionDetail.ExchangeRate;
+
+            var backwordSendingAmount = reciverTransactionDetail.ExchangeRate * reciverTransactionDetail.Amount;
+            Money.NormalizeMoneyAmount(ref backwordSendingAmount);
+
+            var backwordCreateRequest = new CreateTransactionRequest {
+                SenderId = reciverTransactionDetail.AccountToId,
+                ReceiverId = senderTransactionDetail.AccountFromId,
+                SenderExchangeRate = backwordSenderExchangeRate,
+                ReceiveExchangeRate = backwordReceiverExchangeRate,
+                Amount = backwordSendingAmount
+            };
+
+            var backwordTransaction = await BuildTransactionAsync(backwordCreateRequest);
             
+            await _transactionRepository.AddAsync(backwordTransaction);
+
+            await _transactionRepository.SoftDeleteTransactionAsync(backwordTransaction);
+
+            await _transactionRepository.SoftDeleteTransactionAsync(originalTransaction);
+
             await _transactionRepository.SaveChangesAsync();
+
+            return _mapper.ToTransactionResponseModel(backwordTransaction);
+            
         }
 
         public async Task<TransactionResponseModel> GetTransactionByIdAsync(Guid id)
@@ -107,5 +139,6 @@ namespace CoreBanking.Application.Services
 
             return _mapper.ToTransactionResponseModels(transactions.ToList());
         }
+
     }
 }

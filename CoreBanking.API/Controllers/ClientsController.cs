@@ -50,14 +50,14 @@ namespace CoreBanking.API.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult> RemoveClientByIdAsync(Guid id)
         {
-            await _clientService.RemoveClientByIdAsync(id);
+            await _clientService.RemoveByIdAsync(id);
 
             return Ok();
         }
 
         [HttpPut("{id}")]
         [Idempotent]
-        public async Task<ActionResult<ClientResponseModel>> UpdateClientEmailAndPassportByIdAsync(
+        public async Task<ActionResult<ClientResponseModel>> UpdateByIdAsync(
             Guid id,
             UpdateClientRequest request,
             [FromServices] IValidator<UpdateClientRequest> validator)
@@ -65,7 +65,7 @@ namespace CoreBanking.API.Controllers
             validator.ValidateAndThrow(request);
 
             var updatedClient = await _clientService
-                .UpdateClientEmailAndPassportNumberById(id, request);
+                .UpdateByIdAsync(id, request);
 
             return Ok(updatedClient);
         }

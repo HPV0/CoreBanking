@@ -55,20 +55,27 @@ namespace Application.UnitTests.ServiceTests
 
             var transactionDetails = new List<TransactionDetail>();
 
-            var expectedResponse = new List<TransactionDetailResponseModel> {
-                new(){
-                    SenderId = sender.Id,
-                    ReceiverId = BankAccount.Id,
-                    ExchangeRate = 1,
-                    Amount = amount,
-                },
-                new(){
-                    ReceiverId = receiver.Id,
-                    SenderId = BankAccount.Id,
-                    ExchangeRate = 1,
-                    Amount = amount,
+            var expectedResponse = new TransactionResponseModel
+            {
+                Details = new()
+                {
+                    new()
+                    {
+                        SenderId = sender.Id,
+                        ReceiverId = BankAccount.Id,
+                        ExchangeRate = 1,
+                        Amount = amount,
+                    },
+                    new()
+                    {
+                        ReceiverId = receiver.Id,
+                        SenderId = BankAccount.Id,
+                        ExchangeRate = 1,
+                        Amount = amount,
+                    }
                 }
             };
+
 
             _accountRepository
                 .Setup(x => x.GetByIdAsync(sender.Id))
@@ -96,7 +103,7 @@ namespace Application.UnitTests.ServiceTests
             var result = await service.CreateAsync(request);
 
             // Assert
-            result.Should().BeEquivalentTo(expectedResponse);
+            result.Details.Should().BeEquivalentTo(expectedResponse.Details);
 
             _transactionRepository.Verify(
                 x => x.SaveChangesAsync(),
