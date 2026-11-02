@@ -4,8 +4,8 @@ namespace CoreBanking.Application.Interfaces.IRepositories
 {
     public interface IAccountRepository : IBaseRepository<Account>
     {
-        public Task<List<Account>> GetAccountsByClientIdAsync(Guid Id);
-        public Task<bool> ClientHasAccountWithCurrencyCodeAsync(Guid id, string code);
-        public Task<Account> GetOnlyAccountByIdAsync(Guid id);
+        public Task<List<Account>> GetAccountsByClientIdAsync(int Id);
+        public Task<bool> ClientHasAccountWithCurrencyCodeAsync(int id, string code);
+        public Task<Account> GetOnlyAccountByIdAsync(int id);
     }
 }

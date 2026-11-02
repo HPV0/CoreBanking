@@ -4,9 +4,12 @@ namespace CoreBanking.Application.Interfaces.IRepositories
 {
     public interface ICurrencyRepository : IBaseRepository<Currency>
     {
-        public Task<Currency> GetCurrencyWithCurrentRateByIdAsync(Guid Id);
-        public Task<Currency> GetCurrencyWithCurrentRateByCodeAsync(string code);
-        public Task AddCurrencyRateAsync(CurrencyRate currencyRate);
-        public Task<Currency> GetOnlyCurrencyByIdAsync(Guid id);
+        public Task<Currency?> GetCurrencyWithActiveRateByIdAsync(int Id);
+        public Task<Currency?> GetCurrencyWithActiveRateByCodeAsync(string code);
+        public Task<Currency> GetOnlyCurrencyByIdAsync(int id);
+        public Task<Currency> GetOnlyCurrencyByCodeAsync(string code);
+        public Task<CurrencyRate?> GetActiveCurrencyRateByCodeAsync(string code);
+        public Task<CurrencyRate?> GetActiveCurrencyRateByIdAsync(int Id);
+        public Task<bool> CurrencyCodeExist(string code);
     }
 }

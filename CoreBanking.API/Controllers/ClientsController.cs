@@ -32,7 +32,7 @@ namespace CoreBanking.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<ClientResponseModel>> GetClientByIdAsync(Guid id)
+        public async Task<ActionResult<ClientResponseModel>> GetClientByIdAsync(int id)
         {
             var client = await _clientService.GetClientByIdAsync(id);
 
@@ -48,7 +48,7 @@ namespace CoreBanking.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult> RemoveClientByIdAsync(Guid id)
+        public async Task<ActionResult> RemoveClientByIdAsync(int id)
         {
             await _clientService.RemoveByIdAsync(id);
 
@@ -58,7 +58,7 @@ namespace CoreBanking.API.Controllers
         [HttpPut("{id}")]
         [Idempotent]
         public async Task<ActionResult<ClientResponseModel>> UpdateByIdAsync(
-            Guid id,
+            int id,
             UpdateClientRequest request,
             [FromServices] IValidator<UpdateClientRequest> validator)
         {

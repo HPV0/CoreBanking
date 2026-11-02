@@ -7,7 +7,7 @@ namespace CoreBanking.Infrastructure.Repositories
     public class UnitOfWork : IUnitOfWork
     {
         private readonly ApplicationDbContext _dbContext;
-        
+
         private IDbContextTransaction? _currentTransaction;
 
         public ITransactionRepository Transactions { get; }

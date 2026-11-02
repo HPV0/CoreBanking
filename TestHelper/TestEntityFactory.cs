@@ -1,12 +1,16 @@
 ﻿using CoreBanking.Domain.Entities;
 using CoreBanking.Domain.Entities.AccountEntities;
 using CoreBanking.Domain.Entities.CurrencyEntities;
-using CoreBanking.Domain.ValueObjects;
 
 namespace TestHelper
 {
     public static class TestEntityFactory
     {
+        private static int _nextId;
+
+        private static int NextId()
+            => Interlocked.Increment(ref _nextId);
+
         public static Client CreateClient(
             string name = "Name",
             string surname = "Surname",
@@ -15,49 +19,64 @@ namespace TestHelper
             string passportNumber = "123123123123",
             ICollection<Account>? accounts = null)
         {
-            return Client.Create(
-               name,
-                surname,
-                email,
-                birthday,
-                passportNumber,
-                accounts
-            );
+            return new Client
+            {
+                Name = name,
+                Surname = surname,
+                Email = email,
+                Birthday = birthday,
+                PassportNumber = passportNumber,
+                Accounts = accounts?.ToList() ?? new List<Account>()
+            };
         }
 
         public static Currency CreateCurrency(
-            string currencyCode = "ABC")
+            int? id = null,
+            string currencyCode = "ABC",
+            List<CurrencyRate>? currencyRates = null)
         {
-            return Currency.Create(currencyCode);
-        }
-
-        public static Money CreateMoney(
-            decimal amount = 100,
-            string currencyCode = "ABC")
-        {
-            return Money.Create(amount, currencyCode);
+            return new Currency
+            {
+                Id = id ?? NextId(),
+                CurrencyCode = currencyCode,
+                Rates = currencyRates?.ToList() ?? new List<CurrencyRate>()
+            };
         }
 
         public static Account CreateAccount(
+            int? id = null,
             Client? client = null,
-            Currency? currency = null)
+            Currency? currency = null,
+            decimal balance = 0)
         {
             client ??= CreateClient();
             currency ??= CreateCurrency();
 
-            return Account.Create(currency, client);
+            int accountId = id ?? NextId();
+
+            return new Account
+            {
+                Id = accountId,
+                CurrencyId = currency.Id,
+                Currency = currency,
+                Client = client,
+                ClientId = client.Id,
+                Balance = new()
+                {
+                    Amount = balance,
+                    Id = accountId
+                }
+            };
         }
 
-        public static Account CreateAccount(
-            Guid Id,
-            Client? client = null,
-            Currency? currency = null)
+        public static CurrencyRate CreateCurrencyRate( decimal rate = 1, DateTimeOffset? validFrom = null, DateTimeOffset? validTo = null)
         {
-            client ??= CreateClient();
-            currency ??= CreateCurrency();
-
-            return Account.Create(Id, currency, client);
+            return new CurrencyRate
+            {
+                Rate = rate,
+                ValidFrom = validFrom ?? DateTimeOffset.UtcNow,
+                ValidTo = validTo
+            };
         }
-
     }
 }

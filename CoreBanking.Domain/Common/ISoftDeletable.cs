@@ -2,8 +2,7 @@
 {
     public interface ISoftDeletable
     {
-        public bool IsActive { get; }
-        public void SoftDelete();
+        public bool IsActive { get; set; }
     }
 }
 

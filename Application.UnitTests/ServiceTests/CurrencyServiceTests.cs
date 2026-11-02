@@ -12,6 +12,7 @@ namespace Application.UnitTests.ServiceTests
     public class CurrencyServiceTests
     {
         private readonly Mock<ICurrencyRepository> _currencyRepository = new();
+        private readonly Mock<ICurrencyRateRepository> _currencyRateRepository = new();
 
         private readonly Mock<CurrencyMapper> _mapper = new();
 
@@ -19,28 +20,24 @@ namespace Application.UnitTests.ServiceTests
         {
             return new CurrencyService(
                 _currencyRepository.Object,
-                _mapper.Object);
+                _mapper.Object,
+                _currencyRateRepository.Object);
         }
 
         [Fact]
         public async Task GetCurrencyByIdAsync_CurrencyExists_ReturnCurrency()
         {
             // Arrange
-            var id = Guid.NewGuid();
+            var id = new Random().Next();
             decimal rate = 400;
             string code = "USD";
-            var currency = TestEntityFactory.CreateCurrency(code);
-            
-            var currencyRate = CurrencyRate.Create(
-                rate,
-                currency,
-                DateTimeOffset.UtcNow,
-                null);
 
-            currency.AddCurrencyRate(currencyRate);
+            var currencyRate = TestEntityFactory.CreateCurrencyRate(rate);
+
+            var currency = TestEntityFactory.CreateCurrency(id, code, new() { currencyRate });
 
             _currencyRepository
-                .Setup(x => x.GetCurrencyWithCurrentRateByIdAsync(id))
+                .Setup(x => x.GetCurrencyWithActiveRateByIdAsync(id))
                 .ReturnsAsync(currency);
 
             var service = CreateService();
@@ -59,24 +56,19 @@ namespace Application.UnitTests.ServiceTests
             // Arrange
             var currencyCode = "USD";
             decimal rate = 400;
-            var currency = Currency.Create(currencyCode);
-            
-            var currencyRate = CurrencyRate.Create(
-                rate,
-                currency,
-                DateTimeOffset.UtcNow,
-                null);
 
-            currency.AddCurrencyRate(currencyRate);
+            var currencyRate = TestEntityFactory.CreateCurrencyRate(rate);
+
+            var currency = TestEntityFactory.CreateCurrency(currencyCode: currencyCode, currencyRates: new() { currencyRate });
 
             _currencyRepository
-                .Setup(x => x.GetCurrencyWithCurrentRateByCodeAsync(currencyCode))
+                .Setup(x => x.GetCurrencyWithActiveRateByCodeAsync(currencyCode))
                 .ReturnsAsync(currency);
 
             var service = CreateService();
 
             // Act
-            var result = await service.GetRateCurrencyByCodeAsync(currencyCode);
+            var result = await service.GetCurrencyByCodeAsync(currencyCode);
 
             // Assert
             result.CurrencyCode.Should().Be(currencyCode);
@@ -87,7 +79,7 @@ namespace Application.UnitTests.ServiceTests
         public async Task RemoveByIdAsync_CurrencyDoesNotExist_Throw()
         {
             // Arrange
-            var id = Guid.NewGuid();
+            var id = new Random().Next();
 
             _currencyRepository
                 .Setup(x => x.GetOnlyCurrencyByIdAsync(id))

@@ -24,17 +24,19 @@ namespace CoreBanking.Infrastructure.Migrations
 
             modelBuilder.Entity("CoreBanking.Domain.Entities.AccountEntities.Account", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid")
+                        .HasColumnType("integer")
                         .HasColumnName("id");
 
-                    b.Property<Guid>("ClientId")
-                        .HasColumnType("uuid")
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ClientId")
+                        .HasColumnType("integer")
                         .HasColumnName("client_id");
 
-                    b.Property<Guid>("CurrencyId")
-                        .HasColumnType("uuid")
+                    b.Property<int>("CurrencyId")
+                        .HasColumnType("integer")
                         .HasColumnName("currency_id");
 
                     b.Property<DateTime>("InsertedAt")
@@ -63,8 +65,8 @@ namespace CoreBanking.Infrastructure.Migrations
 
             modelBuilder.Entity("CoreBanking.Domain.Entities.AccountEntities.AccountBalance", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .HasColumnType("uuid")
+                    b.Property<int>("Id")
+                        .HasColumnType("integer")
                         .HasColumnName("id");
 
                     b.Property<decimal>("Amount")
@@ -80,10 +82,12 @@ namespace CoreBanking.Infrastructure.Migrations
 
             modelBuilder.Entity("CoreBanking.Domain.Entities.Client", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid")
+                        .HasColumnType("integer")
                         .HasColumnName("id");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<DateOnly?>("Birthday")
                         .HasColumnType("date")
@@ -91,7 +95,8 @@ namespace CoreBanking.Infrastructure.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("text")
+                        .HasMaxLength(40)
+                        .HasColumnType("character varying(40)")
                         .HasColumnName("email");
 
                     b.Property<DateTime>("InsertedAt")
@@ -108,8 +113,8 @@ namespace CoreBanking.Infrastructure.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("character varying(50)")
+                        .HasMaxLength(20)
+                        .HasColumnType("character varying(20)")
                         .HasColumnName("name");
 
                     b.Property<string>("PassportNumber")
@@ -121,8 +126,8 @@ namespace CoreBanking.Infrastructure.Migrations
 
                     b.Property<string>("Surname")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("character varying(50)")
+                        .HasMaxLength(20)
+                        .HasColumnType("character varying(20)")
                         .HasColumnName("surname");
 
                     b.HasKey("Id")
@@ -137,10 +142,12 @@ namespace CoreBanking.Infrastructure.Migrations
 
             modelBuilder.Entity("CoreBanking.Domain.Entities.CurrencyEntities.Currency", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid")
+                        .HasColumnType("integer")
                         .HasColumnName("id");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("CurrencyCode")
                         .IsRequired()
@@ -173,13 +180,15 @@ namespace CoreBanking.Infrastructure.Migrations
 
             modelBuilder.Entity("CoreBanking.Domain.Entities.CurrencyEntities.CurrencyRate", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid")
+                        .HasColumnType("integer")
                         .HasColumnName("id");
 
-                    b.Property<Guid>("CurrencyId")
-                        .HasColumnType("uuid")
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CurrencyId")
+                        .HasColumnType("integer")
                         .HasColumnName("currency_id");
 
                     b.Property<DateTime>("InsertedAt")
@@ -218,42 +227,19 @@ namespace CoreBanking.Infrastructure.Migrations
 
             modelBuilder.Entity("CoreBanking.Domain.Entities.TransactionEntities.Transaction", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid")
+                        .HasColumnType("integer")
                         .HasColumnName("id");
 
-                    b.Property<DateTime>("InsertedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("timestamp with time zone")
-                        .HasColumnName("inserted_at")
-                        .HasDefaultValueSql("now()");
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<bool>("IsActive")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("boolean")
-                        .HasDefaultValue(true)
-                        .HasColumnName("is_active");
-
-                    b.HasKey("Id")
-                        .HasName("pk_transactions");
-
-                    b.ToTable("transactions", (string)null);
-                });
-
-            modelBuilder.Entity("CoreBanking.Domain.Entities.TransactionEntities.TransactionDetail", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid")
-                        .HasColumnName("id");
-
-                    b.Property<Guid>("AccountFromId")
-                        .HasColumnType("uuid")
+                    b.Property<int>("AccountFromId")
+                        .HasColumnType("integer")
                         .HasColumnName("account_from_id");
 
-                    b.Property<Guid>("AccountToId")
-                        .HasColumnType("uuid")
+                    b.Property<int>("AccountToId")
+                        .HasColumnType("integer")
                         .HasColumnName("account_to_id");
 
                     b.Property<decimal>("Amount")
@@ -278,23 +264,22 @@ namespace CoreBanking.Infrastructure.Migrations
                         .HasDefaultValue(true)
                         .HasColumnName("is_active");
 
-                    b.Property<Guid>("TransactionId")
-                        .HasColumnType("uuid")
-                        .HasColumnName("transaction_id");
+                    b.Property<int?>("TransactionId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("transaction_id")
+                        .HasDefaultValueSql("txid_current()");
 
                     b.HasKey("Id")
-                        .HasName("pk_transactions_details");
+                        .HasName("pk_transactions");
 
                     b.HasIndex("AccountFromId")
-                        .HasDatabaseName("ix_transactions_details_account_from_id");
+                        .HasDatabaseName("ix_transactions_account_from_id");
 
                     b.HasIndex("AccountToId")
-                        .HasDatabaseName("ix_transactions_details_account_to_id");
+                        .HasDatabaseName("ix_transactions_account_to_id");
 
-                    b.HasIndex("TransactionId")
-                        .HasDatabaseName("ix_transactions_details_transaction_id");
-
-                    b.ToTable("transactions_details", (string)null);
+                    b.ToTable("transactions", (string)null);
                 });
 
             modelBuilder.Entity("CoreBanking.Domain.Entities.AccountEntities.Account", b =>
@@ -340,28 +325,21 @@ namespace CoreBanking.Infrastructure.Migrations
                     b.Navigation("Currency");
                 });
 
-            modelBuilder.Entity("CoreBanking.Domain.Entities.TransactionEntities.TransactionDetail", b =>
+            modelBuilder.Entity("CoreBanking.Domain.Entities.TransactionEntities.Transaction", b =>
                 {
                     b.HasOne("CoreBanking.Domain.Entities.AccountEntities.Account", "AccountFrom")
                         .WithMany()
                         .HasForeignKey("AccountFromId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired()
-                        .HasConstraintName("fk_transactions_details_accounts_account_from_id");
+                        .HasConstraintName("fk_transactions_accounts_account_from_id");
 
                     b.HasOne("CoreBanking.Domain.Entities.AccountEntities.Account", "AccountTo")
                         .WithMany()
                         .HasForeignKey("AccountToId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired()
-                        .HasConstraintName("fk_transactions_details_accounts_account_to_id");
-
-                    b.HasOne("CoreBanking.Domain.Entities.TransactionEntities.Transaction", null)
-                        .WithMany("Details")
-                        .HasForeignKey("TransactionId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired()
-                        .HasConstraintName("fk_transactions_details_transactions_transaction_id");
+                        .HasConstraintName("fk_transactions_accounts_account_to_id");
 
                     b.Navigation("AccountFrom");
 
@@ -382,11 +360,6 @@ namespace CoreBanking.Infrastructure.Migrations
             modelBuilder.Entity("CoreBanking.Domain.Entities.CurrencyEntities.Currency", b =>
                 {
                     b.Navigation("Rates");
-                });
-
-            modelBuilder.Entity("CoreBanking.Domain.Entities.TransactionEntities.Transaction", b =>
-                {
-                    b.Navigation("Details");
                 });
 #pragma warning restore 612, 618
         }

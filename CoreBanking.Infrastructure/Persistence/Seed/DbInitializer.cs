@@ -13,10 +13,11 @@ namespace CoreBanking.Infrastructure.Persistence.Seed
                 return; // Already seeded
             }
 
-            var currency = await context.Currencies.FindAsync(BaseCurrency.Id) 
+            var currency = await context.Currencies.FindAsync(BaseCurrency.Id)
                 ?? throw new Exception("Base currency doesn't exist.");
 
             var bankClient = BankClient.Create(currency);
+
             context.Clients.Add(bankClient);
 
             await context.SaveChangesAsync();
@@ -35,11 +36,10 @@ namespace CoreBanking.Infrastructure.Persistence.Seed
             await context.SaveChangesAsync();
         }
 
-
         public static async Task SeedAsync(ApplicationDbContext context)
         {
             await SeedBaseCurrencyAsync(context);
-            
+
             await SeedBankClientAndAccountAsync(context);
         }
     }

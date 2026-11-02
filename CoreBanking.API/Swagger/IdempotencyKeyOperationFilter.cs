@@ -23,8 +23,9 @@ namespace CoreBanking.API.Swagger
             {
                 Name = "Idempotency-Key",
                 In = ParameterLocation.Header,
-                Required = true,
-                Description = "Unique key identifying this request.",
+                Required = false,
+                Description = "Unique key identifying this request. " +
+                  "Generated automatically if omitted in Swagger UI.",
                 Schema = new OpenApiSchema
                 {
                     Type = JsonSchemaType.String,

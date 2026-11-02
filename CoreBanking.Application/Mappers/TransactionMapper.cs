@@ -8,34 +8,44 @@ namespace CoreBanking.Application.Mappers
     [Mapper]
     public partial class TransactionMapper
     {
-
         [MapProperty(
-            nameof(TransactionDetail.AccountFromId),
+            nameof(Transaction.AccountFromId),
             nameof(TransactionDetailResponseModel.SenderId))]
         [MapProperty(
-            nameof(TransactionDetail.AccountToId),
+            nameof(Transaction.AccountToId),
             nameof(TransactionDetailResponseModel.ReceiverId))]
         public partial TransactionDetailResponseModel
-            ToTransactionDetailResponseModel(TransactionDetail transactionDetail);
+            ToTransactionDetailResponseModel(Transaction transactionDetail);
 
         public partial List<TransactionDetailResponseModel>
-            ToTransactionDetailResponseModels(List<TransactionDetail> transactionDetails);
+            ToTransactionDetailResponseModels(List<Transaction> transactionDetails);
 
-        [MapProperty(
-            nameof(Transaction.Details),
-            nameof(TransactionResponseModel.Details),
-            Use = nameof(ToTransactionDetailResponseModels))]
-        public partial TransactionResponseModel
-            ToTransactionResponseModel(Transaction transaction);
-
-        public partial List<TransactionResponseModel>
-            ToTransactionResponseModels(List<Transaction> transactions);
-
-        private List<TransactionDetailResponseModel> ToTransactionDetailResponseModelsSorted(
-            List<TransactionDetail> transactionDetails)
+        public TransactionResponseModel ToTransactionResponseModel(
+            List<Transaction> transactions)
         {
-            return ToTransactionDetailResponseModels(transactionDetails)
-                .OrderByDescending(detail => detail.ReceiverId == BankAccount.Id)
+            if (transactions == null || transactions.Count == 0)
+            {
+                return new TransactionResponseModel
+                {
+                    Id = null,
+                    Details = []
+                };
+            }
+
+            return new TransactionResponseModel
+            {
+                Id = transactions[0].TransactionId,
+                Details = ToTransactionDetailResponseModels(transactions)
+                    .OrderByDescending(detail => detail.ReceiverId == BankAccount.Id)
+                    .ToList()
+            };
+        }
+
+        public List<TransactionResponseModel> ToTransactionResponseModels(
+            List<List<Transaction>> transactions)
+        {
+            return transactions
+                .Select(ToTransactionResponseModel)
                 .ToList();
         }
     }

@@ -21,7 +21,7 @@ namespace CoreBanking.Infrastructure.Repositories
             _set = _dbContext.Set<T>();
         }
 
-        public virtual async Task<T?> GetByIdAsync(Guid id)
+        public virtual async Task<T?> GetByIdAsync(int id)
         => await BaseQuery.SingleOrDefaultAsync(e => e.Id == id);
 
         public virtual async Task<IEnumerable<T>> GetAllItemsAsync()
@@ -39,5 +39,7 @@ namespace CoreBanking.Infrastructure.Repositories
         public virtual void Remove(T entity)
         => _set.Remove(entity);
 
+        public async virtual Task<bool> IsExistsAsync(int Id)
+            => await _set.AnyAsync(e => e.Id == Id);
     }
 }

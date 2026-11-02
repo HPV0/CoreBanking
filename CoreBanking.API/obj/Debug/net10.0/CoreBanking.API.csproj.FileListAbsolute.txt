@@ -142,6 +142,7 @@ C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\bin\Debug\net10.
 C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\bin\Debug\net10.0\CoreBanking.API.runtimeconfig.json
 C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\bin\Debug\net10.0\CoreBanking.API.dll
 C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\bin\Debug\net10.0\CoreBanking.API.pdb
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\bin\Debug\net10.0\EFCore.NamingConventions.dll
 C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\bin\Debug\net10.0\FluentValidation.dll
 C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\bin\Debug\net10.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\bin\Debug\net10.0\Humanizer.dll
@@ -157,6 +158,7 @@ C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\bin\Debug\net10.
 C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\bin\Debug\net10.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
 C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\bin\Debug\net10.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\bin\Debug\net10.0\Microsoft.OpenApi.dll
 C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\bin\Debug\net10.0\Microsoft.VisualStudio.SolutionPersistence.dll
@@ -164,7 +166,9 @@ C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\bin\Debug\net10.
 C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\bin\Debug\net10.0\Newtonsoft.Json.dll
 C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\bin\Debug\net10.0\Npgsql.dll
 C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\bin\Debug\net10.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\bin\Debug\net10.0\Pipelines.Sockets.Unofficial.dll
 C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\bin\Debug\net10.0\Riok.Mapperly.Abstractions.dll
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\bin\Debug\net10.0\StackExchange.Redis.dll
 C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -270,7 +274,3 @@ C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\obj\Debug\net10.
 C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\obj\Debug\net10.0\CoreBanking.API.pdb
 C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\obj\Debug\net10.0\CoreBanking.API.genruntimeconfig.cache
 C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\obj\Debug\net10.0\ref\CoreBanking.API.dll
-C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\bin\Debug\net10.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
-C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\bin\Debug\net10.0\Pipelines.Sockets.Unofficial.dll
-C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\bin\Debug\net10.0\StackExchange.Redis.dll
-C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\bin\Debug\net10.0\EFCore.NamingConventions.dll

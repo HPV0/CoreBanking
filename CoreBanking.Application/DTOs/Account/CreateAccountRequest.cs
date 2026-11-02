@@ -2,7 +2,7 @@
 {
     public class CreateAccountRequest
     {
-        public Guid ClientId { get; set; }
+        public int ClientId { get; set; }
         public string CurrencyCode { get; set; }
     }
 }

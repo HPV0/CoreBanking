@@ -94,8 +94,10 @@ C:\Users\HaykPetrosyan\source\repos\CoreBanking\Application.UnitTests\bin\Debug\
 C:\Users\HaykPetrosyan\source\repos\CoreBanking\Application.UnitTests\bin\Debug\net10.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll
 C:\Users\HaykPetrosyan\source\repos\CoreBanking\Application.UnitTests\bin\Debug\net10.0\CoreBanking.Application.dll
 C:\Users\HaykPetrosyan\source\repos\CoreBanking\Application.UnitTests\bin\Debug\net10.0\CoreBanking.Domain.dll
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\Application.UnitTests\bin\Debug\net10.0\TestHelper.dll
 C:\Users\HaykPetrosyan\source\repos\CoreBanking\Application.UnitTests\bin\Debug\net10.0\CoreBanking.Application.pdb
 C:\Users\HaykPetrosyan\source\repos\CoreBanking\Application.UnitTests\bin\Debug\net10.0\CoreBanking.Domain.pdb
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\Application.UnitTests\bin\Debug\net10.0\TestHelper.pdb
 C:\Users\HaykPetrosyan\source\repos\CoreBanking\Application.UnitTests\obj\Debug\net10.0\Application.UnitTests.csproj.AssemblyReference.cache
 C:\Users\HaykPetrosyan\source\repos\CoreBanking\Application.UnitTests\obj\Debug\net10.0\Application.UnitTests.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\HaykPetrosyan\source\repos\CoreBanking\Application.UnitTests\obj\Debug\net10.0\Application.UnitTests.AssemblyInfoInputs.cache
@@ -108,5 +110,3 @@ C:\Users\HaykPetrosyan\source\repos\CoreBanking\Application.UnitTests\obj\Debug\
 C:\Users\HaykPetrosyan\source\repos\CoreBanking\Application.UnitTests\obj\Debug\net10.0\Application.UnitTests.pdb
 C:\Users\HaykPetrosyan\source\repos\CoreBanking\Application.UnitTests\obj\Debug\net10.0\Application.UnitTests.genruntimeconfig.cache
 C:\Users\HaykPetrosyan\source\repos\CoreBanking\Application.UnitTests\obj\Debug\net10.0\ref\Application.UnitTests.dll
-C:\Users\HaykPetrosyan\source\repos\CoreBanking\Application.UnitTests\bin\Debug\net10.0\TestHelper.dll
-C:\Users\HaykPetrosyan\source\repos\CoreBanking\Application.UnitTests\bin\Debug\net10.0\TestHelper.pdb

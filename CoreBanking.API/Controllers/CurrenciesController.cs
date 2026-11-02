@@ -18,21 +18,21 @@ namespace CoreBanking.API.Controllers
 
         [HttpPost]
         [Idempotent]
-        public async Task<ActionResult<CurrencyResponseModel>> CreateAsync(CreateCurrencyRequest createCurrencyRequest, 
+        public async Task<ActionResult<CurrencyResponseModel>> CreateAsync(CreateCurrencyRequest createCurrencyRequest,
             [FromServices] IValidator<CreateCurrencyRequest> validator)
         {
             validator.ValidateAndThrow(createCurrencyRequest);
-            
+
             var createdClient = await _currencyService.CreateAsync(createCurrencyRequest);
-            
+
             return Ok(createdClient);
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<CurrencyResponseModel>> GetCurrencyByIdAsync(Guid id)
+        public async Task<ActionResult<CurrencyResponseModel>> GetCurrencyByIdAsync(int id)
         {
             var currency = await _currencyService.GetCurrencyByIdAsync(id);
-            
+
             return Ok(currency);
         }
 
@@ -40,30 +40,30 @@ namespace CoreBanking.API.Controllers
         public async Task<ActionResult<List<CurrencyWithAllRatesResponseModel>>> GetAllCurrenciesAsync()
         {
             var currencies = await _currencyService.GetAllCurrenciesAsync();
-            
+
             return Ok(currencies);
         }
 
         [HttpGet("code")]
-        public async Task<ActionResult<CurrencyResponseModel>> GetCurrencyByCodeAsync(GetCurrencyRateByCodeRequest code, 
+        public async Task<ActionResult<CurrencyResponseModel>> GetCurrencyByCodeAsync([FromQuery] GetCurrencyRateByCodeRequest request,
             [FromServices] IValidator<GetCurrencyRateByCodeRequest> validator)
         {
-            validator.ValidateAndThrow(code);
+            validator.ValidateAndThrow(request);
 
-            var currency = await _currencyService.GetRateCurrencyByCodeAsync(code.Code);
-            
+            var currency = await _currencyService.GetCurrencyByCodeAsync(request.Code);
+
             return Ok(currency);
         }
 
         [HttpPut]
         [Idempotent]
-        public async Task<ActionResult<CurrencyResponseModel>> UpdateCurrencyRateByIdAsync(UpdateCurrencyRateByIdRequest updateCurrencyRateRequest, 
+        public async Task<ActionResult<CurrencyResponseModel>> UpdateCurrencyRateByIdAsync(UpdateCurrencyRateByIdRequest updateCurrencyRateRequest,
             [FromServices] IValidator<UpdateCurrencyRateByIdRequest> validator)
         {
             validator.ValidateAndThrow(updateCurrencyRateRequest);
 
             var updatedCurrency = await _currencyService.UpdateCurrencyRateByIdAsync(updateCurrencyRateRequest);
-            
+
             return Ok(updatedCurrency);
         }
 
@@ -75,15 +75,15 @@ namespace CoreBanking.API.Controllers
             validator.ValidateAndThrow(updateCurrencyRateRequest);
 
             var updatedCurrency = await _currencyService.UpdateCurrencyRateByCodeAsync(updateCurrencyRateRequest);
-            
+
             return Ok(updatedCurrency);
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult> RemoveByIdAsync(Guid id)
+        public async Task<ActionResult> RemoveByIdAsync(int id)
         {
             await _currencyService.RemoveByIdAsync(id);
-            
+
             return Ok();
         }
     }

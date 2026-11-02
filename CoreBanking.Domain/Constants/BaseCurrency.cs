@@ -4,15 +4,14 @@ namespace CoreBanking.Domain.Constants
 {
     public static class BaseCurrency
     {
-        public readonly static Guid Id = new Guid("C1DF0956-C2D9-4FD4-A97C-87F4362BE184");
+        public readonly static int Id = 4;
         public readonly static string CurrencyCode = "AMD";
         public static Currency Create()
         {
-            var currency = Currency.Create(Id, CurrencyCode);
-            var currencyRate = CurrencyRate.Create(1, currency, DateTimeOffset.UtcNow, null);
 
-            currency.AddCurrencyRate(currencyRate);
-            
+            var currencyRate = new CurrencyRate { Rate = 1, ValidFrom = DateTimeOffset.UtcNow, ValidTo = null };
+            var currency = new Currency { Id = Id, CurrencyCode = BaseCurrency.CurrencyCode, Rates = new List<CurrencyRate> { currencyRate } };
+
             return currency;
         }
     }

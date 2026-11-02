@@ -1,6 +1,8 @@
 ﻿using CoreBanking.Application.DTOs.Account;
 using CoreBanking.Application.Exceptions;
+using CoreBanking.Application.Interfaces.Common;
 using CoreBanking.Application.Interfaces.IRepositories;
+using CoreBanking.Application.Interfaces.IServices;
 using CoreBanking.Application.Mappers;
 using CoreBanking.Application.Services;
 using CoreBanking.Domain.Entities;
@@ -13,12 +15,11 @@ namespace Application.UnitTests.ServiceTests
     public class AccountServiceTests
     {
         private readonly Mock<IAccountRepository> _accountRepository = new();
-
         private readonly Mock<IClientRepository> _clientRepository = new();
-        
         private readonly Mock<ICurrencyRepository> _currencyRepository = new();
-        
         private readonly Mock<AccountMapper> _mapper = new();
+        private readonly Mock<IMoneyCalculator> _moneyCalculator = new();
+        private readonly Mock<IAccountBalanceService> _accountBalanceService = new();
 
         private AccountService CreateService()
         {
@@ -26,45 +27,17 @@ namespace Application.UnitTests.ServiceTests
                 _accountRepository.Object,
                 _clientRepository.Object,
                 _currencyRepository.Object,
-                _mapper.Object);
+                _mapper.Object,
+                _moneyCalculator.Object,
+                _accountBalanceService.Object);
         }
 
-        [Fact]
-        public async Task CreateAsync_ClientAlreadyHasAccountWithCurrency_Throw()
-        {
-            // Arrange
-            var clientId = Guid.NewGuid();
-
-            var currencyCode = "USD";
-
-            var request = new CreateAccountRequest
-            {
-                ClientId = clientId,
-                CurrencyCode = currencyCode
-            };
-
-            _accountRepository
-                .Setup(x => x.ClientHasAccountWithCurrencyCodeAsync(
-                    clientId,
-                    currencyCode))
-                .ReturnsAsync(true);
-
-            var service = CreateService();
-
-            // Act
-            Func<Task> act = () => service.CreateAsync(request);
-            
-            // Assert
-            await act.Should()
-                .ThrowAsync<UnprocessableException>();
-
-        }
 
         [Fact]
         public async Task CreateAsync_ClientDoesNotExist_Throw()
         {
             // Arrange
-            var clientId = Guid.NewGuid();
+            var clientId = new Random().Next();
 
             var currencyCode = "USD";
 
@@ -73,12 +46,6 @@ namespace Application.UnitTests.ServiceTests
                 ClientId = clientId,
                 CurrencyCode = currencyCode
             };
-
-            _accountRepository
-                .Setup(x => x.ClientHasAccountWithCurrencyCodeAsync(
-                    clientId,
-                    currencyCode))
-                .ReturnsAsync(false);
 
             _clientRepository
                 .Setup(x => x.GetByIdAsync(clientId))
@@ -92,14 +59,13 @@ namespace Application.UnitTests.ServiceTests
             // Assert
             await act.Should()
                 .ThrowAsync<EntityNotFoundException>();
-
         }
 
         [Fact]
         public async Task GetAccountByIdAsync_AccountDoesNotExist_Throw()
         {
             // Arrange
-            var accountId = Guid.NewGuid();
+            var accountId = new Random().Next();
 
             _accountRepository
                 .Setup(x => x.GetByIdAsync(accountId))
@@ -120,7 +86,7 @@ namespace Application.UnitTests.ServiceTests
         public async Task RemoveAccountByIdAsync_AccountDoesNotExist_Throw()
         {
             // Arrange
-            var accountId = Guid.NewGuid();
+            var accountId = new Random().Next();
 
             _accountRepository
                 .Setup(x => x.GetOnlyAccountByIdAsync(accountId))

@@ -4,10 +4,8 @@
     {
         public ITransactionRepository Transactions { get; }
         bool HasActiveTransaction { get; }
-
         Task BeginTransactionAsync();
         Task CommitTransactionAsync();
         Task RollbackTransactionAsync();
-        //public Task SaveChanges();
     }
 }

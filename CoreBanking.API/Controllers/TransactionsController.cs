@@ -18,18 +18,18 @@ namespace CoreBanking.API.Controllers
 
         [HttpPost]
         [Idempotent]
-        public async Task<ActionResult<List<TransactionDetailResponseModel>>> CreateAsync(CreateTransactionRequest createTransactionRequest, 
+        public async Task<ActionResult<List<TransactionDetailResponseModel>>> CreateAsync(CreateTransactionRequest createTransactionRequest,
             [FromServices] IValidator<CreateTransactionRequest> validator)
         {
             validator.ValidateAndThrow(createTransactionRequest);
 
             var createdTransactionDetails = await _transactionService.CreateAsync(createTransactionRequest);
-            
+
             return Ok(createdTransactionDetails);
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<TransactionResponseModel>> GetTransactionById(Guid id)
+        public async Task<ActionResult<TransactionResponseModel>> GetTransactionById(int id)
         {
             var transaction = await _transactionService.GetTransactionByIdAsync(id);
 
@@ -46,13 +46,13 @@ namespace CoreBanking.API.Controllers
         }
 
         [HttpGet("withdrawals")]
-        public async Task<ActionResult<List<AccountTotalWithdrawalsResponseModel>>> GetTotalWithdrawalsByAccountsAsync([FromQuery] DateRangeRequest timeRange, 
+        public async Task<ActionResult<List<AccountTotalWithdrawalsResponseModel>>> GetTotalWithdrawalsByAccountsAsync([FromQuery] DateRangeRequest timeRange,
             [FromServices] IValidator<DateRangeRequest> validator)
         {
             validator.ValidateAndThrow(timeRange);
 
             var accountsTotalWithdrawals = await _transactionService.GetTotalWithdrawalsByAccountsAsync(timeRange.timeFrom, timeRange.timeTo);
-            
+
             return Ok(accountsTotalWithdrawals);
         }
 
@@ -63,7 +63,7 @@ namespace CoreBanking.API.Controllers
             validator.ValidateAndThrow(timeRange);
 
             var accountsTotalDeposites = await _transactionService.GetAccountsTotalDepositBetweenDatesAsync(timeRange.timeFrom, timeRange.timeTo);
-            
+
             return Ok(accountsTotalDeposites);
         }
 
@@ -74,16 +74,16 @@ namespace CoreBanking.API.Controllers
             validator.ValidateAndThrow(timeRange);
 
             var accountsTotalCashFlow = await _transactionService.GetTotalCashFlowsByAccountsAsync(timeRange.timeFrom, timeRange.timeTo);
-            
+
             return Ok(accountsTotalCashFlow);
         }
 
         [Idempotent]
         [HttpPut("undo-transaction/{id}")]
-        public async Task<ActionResult<TransactionResponseModel>> UndoTransactionByIdAsync(Guid id)
+        public async Task<ActionResult<TransactionResponseModel>> UndoTransactionByIdAsync(int id)
         {
             var transaction = await _transactionService.UndoTransactionByIdAsync(id);
-            
+
             return Ok(transaction);
         }
 

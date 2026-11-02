@@ -11,7 +11,6 @@ namespace CoreBanking.Infrastructure.Persistence.Configurations.AccountConfigura
         {
             BaseEntityConfiguration.Configure(builder);
 
-
             builder.HasOne(a => a.Client)
                 .WithMany(c => c.Accounts)
                 .HasForeignKey(a => a.ClientId)
@@ -28,7 +27,6 @@ namespace CoreBanking.Infrastructure.Persistence.Configurations.AccountConfigura
             .HasForeignKey<AccountBalance>(b => b.Id)
             .OnDelete(DeleteBehavior.NoAction)
             .IsRequired();
-
 
         }
     }

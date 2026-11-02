@@ -2,6 +2,6 @@
 {
     public interface IAudited
     {
-        DateTime InsertedAt { get; }
+        DateTime InsertedAt { get; set; }
     }
 }

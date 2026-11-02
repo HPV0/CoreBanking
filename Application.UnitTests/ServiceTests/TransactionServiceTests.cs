@@ -1,5 +1,9 @@
-﻿using CoreBanking.Application.DTOs.Transaction;
+﻿using CoreBanking.Application.Common;
+using CoreBanking.Application.DTOs.Transaction;
+using CoreBanking.Application.Exceptions;
+using CoreBanking.Application.Interfaces.Common;
 using CoreBanking.Application.Interfaces.IRepositories;
+using CoreBanking.Application.Interfaces.IServices;
 using CoreBanking.Application.Mappers;
 using CoreBanking.Application.Services;
 using CoreBanking.Domain.Constants;
@@ -13,12 +17,12 @@ namespace Application.UnitTests.ServiceTests
     public class TransactionServiceTests
     {
         private readonly Mock<ITransactionRepository> _transactionRepository = new();
-
         private readonly Mock<IAccountRepository> _accountRepository = new();
-        
         private readonly Mock<ICurrencyRepository> _currencyRepository = new();
-        
+        private readonly IMoneyCalculator _moneyCalculator = new MoneyCalculator();
         private readonly TransactionMapper _mapper = new();
+        private readonly IAccountBalanceService _accountBalanceService = new AccountBalanceService(new MoneyCalculator());
+        private readonly Mock<IUnitOfWork> _unitOfWork = new();
 
         private TransactionService CreateService()
         {
@@ -26,23 +30,28 @@ namespace Application.UnitTests.ServiceTests
                 _mapper,
                 _transactionRepository.Object,
                 _accountRepository.Object,
-                _currencyRepository.Object);
+                _currencyRepository.Object,
+                _moneyCalculator,
+                _accountBalanceService,
+                _unitOfWork.Object
+                );
         }
 
         [Fact]
         public async Task CreateAsync_ShouldCreateTransactionAndCommit()
         {
             // Arrange
-            var curr1 = TestEntityFactory.CreateCurrency("ABC");
-            var curr2 = TestEntityFactory.CreateCurrency("ABD");
-            var curr3 = TestEntityFactory.CreateCurrency("ABE");
+            var curr1 = TestEntityFactory.CreateCurrency(currencyCode: "ABC");
+            var curr2 = TestEntityFactory.CreateCurrency(currencyCode: "ABD");
+            var curr3 = TestEntityFactory.CreateCurrency(currencyCode: "ABE");
 
             var sender = TestEntityFactory.CreateAccount(currency: curr1);
             var receiver = TestEntityFactory.CreateAccount(currency: curr2);
-            var baseAccount = TestEntityFactory.CreateAccount(BankAccount.Id, currency: curr3);
+            var baseAccount = TestEntityFactory.CreateAccount(id: BankAccount.Id, currency: curr3);
 
             decimal amount = 100;
-            sender.Deposit(TestEntityFactory.CreateMoney(amount, curr1.CurrencyCode));
+
+            sender.Balance.Amount = amount;
 
             var request = new CreateTransactionRequest
             {
@@ -53,29 +62,26 @@ namespace Application.UnitTests.ServiceTests
                 ReceiveExchangeRate = 1
             };
 
-            var transactionDetails = new List<TransactionDetail>();
+            var transactionDetails = new List<Transaction>();
 
-            var expectedResponse = new TransactionResponseModel
+            var expectedResponse = new List<TransactionDetailResponseModel>
             {
-                Details = new()
+                new()
                 {
-                    new()
-                    {
-                        SenderId = sender.Id,
-                        ReceiverId = BankAccount.Id,
-                        ExchangeRate = 1,
-                        Amount = amount,
-                    },
-                    new()
-                    {
-                        ReceiverId = receiver.Id,
-                        SenderId = BankAccount.Id,
-                        ExchangeRate = 1,
-                        Amount = amount,
-                    }
+                    SenderId = sender.Id,
+                    ReceiverId = BankAccount.Id,
+                    ExchangeRate = 1,
+                    Amount = amount,
+                },
+                new()
+                {
+                    SenderId = BankAccount.Id,
+                    ReceiverId = receiver.Id,
+                    ExchangeRate = 1,
+                    Amount = amount,
                 }
-            };
 
+            };
 
             _accountRepository
                 .Setup(x => x.GetByIdAsync(sender.Id))
@@ -93,7 +99,7 @@ namespace Application.UnitTests.ServiceTests
                 .Setup(x => x.AddAsync(It.IsAny<Transaction>()))
                 .Callback<Transaction>(transaction =>
                 {
-                    transactionDetails = transaction.Details!.ToList();
+                    transactionDetails.Add(transaction);
                 })
                 .Returns(Task.CompletedTask);
 
@@ -103,12 +109,13 @@ namespace Application.UnitTests.ServiceTests
             var result = await service.CreateAsync(request);
 
             // Assert
-            result.Details.Should().BeEquivalentTo(expectedResponse.Details);
+            result.Should().BeEquivalentTo(expectedResponse);
 
             _transactionRepository.Verify(
                 x => x.SaveChangesAsync(),
                 Times.Once);
         }
+
 
         [Fact]
         public async Task GetAccountsTotalDepositBetweenDatesAsync_ShouldReturnRepositoryResult()
@@ -121,7 +128,7 @@ namespace Application.UnitTests.ServiceTests
             {
                 new()
                 {
-                    AccountId = Guid.NewGuid(),
+                    AccountId = new Random().Next(),
                     CurrencyCode = "ABC",
                     TotalDeposites = 500
                 }
@@ -155,7 +162,7 @@ namespace Application.UnitTests.ServiceTests
             {
                 new()
                 {
-                    AccountId = Guid.NewGuid(),
+                    AccountId = new Random().Next(),
                     TotalWithdrawals = 200
                 }
             };
@@ -178,61 +185,152 @@ namespace Application.UnitTests.ServiceTests
         }
 
         [Fact]
-        public async Task GetTotalCashFlowsByAccountsAsync_ShouldCalculateCashFlow()
+        public async Task CreateAsync_WithInsufficientFunds_Throw()
         {
             // Arrange
-            var accountId = Guid.NewGuid();
-            string code = "ABV";
-            decimal totalDeposites = 1000;
-            decimal totalWithdrawals = 300;
+            var currency = TestEntityFactory.CreateCurrency(currencyCode: "ABC");
 
-            var deposits = new List<AccountTotalDepositesResponseModel>
+            var sender = TestEntityFactory.CreateAccount(
+                currency: currency);
+
+            var receiver = TestEntityFactory.CreateAccount(
+                currency: currency);
+
+            var baseAccount = TestEntityFactory.CreateAccount(
+                currency: currency);
+
+            decimal amount = 50;
+
+            _accountBalanceService.Deposit(sender, amount);
+
+            var request = new CreateTransactionRequest
             {
-                new()
-                {
-                    AccountId = accountId,
-                    CurrencyCode = code,
-                    TotalDeposites = totalDeposites
-                }
+                SenderId = sender.Id,
+                ReceiverId = receiver.Id,
+                Amount = amount + 50,
+                SenderExchangeRate = 1,
+                ReceiveExchangeRate = 1
             };
 
-            var withdrawals = new List<AccountTotalWithdrawalsResponseModel>
-            {
-                new()
-                {
-                    AccountId = accountId,
-                    CurrencyCode = code,
-                    TotalWithdrawals = totalWithdrawals
-                }
-            };
+            _accountRepository
+                .Setup(x => x.GetByIdAsync(sender.Id))
+                .ReturnsAsync(sender);
 
-            _transactionRepository
-                .Setup(x => x.GetAccountsTotalDepositBetweenDatesAsync(
-                    It.IsAny<DateTime>(),
-                    It.IsAny<DateTime>()))
-                .ReturnsAsync(deposits);
+            _accountRepository
+                .Setup(x => x.GetByIdAsync(receiver.Id))
+                .ReturnsAsync(receiver);
 
-            _transactionRepository
-                .Setup(x => x.GetTotalWithdrawalsByAccountsAsync(
-                    It.IsAny<DateTime>(),
-                    It.IsAny<DateTime>()))
-                .ReturnsAsync(withdrawals);
+            _accountRepository
+                .Setup(x => x.GetByIdAsync(BankAccount.Id))
+                .ReturnsAsync(baseAccount);
 
             var service = CreateService();
 
             // Act
-            var result = await service.GetTotalCashFlowsByAccountsAsync(
-                DateTime.UtcNow.AddDays(-1),
-                DateTime.UtcNow);
+            var act = () => service.CreateAsync(request);
 
             // Assert
-            result.Should().ContainSingle();
+            await act.Should()
+                .ThrowAsync<UnprocessableException>();
+        }
 
-            result[0].Id.Should().Be(accountId);
-            result[0].CurrencyCode.Should().Be(code);
-            result[0].IncomesAmount.Should().Be(totalDeposites);
-            result[0].SpendingAmount.Should().Be(totalWithdrawals);
-            result[0].BalanceChangeAmount.Should().Be(totalDeposites - totalWithdrawals);
+
+        [Fact]
+        public async Task CreateAsync_DifferentCurrencies_CreateTwoDetails()
+        {
+            // Arrange
+            var usd = TestEntityFactory.CreateCurrency(currencyCode: "USD");
+            var amd = TestEntityFactory.CreateCurrency(currencyCode: "AMD");
+
+            var sender = TestEntityFactory.CreateAccount(
+                currency: usd);
+
+            var receiver = TestEntityFactory.CreateAccount(
+                currency: amd);
+
+            var baseAccount = TestEntityFactory.CreateAccount(
+                currency: usd);
+
+            decimal amount = 100;
+
+            _accountBalanceService.Deposit(sender, amount);
+
+            var request = new CreateTransactionRequest
+            {
+                SenderId = sender.Id,
+                ReceiverId = receiver.Id,
+                Amount = amount,
+                SenderExchangeRate = 1,
+                ReceiveExchangeRate = 1
+            };
+
+            _accountRepository
+                .Setup(x => x.GetByIdAsync(sender.Id))
+                .ReturnsAsync(sender);
+
+            _accountRepository
+                .Setup(x => x.GetByIdAsync(receiver.Id))
+                .ReturnsAsync(receiver);
+
+            _accountRepository
+                .Setup(x => x.GetByIdAsync(BankAccount.Id))
+                .ReturnsAsync(baseAccount);
+
+            var service = CreateService();
+
+            // Act
+            var result = await service.CreateAsync(request);
+
+            // Assert
+            result.Should().HaveCount(2);
+        }
+
+        [Fact]
+        public async Task CreateAsync_DifferentCurrencies_WithdrawFromSenderAndDepositToReceiver()
+        {
+            // Arrange
+            var usd = TestEntityFactory.CreateCurrency(currencyCode: "USD");
+            var amd = TestEntityFactory.CreateCurrency(currencyCode: "AMD");
+
+            var sender = TestEntityFactory.CreateAccount(currency: usd);
+            var receiver = TestEntityFactory.CreateAccount(currency: amd);
+            var baseAccount = TestEntityFactory.CreateAccount(currency: usd);
+
+            decimal reciverExchangeRate = 400;
+            decimal senderExchangeRate = 400;
+            decimal sendingAmount = 100;
+
+            _accountBalanceService.Deposit(sender, sendingAmount);
+
+            var request = new CreateTransactionRequest
+            {
+                SenderId = sender.Id,
+                ReceiverId = receiver.Id,
+                Amount = sendingAmount,
+                SenderExchangeRate = 1,
+                ReceiveExchangeRate = 1
+            };
+
+            _accountRepository
+                .Setup(x => x.GetByIdAsync(sender.Id))
+                .ReturnsAsync(sender);
+
+            _accountRepository
+                .Setup(x => x.GetByIdAsync(receiver.Id))
+                .ReturnsAsync(receiver);
+
+            _accountRepository
+                .Setup(x => x.GetByIdAsync(BankAccount.Id))
+                .ReturnsAsync(baseAccount);
+
+            var service = CreateService();
+
+            // Act
+            var result = await service.CreateAsync(request);
+
+            // Assert
+            sender.Balance.Amount.Should().Be(0);
+            receiver.Balance.Amount.Should().Be(_moneyCalculator.ExchangeCalc(sendingAmount, senderExchangeRate, reciverExchangeRate));
         }
     }
 }

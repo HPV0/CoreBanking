@@ -26,15 +26,15 @@ namespace CoreBanking.API.Controllers
             validator.ValidateAndThrow(createAccountRequest);
 
             var createdClient = await _accountService.CreateAsync(createAccountRequest);
-            
+
             return Ok(createdClient);
         }
 
         [HttpGet("client/{id}")]
-        public async Task<ActionResult<List<AccountResponseModel>>> GetAccountsByClientIdAsync(Guid id)
+        public async Task<ActionResult<List<AccountResponseModel>>> GetAccountsByClientIdAsync(int id)
         {
             var accounts = await _accountService.GetAccountsByClientIdAsync(id);
-            
+
             return Ok(accounts);
         }
 
@@ -47,41 +47,41 @@ namespace CoreBanking.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<AccountResponseModel>> GetAccountByIdAsync(Guid id)
+        public async Task<ActionResult<AccountResponseModel>> GetAccountByIdAsync(int id)
         {
             var account = await _accountService.GetAccountByIdAsync(id);
-            
+
             return Ok(account);
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult> RemoveAccountByIdasync(Guid id)
+        public async Task<ActionResult> RemoveAccountByIdasync(int id)
         {
             await _accountService.RemoveAccountByIdAsync(id);
-            
+
             return Ok();
         }
 
         [HttpPut("withdraw/{id}")]
         [Idempotent]
-        public async Task<ActionResult<AccountResponseModel>> WithdrawCashByAccountIdAsync(Guid id, CashFlowRequest cashflow, [FromServices] IValidator<CashFlowRequest> validator)
+        public async Task<ActionResult<AccountResponseModel>> WithdrawCashByAccountIdAsync(int id, CashFlowRequest cashflow, [FromServices] IValidator<CashFlowRequest> validator)
         {
             validator.ValidateAndThrow(cashflow);
-            
+
             var updatedAccount = await _accountService.WithdrawCashByAccountIdAsync(id, cashflow.Amount);
-            
+
             return Ok(updatedAccount);
         }
 
         [HttpPut("deposit/{id}")]
         [Idempotent]
-        public async Task<ActionResult<AccountResponseModel>> DepositCashByAccountIdAsync(Guid id, CashFlowRequest cashflow, 
+        public async Task<ActionResult<AccountResponseModel>> DepositCashByAccountIdAsync(int id, CashFlowRequest cashflow,
             [FromServices] IValidator<CashFlowRequest> validator)
         {
             validator.ValidateAndThrow(cashflow);
 
             var updatedAccount = await _accountService.DepositCashByAccountIdAsync(id, cashflow.Amount);
-            
+
             return Ok(updatedAccount);
         }
 

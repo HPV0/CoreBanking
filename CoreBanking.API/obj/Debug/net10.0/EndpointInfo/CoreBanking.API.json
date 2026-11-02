@@ -14,8 +14,7 @@
           {
             "name": "Idempotency-Key",
             "in": "header",
-            "description": "Unique key identifying this request.",
-            "required": true,
+            "description": "Unique key identifying this request. Generated automatically if omitted in Swagger UI.",
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -112,8 +111,8 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string",
-              "format": "uuid"
+              "type": "integer",
+              "format": "int32"
             }
           }
         ],
@@ -161,8 +160,8 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string",
-              "format": "uuid"
+              "type": "integer",
+              "format": "int32"
             }
           }
         ],
@@ -199,8 +198,8 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string",
-              "format": "uuid"
+              "type": "integer",
+              "format": "int32"
             }
           }
         ],
@@ -222,15 +221,14 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string",
-              "format": "uuid"
+              "type": "integer",
+              "format": "int32"
             }
           },
           {
             "name": "Idempotency-Key",
             "in": "header",
-            "description": "Unique key identifying this request.",
-            "required": true,
+            "description": "Unique key identifying this request. Generated automatically if omitted in Swagger UI.",
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -291,15 +289,14 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string",
-              "format": "uuid"
+              "type": "integer",
+              "format": "int32"
             }
           },
           {
             "name": "Idempotency-Key",
             "in": "header",
-            "description": "Unique key identifying this request.",
-            "required": true,
+            "description": "Unique key identifying this request. Generated automatically if omitted in Swagger UI.",
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -358,8 +355,7 @@
           {
             "name": "Idempotency-Key",
             "in": "header",
-            "description": "Unique key identifying this request.",
-            "required": true,
+            "description": "Unique key identifying this request. Generated automatically if omitted in Swagger UI.",
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -456,8 +452,8 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string",
-              "format": "uuid"
+              "type": "integer",
+              "format": "int32"
             }
           }
         ],
@@ -494,8 +490,8 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string",
-              "format": "uuid"
+              "type": "integer",
+              "format": "int32"
             }
           }
         ],
@@ -515,15 +511,14 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string",
-              "format": "uuid"
+              "type": "integer",
+              "format": "int32"
             }
           },
           {
             "name": "Idempotency-Key",
             "in": "header",
-            "description": "Unique key identifying this request.",
-            "required": true,
+            "description": "Unique key identifying this request. Generated automatically if omitted in Swagger UI.",
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -582,8 +577,7 @@
           {
             "name": "Idempotency-Key",
             "in": "header",
-            "description": "Unique key identifying this request.",
-            "required": true,
+            "description": "Unique key identifying this request. Generated automatically if omitted in Swagger UI.",
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -676,8 +670,7 @@
           {
             "name": "Idempotency-Key",
             "in": "header",
-            "description": "Unique key identifying this request.",
-            "required": true,
+            "description": "Unique key identifying this request. Generated automatically if omitted in Swagger UI.",
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -738,8 +731,8 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string",
-              "format": "uuid"
+              "type": "integer",
+              "format": "int32"
             }
           }
         ],
@@ -776,8 +769,8 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string",
-              "format": "uuid"
+              "type": "integer",
+              "format": "int32"
             }
           }
         ],
@@ -793,25 +786,15 @@
         "tags": [
           "Currencies"
         ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetCurrencyRateByCodeRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetCurrencyRateByCodeRequest"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetCurrencyRateByCodeRequest"
-              }
+        "parameters": [
+          {
+            "name": "Code",
+            "in": "query",
+            "schema": {
+              "type": "string"
             }
           }
-        },
+        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -843,8 +826,7 @@
           {
             "name": "Idempotency-Key",
             "in": "header",
-            "description": "Unique key identifying this request.",
-            "required": true,
+            "description": "Unique key identifying this request. Generated automatically if omitted in Swagger UI.",
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -903,8 +885,7 @@
           {
             "name": "Idempotency-Key",
             "in": "header",
-            "description": "Unique key identifying this request.",
-            "required": true,
+            "description": "Unique key identifying this request. Generated automatically if omitted in Swagger UI.",
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -1010,8 +991,8 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string",
-              "format": "uuid"
+              "type": "integer",
+              "format": "int32"
             }
           }
         ],
@@ -1218,15 +1199,14 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string",
-              "format": "uuid"
+              "type": "integer",
+              "format": "int32"
             }
           },
           {
             "name": "Idempotency-Key",
             "in": "header",
-            "description": "Unique key identifying this request.",
-            "required": true,
+            "description": "Unique key identifying this request. Generated automatically if omitted in Swagger UI.",
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -1264,8 +1244,8 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string",
-            "format": "uuid"
+            "type": "integer",
+            "format": "int32"
           },
           "currencyCode": {
             "type": "string",
@@ -1290,8 +1270,8 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string",
-            "format": "uuid"
+            "type": "integer",
+            "format": "int32"
           },
           "amount": {
             "type": "number",
@@ -1308,8 +1288,8 @@
         "type": "object",
         "properties": {
           "accountId": {
-            "type": "string",
-            "format": "uuid"
+            "type": "integer",
+            "format": "int32"
           },
           "totalWithdrawals": {
             "type": "number",
@@ -1336,8 +1316,8 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string",
-            "format": "uuid"
+            "type": "integer",
+            "format": "int32"
           },
           "name": {
             "type": "string",
@@ -1367,8 +1347,8 @@
         "type": "object",
         "properties": {
           "clientId": {
-            "type": "string",
-            "format": "uuid"
+            "type": "integer",
+            "format": "int32"
           },
           "currencyCode": {
             "type": "string",
@@ -1422,12 +1402,12 @@
         "type": "object",
         "properties": {
           "senderId": {
-            "type": "string",
-            "format": "uuid"
+            "type": "integer",
+            "format": "int32"
           },
           "receiverId": {
-            "type": "string",
-            "format": "uuid"
+            "type": "integer",
+            "format": "int32"
           },
           "senderExchangeRate": {
             "type": "number",
@@ -1449,6 +1429,10 @@
       "CurrencyRateResponseModel": {
         "type": "object",
         "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
           "validFrom": {
             "type": "string",
             "format": "date-time"
@@ -1469,8 +1453,8 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string",
-            "format": "uuid"
+            "type": "integer",
+            "format": "int32"
           },
           "currencyCode": {
             "type": "string",
@@ -1487,8 +1471,8 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string",
-            "format": "uuid"
+            "type": "integer",
+            "format": "int32"
           },
           "currencyCode": {
             "type": "string",
@@ -1504,26 +1488,20 @@
         },
         "additionalProperties": false
       },
-      "GetCurrencyRateByCodeRequest": {
-        "type": "object",
-        "properties": {
-          "code": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "TransactionDetailResponseModel": {
         "type": "object",
         "properties": {
           "senderId": {
-            "type": "string",
-            "format": "uuid"
+            "type": "integer",
+            "format": "int32"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int32"
           },
           "receiverId": {
-            "type": "string",
-            "format": "uuid"
+            "type": "integer",
+            "format": "int32"
           },
           "exchangeRate": {
             "type": "number",
@@ -1532,6 +1510,11 @@
           "amount": {
             "type": "number",
             "format": "double"
+          },
+          "transactionId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1540,8 +1523,9 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string",
-            "format": "uuid"
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
           },
           "details": {
             "type": "array",
@@ -1598,8 +1582,8 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string",
-            "format": "uuid"
+            "type": "integer",
+            "format": "int32"
           },
           "rate": {
             "type": "number",

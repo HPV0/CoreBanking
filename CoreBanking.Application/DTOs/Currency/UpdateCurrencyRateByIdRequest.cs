@@ -2,7 +2,7 @@
 {
     public class UpdateCurrencyRateByIdRequest
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public decimal Rate { get; set; }
     }
 }

@@ -19,7 +19,7 @@ namespace Domain.UnitTests.AccountTest
             
             var currency = TestEntityFactory.CreateCurrency(currencyCode: code);
             
-            var account = Account.Create(currency, client);
+            var account = new Account { Currency = currency, Client = client };
             
             var money = TestEntityFactory.CreateMoney(currencyCode: code, amount: amount);
 
@@ -38,7 +38,7 @@ namespace Domain.UnitTests.AccountTest
             decimal amount = 100;
             var client = TestEntityFactory.CreateClient();
             var currency = TestEntityFactory.CreateCurrency(currencyCode: code);
-            var account = Account.Create(currency, client);
+            var account = new Account { Currency = currency,Client = client };
             var money = TestEntityFactory.CreateMoney(currencyCode: code, amount: amount);
 
             account.Deposit(Money.Create(100, code));
@@ -60,7 +60,7 @@ namespace Domain.UnitTests.AccountTest
             decimal amount = 100;
             var client = TestEntityFactory.CreateClient();
             var currency = TestEntityFactory.CreateCurrency(currencyCode: code);
-            var account = Account.Create(currency, client);
+            var account = new Account { Currency = currency, Client = client };
             var money = TestEntityFactory.CreateMoney(currencyCode: otherCode, amount: amount);
 
             // Act

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CoreBanking.Application.Exceptions
+﻿namespace CoreBanking.Application.Exceptions
 {
     public class CustomValidationException : Exception
     {

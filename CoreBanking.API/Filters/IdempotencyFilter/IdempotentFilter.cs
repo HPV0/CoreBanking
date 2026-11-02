@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Caching.Distributed;
 using StackExchange.Redis;
 using System.Text.Json;
-using System.Text.Json.Serialization;
 
 namespace CoreBanking.API.Filters.IdempotencyFilter
 {
@@ -17,9 +16,15 @@ namespace CoreBanking.API.Filters.IdempotencyFilter
         {
             var request = context.HttpContext.Request;
 
-            if (!request.Headers.TryGetValue("Idempotency-Key", out var keyVal) || !Guid.TryParse(keyVal, out var key))
+            if (!request.Headers.TryGetValue("Idempotency-Key", out var keyVal))
             {
-                throw new CustomValidationException("Missing or invalid Idempotency-Key");
+                request.Headers.TryAdd("Idempotency-Key", Guid.NewGuid().ToString());
+                request.Headers.TryGetValue("Idempotency-Key", out keyVal);
+            }
+
+            if (!Guid.TryParse(keyVal, out var key))
+            {
+                throw new CustomValidationException("Invalid Idempotency key");
             }
 
             var cache = context.HttpContext.RequestServices.GetRequiredService<IDistributedCache>();
@@ -39,10 +44,7 @@ namespace CoreBanking.API.Filters.IdempotencyFilter
                 var existing = await cache.GetStringAsync(cacheKey);
                 if (existing != null)
                 {
-
-                    var saved = JsonSerializer.Deserialize<IdempotentResponse>(existing)!;
-                    context.Result = new ObjectResult(saved.Value) { StatusCode = saved.StatusCode };
-                    return;
+                    throw new CustomValidationException("Request with this idempotency key is already processed.");
                 }
 
                 var result = await next();

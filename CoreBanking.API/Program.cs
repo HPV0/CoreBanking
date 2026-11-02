@@ -1,12 +1,13 @@
 using CoreBanking.API.Exceptions;
 using CoreBanking.API.Swagger;
+using CoreBanking.Application.Common;
+using CoreBanking.Application.Interfaces.Common;
 using CoreBanking.Application.Interfaces.IRepositories;
 using CoreBanking.Application.Interfaces.IServices;
 using CoreBanking.Application.Mappers;
 using CoreBanking.Application.Services;
 using CoreBanking.Infrastructure.Data.Context;
 using CoreBanking.Infrastructure.Persistence;
-using CoreBanking.Infrastructure.Persistence.Seed;
 using CoreBanking.Infrastructure.Repositories;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
@@ -26,12 +27,16 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     .UseSnakeCaseNamingConvention());
 
 
+builder.Services.AddSingleton<IMoneyCalculator, MoneyCalculator>();
+
 builder.Services.AddScoped<IClinetService, ClinetService>();
+builder.Services.AddScoped<IAccountBalanceService, AccountBalanceService>();
 builder.Services.AddScoped<ICurrencyService, CurrencyService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<ITransactionService, TransactionService>();
 
 builder.Services.AddScoped<IClientRepository, ClientRepository>();
+builder.Services.AddScoped<ICurrencyRateRepository, CurrencyRateRepository>();
 builder.Services.AddScoped<ICurrencyRepository, CurrencyRepository>();
 builder.Services.AddScoped<IAccountRepository, AccountRepository>();
 builder.Services.AddScoped<ITransactionRepository, TransactionRepository>();

@@ -1,4 +1,5 @@
-﻿using FluentValidation;
+﻿using CoreBanking.Domain.Constants;
+using FluentValidation;
 
 namespace CoreBanking.API.Validators.Extensions
 {
@@ -20,7 +21,7 @@ namespace CoreBanking.API.Validators.Extensions
         {
             return ruleBuilder
                 .GreaterThan(0).WithMessage("Rate must be positive.")
-                .PrecisionScale(18, 6, true).WithMessage("Amount cannot have more than 18 digits before the decimal point and 4 decimal places.");
+                .PrecisionScale(18, FinancialPrecision.RatePrecision, true).WithMessage($"Amount cannot have more than 18 digits before the decimal point and {FinancialPrecision.RatePrecision} decimal places.");
         }
 
         public static IRuleBuilderOptions<T, decimal> IsValidRate<T>(
@@ -28,7 +29,7 @@ namespace CoreBanking.API.Validators.Extensions
         {
             return ruleBuilder
                 .GreaterThan(0).WithMessage("Rate must be positive.")
-                .PrecisionScale(18, 6, true).WithMessage("Amount cannot have more than 18 digits before the decimal point and 4 decimal places.");
+                .PrecisionScale(18, FinancialPrecision.RatePrecision, true).WithMessage($"Amount cannot have more than 18 digits before the decimal point and {FinancialPrecision.RatePrecision} decimal places.");
         }
     }
 }

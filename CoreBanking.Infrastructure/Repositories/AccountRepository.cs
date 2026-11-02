@@ -12,23 +12,23 @@ namespace CoreBanking.Infrastructure.Repositories
 
         public AccountRepository(ApplicationDbContext db) : base(db) { }
 
-        public async Task<List<Account>> GetAccountsByClientIdAsync(Guid Id)
+        public async Task<List<Account>> GetAccountsByClientIdAsync(int Id)
         {
             return await BaseQuery.Where(a => a.ClientId == Id).ToListAsync();
         }
 
-        public async Task<bool> ClientHasAccountWithCurrencyCodeAsync(Guid id, string code)
+        public async Task<bool> ClientHasAccountWithCurrencyCodeAsync(int id, string code)
         {
-            var account = await BaseQuery.FirstOrDefaultAsync(a => a.ClientId == id && a.Currency.CurrencyCode == code);
+            var account = await BaseQuery.FirstOrDefaultAsync(a => a.Id == id && a.Currency.CurrencyCode == code);
             return account != null;
         }
 
-        public async Task<Account> GetOnlyAccountByIdAsync(Guid id)
+        public async Task<Account> GetOnlyAccountByIdAsync(int id)
         {
             return await _dbContext.Accounts.FirstOrDefaultAsync(a => a.Id == id);
         }
 
         public override void Remove(Account entity)
-        => entity.SoftDelete();
+        => entity.IsActive = false;
     }
 }

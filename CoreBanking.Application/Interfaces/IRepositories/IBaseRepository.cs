@@ -5,16 +5,12 @@ namespace CoreBanking.Application.Interfaces.IRepositories
 {
     public interface IBaseRepository<TEntity> where TEntity : BaseEntity
     {
-        public Task<TEntity?> GetByIdAsync(Guid id);
-
+        public Task<TEntity?> GetByIdAsync(int id);
         public Task<IEnumerable<TEntity>> GetAllItemsAsync();
-
         public Task<IEnumerable<TEntity>> GetFilteredAsync(Expression<Func<TEntity, bool>> filter);
-
         public Task SaveChangesAsync();
-
         public Task AddAsync(TEntity entity);
         public void Remove(TEntity entity);
-
+        public Task<bool> IsExistsAsync(int Id);
     }
 }

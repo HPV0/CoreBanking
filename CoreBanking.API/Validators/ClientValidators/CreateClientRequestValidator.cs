@@ -9,13 +9,15 @@ namespace CoreBanking.API.Validators.ClientValidators
         {
             RuleFor(x => x.Name)
                 .NotNull().WithMessage("Name cannot be null")
-                .NotEmpty().WithMessage("Name is requird")
-                .MaximumLength(20).WithMessage("Maximum length is 20");
+                .NotEmpty().WithMessage("Name is required")
+                .MaximumLength(20).WithMessage("Maximum length is 20")
+                .Matches("^[a-zA-Z]*$").WithMessage("Name must contain only English characters");
 
             RuleFor(x => x.Surname)
                 .NotNull().WithMessage("Surname cannot be null")
-                .NotEmpty().WithMessage("Surname is requird")
-                .MaximumLength(20).WithMessage("Maximum length of Surname is 20");
+                .NotEmpty().WithMessage("Surname is required")
+                .MaximumLength(20).WithMessage("Maximum length of Surname is 20")
+                .Matches("^[a-zA-Z]*$").WithMessage("Surname must contain only English characters");
 
 
             RuleFor(x => x.Birthday)

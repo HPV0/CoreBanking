@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CoreBanking.API.Exceptions
 {
-    internal sealed class CustomValidationExceptionHandler : IExceptionHandler 
+    internal sealed class CustomValidationExceptionHandler : IExceptionHandler
     {
         private readonly ILogger<CustomValidationExceptionHandler> _logger;
 

@@ -1,4 +1,5 @@
-﻿using CoreBanking.Domain.Entities.CurrencyEntities;
+﻿using CoreBanking.Domain.Constants;
+using CoreBanking.Domain.Entities.CurrencyEntities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -11,7 +12,7 @@ namespace CoreBanking.Infrastructure.Persistence.Configurations.CurrencyConfigur
             BaseEntityConfiguration.Configure(builder);
 
             builder.Property(cr => cr.Rate)
-                .HasPrecision(18, 6)
+                .HasPrecision(18, FinancialPrecision.RatePrecision)
                 .IsRequired();
 
             builder.Property(cr => cr.ValidFrom)

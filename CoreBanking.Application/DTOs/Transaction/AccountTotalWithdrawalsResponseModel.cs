@@ -2,7 +2,7 @@
 {
     public class AccountTotalWithdrawalsResponseModel
     {
-        public Guid AccountId { get; set; }
+        public int AccountId { get; set; }
         public decimal TotalWithdrawals { get; set; }
         public string CurrencyCode { get; set; }
     }

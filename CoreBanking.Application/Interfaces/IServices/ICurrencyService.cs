@@ -7,10 +7,9 @@ namespace CoreBanking.Application.Interfaces.IServices
         public Task<CurrencyResponseModel> CreateAsync(CreateCurrencyRequest createClientRequest);
         public Task<CurrencyResponseModel> UpdateCurrencyRateByIdAsync(UpdateCurrencyRateByIdRequest updateCurrencyRateRequest);
         public Task<CurrencyResponseModel> UpdateCurrencyRateByCodeAsync(UpdateCurrencyRateByCodeRequest updateCurrencyRateRequest);
-        public Task<CurrencyResponseModel> GetCurrencyByIdAsync(Guid Id);
+        public Task<CurrencyResponseModel> GetCurrencyByIdAsync(int Id);
         public Task<List<CurrencyWithAllRatesResponseModel>> GetAllCurrenciesAsync();
-        public Task RemoveByIdAsync(Guid Id);
-        public Task<CurrencyResponseModel> GetRateCurrencyByCodeAsync(string code);
-
+        public Task RemoveByIdAsync(int Id);
+        public Task<CurrencyResponseModel> GetCurrencyByCodeAsync(string code);
     }
 }

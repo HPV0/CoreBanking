@@ -8,6 +8,7 @@ namespace CoreBanking.Application.Mappers
     [Mapper]
     public partial class ClientMapper
     {
+        public partial Client ToClient(CreateClientRequest client);
         public partial CreateClientRequest ToCreateClientRequest(Client client);
         public partial List<CreateClientRequest> ToCreateClientRequests(List<Client> clients);
 

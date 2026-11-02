@@ -18,21 +18,18 @@ namespace CoreBanking.Infrastructure.Data.Context
         public DbSet<Client> Clients => Set<Client>();
 
         public DbSet<Account> Accounts => Set<Account>();
-        
+
         public DbSet<AccountBalance> AccountBalances => Set<AccountBalance>();
-        
+
         public DbSet<Currency> Currencies => Set<Currency>();
-        
+
         public DbSet<CurrencyRate> CurrencyRates => Set<CurrencyRate>();
-        
+
         public DbSet<Transaction> Transactions => Set<Transaction>();
-        
-        public DbSet<TransactionDetail> TransactionsDetails => Set<TransactionDetail>();
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
-
 
         public override int SaveChanges()
             => SaveChanges(acceptAllChangesOnSuccess: true);
@@ -52,7 +49,6 @@ namespace CoreBanking.Infrastructure.Data.Context
             return base.SaveChangesAsync(acceptAllChangesOnSuccess, cancellationToken);
         }
 
-
         protected override void OnModelCreating(ModelBuilder builder)
         {
             ConfigureSoftDeleteFilter(builder);
@@ -62,11 +58,9 @@ namespace CoreBanking.Infrastructure.Data.Context
             builder.ApplyConfiguration(new CurrencyConfiguration());
             builder.ApplyConfiguration(new CurrencyRateConfiguration());
             builder.ApplyConfiguration(new TransactionConfiguration());
-            builder.ApplyConfiguration(new TransactionDetailsConfiguration());
 
             base.OnModelCreating(builder);
         }
-
 
         private static void ConfigureSoftDeleteFilter(ModelBuilder builder)
         {
