@@ -18,6 +18,9 @@ namespace CoreBanking.Infrastructure.Persistence.Configurations.CurrencyConfigur
             builder.HasIndex(c => c.CurrencyCode)
                 .IsUnique();
 
+            builder.HasIndex(c => c.IsBaseCurrency)
+                .IsUnique()
+                .HasFilter("\"is_base_currency\" = TRUE");
         }
     }
 }

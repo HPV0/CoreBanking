@@ -168,12 +168,21 @@ namespace CoreBanking.Infrastructure.Migrations
                         .HasDefaultValue(true)
                         .HasColumnName("is_active");
 
+                    b.Property<bool>("IsBaseCurrency")
+                        .HasColumnType("boolean")
+                        .HasColumnName("is_base_currency");
+
                     b.HasKey("Id")
                         .HasName("pk_currencies");
 
                     b.HasIndex("CurrencyCode")
                         .IsUnique()
                         .HasDatabaseName("ix_currencies_currency_code");
+
+                    b.HasIndex("IsBaseCurrency")
+                        .IsUnique()
+                        .HasDatabaseName("ix_currencies_is_base_currency")
+                        .HasFilter("\"is_base_currency\" = TRUE");
 
                     b.ToTable("currencies", (string)null);
                 });

@@ -11,5 +11,6 @@ namespace CoreBanking.Application.Interfaces.IRepositories
         public Task<CurrencyRate?> GetActiveCurrencyRateByCodeAsync(string code);
         public Task<CurrencyRate?> GetActiveCurrencyRateByIdAsync(int Id);
         public Task<bool> CurrencyCodeExist(string code);
+        public Task<Currency> GetBaseCurrencyAsync();
     }
 }

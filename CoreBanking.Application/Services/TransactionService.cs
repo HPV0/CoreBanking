@@ -35,6 +35,8 @@ namespace CoreBanking.Application.Services
         async Task<List<Transaction>> BuildTransactionAsync(CreateTransactionRequest createTransactionRequest)
         {
 
+            var baseCurrnecy = await _currencyRepository.GetBaseCurrencyAsync();
+
             if (createTransactionRequest.SenderId == BankAccount.Id || createTransactionRequest.ReceiverId == BankAccount.Id)
                 throw new UnprocessableException("Cannot do transaction with base account");
 
@@ -60,10 +62,10 @@ namespace CoreBanking.Application.Services
             if (senderAccount.Id == receiverAccount.Id)
                 throw new UnprocessableException("Sender and Recevier accounts cannot be same.");
 
-            if (senderAccount.CurrencyId == BaseCurrency.Id && senderExchangeRate != 1)
+            if (senderAccount.CurrencyId == baseCurrnecy.Id && senderExchangeRate != 1)
                 throw new UnprocessableException("Sender Exchange rate for base currency cannot be other then 1");
 
-            if (receiverAccount.CurrencyId == BaseCurrency.Id && receiverExchangeRate != 1)
+            if (receiverAccount.CurrencyId == baseCurrnecy.Id && receiverExchangeRate != 1)
                 throw new UnprocessableException("Receiver Exchange rate for base currency cannot be other then 1");
 
             List<Transaction> Details = new();

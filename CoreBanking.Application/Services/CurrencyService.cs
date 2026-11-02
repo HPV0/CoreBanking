@@ -76,7 +76,9 @@ namespace CoreBanking.Application.Services
 
         public async Task<CurrencyResponseModel> UpdateCurrencyRateByIdAsync(UpdateCurrencyRateByIdRequest updateCurrencyRateRequest)
         {
-            if (updateCurrencyRateRequest.Id == BaseCurrency.Id)
+            var baseCurrnecy = await _currencyRepository.GetBaseCurrencyAsync();
+
+            if (updateCurrencyRateRequest.Id == baseCurrnecy.Id)
                 throw new UnprocessableException("Cannot update base currency rate");
 
             var currencyWithRate = await _currencyRepository.GetCurrencyWithActiveRateByIdAsync(updateCurrencyRateRequest.Id)
@@ -106,7 +108,9 @@ namespace CoreBanking.Application.Services
 
         public async Task RemoveByIdAsync(int id)
         {
-            if (id == BaseCurrency.Id)
+            var baseCurrnecy = await _currencyRepository.GetBaseCurrencyAsync();
+
+            if (id == baseCurrnecy.Id)
                 throw new Exception("Cannot remove base currency.");
 
             var curr = await _currencyRepository.GetOnlyCurrencyByIdAsync(id)

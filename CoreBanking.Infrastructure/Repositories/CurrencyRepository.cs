@@ -1,4 +1,5 @@
-﻿using CoreBanking.Application.Interfaces.IRepositories;
+﻿using CoreBanking.Application.Exceptions;
+using CoreBanking.Application.Interfaces.IRepositories;
 using CoreBanking.Domain.Entities.CurrencyEntities;
 using CoreBanking.Infrastructure.Data.Context;
 using Microsoft.EntityFrameworkCore;
@@ -72,6 +73,14 @@ namespace CoreBanking.Infrastructure.Repositories
         {
             var currencyExist = await OnlyCurrencyQuery.AnyAsync(c => c.CurrencyCode == code);
             return currencyExist;
+        }
+
+        public async Task<Currency> GetBaseCurrencyAsync()
+        {
+            var baseCurrency = await OnlyCurrencyQuery.SingleOrDefaultAsync(curr => curr.IsBaseCurrency == true) 
+                ?? throw new Exception("No base currency exist");
+            
+            return baseCurrency;
         }
     }
 }
