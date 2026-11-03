@@ -1,4 +1,5 @@
-﻿using CoreBanking.Application.Common;
+﻿using Castle.Components.DictionaryAdapter.Xml;
+using CoreBanking.Application.Common;
 using CoreBanking.Application.DTOs.Transaction;
 using CoreBanking.Application.Exceptions;
 using CoreBanking.Application.Interfaces.Common;
@@ -7,6 +8,7 @@ using CoreBanking.Application.Interfaces.IServices;
 using CoreBanking.Application.Mappers;
 using CoreBanking.Application.Services;
 using CoreBanking.Domain.Constants;
+using CoreBanking.Domain.Entities.CurrencyEntities;
 using CoreBanking.Domain.Entities.TransactionEntities;
 using FluentAssertions;
 using Moq;
@@ -45,9 +47,11 @@ namespace Application.UnitTests.ServiceTests
             var curr2 = TestEntityFactory.CreateCurrency(currencyCode: "ABD");
             var curr3 = TestEntityFactory.CreateCurrency(currencyCode: "ABE");
 
+            int bankAccountId = 1;
+
             var sender = TestEntityFactory.CreateAccount(currency: curr1);
             var receiver = TestEntityFactory.CreateAccount(currency: curr2);
-            var baseAccount = TestEntityFactory.CreateAccount(id: BankAccount.Id, currency: curr3);
+            var baseAccount = TestEntityFactory.CreateAccount(id: bankAccountId, currency: curr3);
 
             decimal amount = 100;
 
@@ -69,19 +73,23 @@ namespace Application.UnitTests.ServiceTests
                 new()
                 {
                     SenderId = sender.Id,
-                    ReceiverId = BankAccount.Id,
+                    ReceiverId = bankAccountId,
                     ExchangeRate = 1,
                     Amount = amount,
                 },
                 new()
                 {
-                    SenderId = BankAccount.Id,
+                    SenderId = bankAccountId,
                     ReceiverId = receiver.Id,
                     ExchangeRate = 1,
                     Amount = amount,
                 }
 
             };
+
+            _currencyRepository
+                .Setup(x => x.GetBaseCurrencyAsync())
+                .ReturnsAsync(curr3);
 
             _accountRepository
                 .Setup(x => x.GetByIdAsync(sender.Id))
@@ -92,7 +100,7 @@ namespace Application.UnitTests.ServiceTests
                 .ReturnsAsync(receiver);
 
             _accountRepository
-                .Setup(x => x.GetByIdAsync(BankAccount.Id))
+                .Setup(x => x.GetBankAccountAsync())
                 .ReturnsAsync(baseAccount);
 
             _transactionRepository
@@ -190,13 +198,15 @@ namespace Application.UnitTests.ServiceTests
             // Arrange
             var currency = TestEntityFactory.CreateCurrency(currencyCode: "ABC");
 
+            int bankAccountId = 1;
+
             var sender = TestEntityFactory.CreateAccount(
                 currency: currency);
 
             var receiver = TestEntityFactory.CreateAccount(
                 currency: currency);
 
-            var baseAccount = TestEntityFactory.CreateAccount(
+            var baseAccount = TestEntityFactory.CreateAccount(id: bankAccountId,
                 currency: currency);
 
             decimal amount = 50;
@@ -212,6 +222,10 @@ namespace Application.UnitTests.ServiceTests
                 ReceiveExchangeRate = 1
             };
 
+            _currencyRepository
+                .Setup(x => x.GetBaseCurrencyAsync())
+                .ReturnsAsync(currency);
+
             _accountRepository
                 .Setup(x => x.GetByIdAsync(sender.Id))
                 .ReturnsAsync(sender);
@@ -221,7 +235,7 @@ namespace Application.UnitTests.ServiceTests
                 .ReturnsAsync(receiver);
 
             _accountRepository
-                .Setup(x => x.GetByIdAsync(BankAccount.Id))
+                .Setup(x => x.GetBankAccountAsync())
                 .ReturnsAsync(baseAccount);
 
             var service = CreateService();
@@ -242,13 +256,15 @@ namespace Application.UnitTests.ServiceTests
             var usd = TestEntityFactory.CreateCurrency(currencyCode: "USD");
             var amd = TestEntityFactory.CreateCurrency(currencyCode: "AMD");
 
+            int bankAccountId = 1;
+
             var sender = TestEntityFactory.CreateAccount(
                 currency: usd);
 
             var receiver = TestEntityFactory.CreateAccount(
                 currency: amd);
 
-            var baseAccount = TestEntityFactory.CreateAccount(
+            var baseAccount = TestEntityFactory.CreateAccount(bankAccountId,
                 currency: usd);
 
             decimal amount = 100;
@@ -264,6 +280,10 @@ namespace Application.UnitTests.ServiceTests
                 ReceiveExchangeRate = 1
             };
 
+            _currencyRepository
+                .Setup(x => x.GetBaseCurrencyAsync())
+                .ReturnsAsync(usd);
+
             _accountRepository
                 .Setup(x => x.GetByIdAsync(sender.Id))
                 .ReturnsAsync(sender);
@@ -273,7 +293,7 @@ namespace Application.UnitTests.ServiceTests
                 .ReturnsAsync(receiver);
 
             _accountRepository
-                .Setup(x => x.GetByIdAsync(BankAccount.Id))
+                .Setup(x => x.GetBankAccountAsync())
                 .ReturnsAsync(baseAccount);
 
             var service = CreateService();
@@ -292,9 +312,11 @@ namespace Application.UnitTests.ServiceTests
             var usd = TestEntityFactory.CreateCurrency(currencyCode: "USD");
             var amd = TestEntityFactory.CreateCurrency(currencyCode: "AMD");
 
+            int bankAccountId = 1;
+
             var sender = TestEntityFactory.CreateAccount(currency: usd);
             var receiver = TestEntityFactory.CreateAccount(currency: amd);
-            var baseAccount = TestEntityFactory.CreateAccount(currency: usd);
+            var baseAccount = TestEntityFactory.CreateAccount(bankAccountId, currency: usd);
 
             decimal reciverExchangeRate = 400;
             decimal senderExchangeRate = 400;
@@ -311,6 +333,10 @@ namespace Application.UnitTests.ServiceTests
                 ReceiveExchangeRate = 1
             };
 
+            _currencyRepository
+                .Setup(x => x.GetBaseCurrencyAsync())
+                .ReturnsAsync(usd);
+
             _accountRepository
                 .Setup(x => x.GetByIdAsync(sender.Id))
                 .ReturnsAsync(sender);
@@ -320,7 +346,7 @@ namespace Application.UnitTests.ServiceTests
                 .ReturnsAsync(receiver);
 
             _accountRepository
-                .Setup(x => x.GetByIdAsync(BankAccount.Id))
+                .Setup(x => x.GetBankAccountAsync())
                 .ReturnsAsync(baseAccount);
 
             var service = CreateService();

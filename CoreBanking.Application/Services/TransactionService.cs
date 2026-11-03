@@ -32,22 +32,22 @@ namespace CoreBanking.Application.Services
             _unitOfWork = unitOfWork;
         }
 
-        async Task<List<Transaction>> BuildTransactionAsync(CreateTransactionRequest createTransactionRequest)
+        async Task<List<Transaction>> BuildTransactionAsync(CreateTransactionRequest createTransactionRequest, Account? bankAccount = null)
         {
 
             var baseCurrnecy = await _currencyRepository.GetBaseCurrencyAsync();
-
-            if (createTransactionRequest.SenderId == BankAccount.Id || createTransactionRequest.ReceiverId == BankAccount.Id)
-                throw new UnprocessableException("Cannot do transaction with base account");
 
             var senderAccount = await _accountRepository.GetByIdAsync(createTransactionRequest.SenderId)
                 ?? throw new EntityNotFoundException(nameof(Account), createTransactionRequest.SenderId);
 
             var receiverAccount = await _accountRepository.GetByIdAsync(createTransactionRequest.ReceiverId)
                 ?? throw new EntityNotFoundException(nameof(Account), createTransactionRequest.ReceiverId);
+            
+            if (bankAccount is null)
+                bankAccount = await _accountRepository.GetBankAccountAsync();
 
-            var baseAccount = await _accountRepository.GetByIdAsync(BankAccount.Id)
-                ?? throw new EntityNotFoundException(nameof(Account), BankAccount.Id);
+            if (createTransactionRequest.SenderId == bankAccount.Id || createTransactionRequest.ReceiverId == bankAccount.Id)
+                throw new UnprocessableException("Cannot do transaction with base account");
 
             decimal senderExchangeRate = createTransactionRequest.SenderExchangeRate
                     ?? (await _currencyRepository.GetActiveCurrencyRateByIdAsync(senderAccount.CurrencyId)
@@ -80,11 +80,11 @@ namespace CoreBanking.Application.Services
             {
                 decimal baseAccountRecevingAmount;
 
-                var detail1 = CreateTransactionDetail(senderAccount, baseAccount, senderExchangeRate, 1, sendingAmount, out baseAccountRecevingAmount);
+                var detail1 = CreateTransactionDetail(senderAccount, bankAccount, senderExchangeRate, 1, sendingAmount, out baseAccountRecevingAmount);
                 await _transactionRepository.AddAsync(detail1);
                 Details.Add(detail1);
 
-                var detail2 = CreateTransactionDetail(baseAccount, receiverAccount, 1, receiverExchangeRate, baseAccountRecevingAmount, out _);
+                var detail2 = CreateTransactionDetail(bankAccount, receiverAccount, 1, receiverExchangeRate, baseAccountRecevingAmount, out _);
                 await _transactionRepository.AddAsync(detail2);
                 Details.Add(detail2);
             }
@@ -144,8 +144,10 @@ namespace CoreBanking.Application.Services
                 var originalTransactionDetails = await _transactionRepository.GetByTransactionIdAsync(id)
                 ?? throw new EntityNotFoundException("Transaction", id);
 
+                var bankAccount = await _accountRepository.GetBankAccountAsync();
+
                 Transaction senderTransactionDetail, reciverTransactionDetail;
-                GetTransactionDetailsSenderAndReceiver(originalTransactionDetails, out reciverTransactionDetail, out senderTransactionDetail);
+                GetTransactionDetailsSenderAndReceiver(originalTransactionDetails, bankAccount.Id, out reciverTransactionDetail, out senderTransactionDetail);
 
 
                 var reverseSenderExchangeRate = _moneyCalculator.ExchangeRateCalc(1, reciverTransactionDetail.ExchangeRate);
@@ -163,7 +165,7 @@ namespace CoreBanking.Application.Services
                     Amount = reverseSendingAmount
                 };
 
-                var reverseTransaction = await BuildTransactionAsync(reverseCreateRequest);
+                var reverseTransaction = await BuildTransactionAsync(reverseCreateRequest, bankAccount);
 
                 await _transactionRepository.SaveChangesAsync();
 
@@ -192,7 +194,7 @@ namespace CoreBanking.Application.Services
         }
 
 
-        void GetTransactionDetailsSenderAndReceiver(List<Transaction> Details, out Transaction receiverAccount, out Transaction senderAccount)
+        void GetTransactionDetailsSenderAndReceiver(List<Transaction> Details, int bankAccountId, out Transaction receiverAccount, out Transaction senderAccount)
         {
             if (Details.Count == 0)
                 throw new Exception("Cannot get Sender And Receiver, when Details count is 0");
@@ -202,11 +204,11 @@ namespace CoreBanking.Application.Services
 
             foreach (var transactionDetail in Details)
             {
-                if (transactionDetail.AccountFromId != BankAccount.Id)
+                if (transactionDetail.AccountFromId != bankAccountId)
                 {
                     senderAccount = transactionDetail;
                 }
-                else if (transactionDetail.AccountToId != BankAccount.Id)
+                else if (transactionDetail.AccountToId != bankAccountId)
                 {
                     receiverAccount = transactionDetail;
                 }

@@ -51,6 +51,10 @@ namespace CoreBanking.Infrastructure.Migrations
                         .HasDefaultValue(true)
                         .HasColumnName("is_active");
 
+                    b.Property<bool>("IsBankAccount")
+                        .HasColumnType("boolean")
+                        .HasColumnName("is_bank_account");
+
                     b.HasKey("Id")
                         .HasName("pk_accounts");
 
@@ -59,6 +63,11 @@ namespace CoreBanking.Infrastructure.Migrations
 
                     b.HasIndex("CurrencyId")
                         .HasDatabaseName("ix_accounts_currency_id");
+
+                    b.HasIndex("IsBankAccount")
+                        .IsUnique()
+                        .HasDatabaseName("ix_accounts_is_bank_account")
+                        .HasFilter("\"is_bank_account\" = TRUE");
 
                     b.ToTable("accounts", (string)null);
                 });

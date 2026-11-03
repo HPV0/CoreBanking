@@ -53,7 +53,10 @@ namespace CoreBanking.Application.Services
 
         public async Task RemoveByIdAsync(int Id)
         {
-            if (Id == BankClient.Id)
+
+            var bankClient = await _clientRepository.GetBankClientAsync();
+
+            if (Id == bankClient.Id)
                 throw new Exception("Cannot remove bank Client.");
 
             var cl = await _clientRepository.GetByIdAsync(Id)
@@ -74,6 +77,9 @@ namespace CoreBanking.Application.Services
 
             if (update.PassportNumber is not null)
             {
+                if (cl.PassportNumber == BankClient.PassportNumber)
+                    throw new UnprocessableException("Cannot update Bank's passport number.");
+
                 var passportNumberExist = await _clientRepository.PassportNumberExistsAsync(update.PassportNumber);
 
                 if (passportNumberExist)

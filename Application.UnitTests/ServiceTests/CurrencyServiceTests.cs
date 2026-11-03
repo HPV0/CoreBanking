@@ -6,6 +6,7 @@ using CoreBanking.Domain.Entities.CurrencyEntities;
 using FluentAssertions;
 using Moq;
 using TestHelper;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Application.UnitTests.ServiceTests
 {
@@ -81,9 +82,15 @@ namespace Application.UnitTests.ServiceTests
             // Arrange
             var id = new Random().Next();
 
+            var baseCurrency = TestEntityFactory.CreateCurrency(); ;
+
             _currencyRepository
                 .Setup(x => x.GetOnlyCurrencyByIdAsync(id))
                 .ReturnsAsync((Currency?)null);
+
+            _currencyRepository
+                .Setup(x => x.GetBaseCurrencyAsync())
+                .ReturnsAsync(baseCurrency);
 
             var service = CreateService();
 

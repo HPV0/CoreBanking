@@ -30,5 +30,13 @@ namespace CoreBanking.Infrastructure.Repositories
 
         public override void Remove(Account entity)
         => entity.IsActive = false;
+
+        public async Task<Account> GetBankAccountAsync()
+        {
+            var account = await BaseQuery.SingleOrDefaultAsync(a => a.IsBankAccount== true)
+                ?? throw new Exception("No bank account exist");
+            
+            return account;
+        }
     }
 }

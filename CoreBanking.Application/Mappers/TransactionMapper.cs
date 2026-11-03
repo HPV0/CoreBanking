@@ -36,7 +36,7 @@ namespace CoreBanking.Application.Mappers
             {
                 Id = transactions[0].TransactionId,
                 Details = ToTransactionDetailResponseModels(transactions)
-                    .OrderByDescending(detail => detail.ReceiverId == BankAccount.Id)
+                    .OrderByDescending(detail => detail.Id)
                     .ToList()
             };
         }

@@ -111,7 +111,7 @@ namespace CoreBanking.Application.Services
             var baseCurrnecy = await _currencyRepository.GetBaseCurrencyAsync();
 
             if (id == baseCurrnecy.Id)
-                throw new Exception("Cannot remove base currency.");
+                throw new UnprocessableException("Cannot remove base currency.");
 
             var curr = await _currencyRepository.GetOnlyCurrencyByIdAsync(id)
                 ?? throw new EntityNotFoundException(nameof(Currency), id);

@@ -10,5 +10,6 @@ namespace CoreBanking.Domain.Entities.AccountEntities
         public AccountBalance Balance { get; set; }
         public int ClientId { get; set; }
         public int CurrencyId { get; set; }
+        public bool IsBankAccount { get; set; }
     }
 }

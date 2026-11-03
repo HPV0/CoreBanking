@@ -28,6 +28,10 @@ namespace CoreBanking.Infrastructure.Persistence.Configurations.AccountConfigura
             .OnDelete(DeleteBehavior.NoAction)
             .IsRequired();
 
+
+            builder.HasIndex(c => c.IsBankAccount)
+                .IsUnique()
+                .HasFilter("\"is_bank_account\" = TRUE");
         }
     }
 }
