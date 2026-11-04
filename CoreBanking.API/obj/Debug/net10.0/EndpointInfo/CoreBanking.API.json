@@ -1,11 +1,11 @@
 {
   "openapi": "3.0.4",
   "info": {
-    "title": "CoreBanking.API",
-    "version": "1.0"
+    "title": "Core Banking API V1",
+    "version": "v1"
   },
   "paths": {
-    "/api/accounts": {
+    "/api/v1/accounts": {
       "post": {
         "tags": [
           "Accounts"
@@ -100,7 +100,7 @@
         }
       }
     },
-    "/api/accounts/client/{id}": {
+    "/api/v1/accounts/client/{id}": {
       "get": {
         "tags": [
           "Accounts"
@@ -149,7 +149,7 @@
         }
       }
     },
-    "/api/accounts/{id}": {
+    "/api/v1/accounts/{id}": {
       "get": {
         "tags": [
           "Accounts"
@@ -210,7 +210,7 @@
         }
       }
     },
-    "/api/accounts/withdraw/{id}": {
+    "/api/v1/accounts/withdraw/{id}": {
       "put": {
         "tags": [
           "Accounts"
@@ -278,7 +278,7 @@
         }
       }
     },
-    "/api/accounts/deposit/{id}": {
+    "/api/v1/accounts/deposit/{id}": {
       "put": {
         "tags": [
           "Accounts"
@@ -346,7 +346,7 @@
         }
       }
     },
-    "/api/clients": {
+    "/api/v1/clients": {
       "post": {
         "tags": [
           "Clients"
@@ -441,7 +441,7 @@
         }
       }
     },
-    "/api/clients/{id}": {
+    "/api/v1/clients/{id}": {
       "get": {
         "tags": [
           "Clients"
@@ -568,7 +568,7 @@
         }
       }
     },
-    "/api/currencies": {
+    "/api/v1/currencies": {
       "post": {
         "tags": [
           "Currencies"
@@ -720,7 +720,7 @@
         }
       }
     },
-    "/api/currencies/{id}": {
+    "/api/v1/currencies/{id}": {
       "get": {
         "tags": [
           "Currencies"
@@ -781,7 +781,7 @@
         }
       }
     },
-    "/api/currencies/code": {
+    "/api/v1/currencies/code": {
       "get": {
         "tags": [
           "Currencies"
@@ -876,7 +876,7 @@
         }
       }
     },
-    "/api/transactions": {
+    "/api/v1/transactions": {
       "post": {
         "tags": [
           "Transactions"
@@ -980,7 +980,7 @@
         }
       }
     },
-    "/api/transactions/{id}": {
+    "/api/v1/transactions/{id}": {
       "get": {
         "tags": [
           "Transactions"
@@ -1020,7 +1020,7 @@
         }
       }
     },
-    "/api/transactions/withdrawals": {
+    "/api/v1/transactions/withdrawals": {
       "get": {
         "tags": [
           "Transactions"
@@ -1076,7 +1076,7 @@
         }
       }
     },
-    "/api/transactions/deposits": {
+    "/api/v1/transactions/deposits": {
       "get": {
         "tags": [
           "Transactions"
@@ -1132,7 +1132,7 @@
         }
       }
     },
-    "/api/transactions/cash-flow": {
+    "/api/v1/transactions/cash-flow": {
       "get": {
         "tags": [
           "Transactions"
@@ -1188,7 +1188,7 @@
         }
       }
     },
-    "/api/transactions/undo-transaction/{id}": {
+    "/api/v1/transactions/undo-transaction/{id}": {
       "put": {
         "tags": [
           "Transactions"

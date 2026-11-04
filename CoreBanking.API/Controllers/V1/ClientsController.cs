@@ -1,13 +1,15 @@
-﻿using CoreBanking.API.Filters.IdempotencyFilter;
+﻿using Asp.Versioning;
+using CoreBanking.API.Filters.IdempotencyFilter;
 using CoreBanking.Application.DTOs.Client;
 using CoreBanking.Application.DTOs.Client.CreateClient;
 using CoreBanking.Application.Interfaces.IServices;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CoreBanking.API.Controllers
+namespace CoreBanking.API.Controllers.V1
 {
-    [Route("api/[controller]")]
+    [ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
     public class ClientsController : ControllerBase
     {

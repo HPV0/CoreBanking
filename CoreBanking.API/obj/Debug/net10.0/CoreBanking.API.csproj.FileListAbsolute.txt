@@ -274,3 +274,7 @@ C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\obj\Debug\net10.
 C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\obj\Debug\net10.0\CoreBanking.API.pdb
 C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\obj\Debug\net10.0\CoreBanking.API.genruntimeconfig.cache
 C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\obj\Debug\net10.0\ref\CoreBanking.API.dll
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\bin\Debug\net10.0\Asp.Versioning.Abstractions.dll
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\bin\Debug\net10.0\Asp.Versioning.Http.dll
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\bin\Debug\net10.0\Asp.Versioning.Mvc.dll
+C:\Users\HaykPetrosyan\source\repos\CoreBanking\CoreBanking.API\bin\Debug\net10.0\Asp.Versioning.Mvc.ApiExplorer.dll

@@ -1,8 +1,8 @@
 [
   {
-    "ContainingType": "CoreBanking.API.Controllers.AccountsController",
+    "ContainingType": "CoreBanking.API.Controllers.V1.AccountsController",
     "Method": "CreateAsync",
-    "RelativePath": "api/accounts",
+    "RelativePath": "api/v1/accounts",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -26,9 +26,9 @@
     ]
   },
   {
-    "ContainingType": "CoreBanking.API.Controllers.AccountsController",
+    "ContainingType": "CoreBanking.API.Controllers.V1.AccountsController",
     "Method": "GetAccountsAsync",
-    "RelativePath": "api/accounts",
+    "RelativePath": "api/v1/accounts",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -46,9 +46,9 @@
     ]
   },
   {
-    "ContainingType": "CoreBanking.API.Controllers.AccountsController",
+    "ContainingType": "CoreBanking.API.Controllers.V1.AccountsController",
     "Method": "GetAccountByIdAsync",
-    "RelativePath": "api/accounts/{id}",
+    "RelativePath": "api/v1/accounts/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -72,9 +72,9 @@
     ]
   },
   {
-    "ContainingType": "CoreBanking.API.Controllers.AccountsController",
+    "ContainingType": "CoreBanking.API.Controllers.V1.AccountsController",
     "Method": "RemoveAccountByIdasync",
-    "RelativePath": "api/accounts/{id}",
+    "RelativePath": "api/v1/accounts/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -88,9 +88,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CoreBanking.API.Controllers.AccountsController",
+    "ContainingType": "CoreBanking.API.Controllers.V1.AccountsController",
     "Method": "GetAccountsByClientIdAsync",
-    "RelativePath": "api/accounts/client/{id}",
+    "RelativePath": "api/v1/accounts/client/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -114,9 +114,9 @@
     ]
   },
   {
-    "ContainingType": "CoreBanking.API.Controllers.AccountsController",
+    "ContainingType": "CoreBanking.API.Controllers.V1.AccountsController",
     "Method": "DepositCashByAccountIdAsync",
-    "RelativePath": "api/accounts/deposit/{id}",
+    "RelativePath": "api/v1/accounts/deposit/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -145,9 +145,9 @@
     ]
   },
   {
-    "ContainingType": "CoreBanking.API.Controllers.AccountsController",
+    "ContainingType": "CoreBanking.API.Controllers.V1.AccountsController",
     "Method": "WithdrawCashByAccountIdAsync",
-    "RelativePath": "api/accounts/withdraw/{id}",
+    "RelativePath": "api/v1/accounts/withdraw/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -176,9 +176,9 @@
     ]
   },
   {
-    "ContainingType": "CoreBanking.API.Controllers.ClientsController",
+    "ContainingType": "CoreBanking.API.Controllers.V1.ClientsController",
     "Method": "CreateAsync",
-    "RelativePath": "api/clients",
+    "RelativePath": "api/v1/clients",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -202,9 +202,9 @@
     ]
   },
   {
-    "ContainingType": "CoreBanking.API.Controllers.ClientsController",
+    "ContainingType": "CoreBanking.API.Controllers.V1.ClientsController",
     "Method": "GetClientsAsync",
-    "RelativePath": "api/clients",
+    "RelativePath": "api/v1/clients",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -222,9 +222,9 @@
     ]
   },
   {
-    "ContainingType": "CoreBanking.API.Controllers.ClientsController",
+    "ContainingType": "CoreBanking.API.Controllers.V1.ClientsController",
     "Method": "GetClientByIdAsync",
-    "RelativePath": "api/clients/{id}",
+    "RelativePath": "api/v1/clients/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -248,9 +248,9 @@
     ]
   },
   {
-    "ContainingType": "CoreBanking.API.Controllers.ClientsController",
+    "ContainingType": "CoreBanking.API.Controllers.V1.ClientsController",
     "Method": "RemoveClientByIdAsync",
-    "RelativePath": "api/clients/{id}",
+    "RelativePath": "api/v1/clients/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -264,9 +264,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CoreBanking.API.Controllers.ClientsController",
+    "ContainingType": "CoreBanking.API.Controllers.V1.ClientsController",
     "Method": "UpdateByIdAsync",
-    "RelativePath": "api/clients/{id}",
+    "RelativePath": "api/v1/clients/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -295,9 +295,9 @@
     ]
   },
   {
-    "ContainingType": "CoreBanking.API.Controllers.CurrenciesController",
+    "ContainingType": "CoreBanking.API.Controllers.V1.CurrenciesController",
     "Method": "CreateAsync",
-    "RelativePath": "api/currencies",
+    "RelativePath": "api/v1/currencies",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -321,9 +321,9 @@
     ]
   },
   {
-    "ContainingType": "CoreBanking.API.Controllers.CurrenciesController",
+    "ContainingType": "CoreBanking.API.Controllers.V1.CurrenciesController",
     "Method": "GetAllCurrenciesAsync",
-    "RelativePath": "api/currencies",
+    "RelativePath": "api/v1/currencies",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -341,9 +341,9 @@
     ]
   },
   {
-    "ContainingType": "CoreBanking.API.Controllers.CurrenciesController",
+    "ContainingType": "CoreBanking.API.Controllers.V1.CurrenciesController",
     "Method": "UpdateCurrencyRateByIdAsync",
-    "RelativePath": "api/currencies",
+    "RelativePath": "api/v1/currencies",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -367,9 +367,9 @@
     ]
   },
   {
-    "ContainingType": "CoreBanking.API.Controllers.CurrenciesController",
+    "ContainingType": "CoreBanking.API.Controllers.V1.CurrenciesController",
     "Method": "GetCurrencyByIdAsync",
-    "RelativePath": "api/currencies/{id}",
+    "RelativePath": "api/v1/currencies/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -393,9 +393,9 @@
     ]
   },
   {
-    "ContainingType": "CoreBanking.API.Controllers.CurrenciesController",
+    "ContainingType": "CoreBanking.API.Controllers.V1.CurrenciesController",
     "Method": "RemoveByIdAsync",
-    "RelativePath": "api/currencies/{id}",
+    "RelativePath": "api/v1/currencies/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -409,9 +409,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CoreBanking.API.Controllers.CurrenciesController",
+    "ContainingType": "CoreBanking.API.Controllers.V1.CurrenciesController",
     "Method": "GetCurrencyByCodeAsync",
-    "RelativePath": "api/currencies/code",
+    "RelativePath": "api/v1/currencies/code",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -435,9 +435,9 @@
     ]
   },
   {
-    "ContainingType": "CoreBanking.API.Controllers.CurrenciesController",
+    "ContainingType": "CoreBanking.API.Controllers.V1.CurrenciesController",
     "Method": "UpdateCurrencyByCodeRateAsync",
-    "RelativePath": "api/currencies/code",
+    "RelativePath": "api/v1/currencies/code",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -461,9 +461,9 @@
     ]
   },
   {
-    "ContainingType": "CoreBanking.API.Controllers.TransactionsController",
+    "ContainingType": "CoreBanking.API.Controllers.V1.TransactionsController",
     "Method": "CreateAsync",
-    "RelativePath": "api/transactions",
+    "RelativePath": "api/v1/transactions",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -487,9 +487,9 @@
     ]
   },
   {
-    "ContainingType": "CoreBanking.API.Controllers.TransactionsController",
+    "ContainingType": "CoreBanking.API.Controllers.V1.TransactionsController",
     "Method": "GetAllTransactionsAsync",
-    "RelativePath": "api/transactions",
+    "RelativePath": "api/v1/transactions",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -507,9 +507,9 @@
     ]
   },
   {
-    "ContainingType": "CoreBanking.API.Controllers.TransactionsController",
+    "ContainingType": "CoreBanking.API.Controllers.V1.TransactionsController",
     "Method": "GetTransactionById",
-    "RelativePath": "api/transactions/{id}",
+    "RelativePath": "api/v1/transactions/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -533,9 +533,9 @@
     ]
   },
   {
-    "ContainingType": "CoreBanking.API.Controllers.TransactionsController",
+    "ContainingType": "CoreBanking.API.Controllers.V1.TransactionsController",
     "Method": "GetTotalCashFlowsByAccountsAsync",
-    "RelativePath": "api/transactions/cash-flow",
+    "RelativePath": "api/v1/transactions/cash-flow",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -564,9 +564,9 @@
     ]
   },
   {
-    "ContainingType": "CoreBanking.API.Controllers.TransactionsController",
+    "ContainingType": "CoreBanking.API.Controllers.V1.TransactionsController",
     "Method": "GetTotalDepositsByAccountsAsync",
-    "RelativePath": "api/transactions/deposits",
+    "RelativePath": "api/v1/transactions/deposits",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -595,9 +595,9 @@
     ]
   },
   {
-    "ContainingType": "CoreBanking.API.Controllers.TransactionsController",
+    "ContainingType": "CoreBanking.API.Controllers.V1.TransactionsController",
     "Method": "UndoTransactionByIdAsync",
-    "RelativePath": "api/transactions/undo-transaction/{id}",
+    "RelativePath": "api/v1/transactions/undo-transaction/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -621,9 +621,9 @@
     ]
   },
   {
-    "ContainingType": "CoreBanking.API.Controllers.TransactionsController",
+    "ContainingType": "CoreBanking.API.Controllers.V1.TransactionsController",
     "Method": "GetTotalWithdrawalsByAccountsAsync",
-    "RelativePath": "api/transactions/withdrawals",
+    "RelativePath": "api/v1/transactions/withdrawals",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

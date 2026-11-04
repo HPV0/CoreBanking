@@ -3,24 +3,76 @@
   "WorkspaceRootPath": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{719092A8-37D4-41A8-BE72-A5669C8EBF2E}|Application.UnitTests\\Application.UnitTests.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\application.unittests\\servicetests\\currencyservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{719092A8-37D4-41A8-BE72-A5669C8EBF2E}|Application.UnitTests\\Application.UnitTests.csproj|solutionrelative:application.unittests\\servicetests\\currencyservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{27D75A09-40AB-C42C-4449-90BEAA68764C}|CoreBanking.API\\CoreBanking.API.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27D75A09-40AB-C42C-4449-90BEAA68764C}|CoreBanking.API\\CoreBanking.API.csproj|solutionrelative:corebanking.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D37850BF-5FB4-4A40-A13E-35A7D120E28F}|CoreBanking.Application\\CoreBanking.Application.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.application\\services\\currencyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D37850BF-5FB4-4A40-A13E-35A7D120E28F}|CoreBanking.Application\\CoreBanking.Application.csproj|solutionrelative:corebanking.application\\services\\currencyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D37850BF-5FB4-4A40-A13E-35A7D120E28F}|CoreBanking.Application\\CoreBanking.Application.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.application\\interfaces\\irepositories\\icurrencyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D37850BF-5FB4-4A40-A13E-35A7D120E28F}|CoreBanking.Application\\CoreBanking.Application.csproj|solutionrelative:corebanking.application\\interfaces\\irepositories\\icurrencyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{27D75A09-40AB-C42C-4449-90BEAA68764C}|CoreBanking.API\\CoreBanking.API.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.api\\filters\\idempotencyfilter\\idempotentfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27D75A09-40AB-C42C-4449-90BEAA68764C}|CoreBanking.API\\CoreBanking.API.csproj|solutionrelative:corebanking.api\\filters\\idempotencyfilter\\idempotentfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27D75A09-40AB-C42C-4449-90BEAA68764C}|CoreBanking.API\\CoreBanking.API.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.api\\controllers\\v1\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27D75A09-40AB-C42C-4449-90BEAA68764C}|CoreBanking.API\\CoreBanking.API.csproj|solutionrelative:corebanking.api\\controllers\\v1\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27D75A09-40AB-C42C-4449-90BEAA68764C}|CoreBanking.API\\CoreBanking.API.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.api\\controllers\\v1\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27D75A09-40AB-C42C-4449-90BEAA68764C}|CoreBanking.API\\CoreBanking.API.csproj|solutionrelative:corebanking.api\\controllers\\v1\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27D75A09-40AB-C42C-4449-90BEAA68764C}|CoreBanking.API\\CoreBanking.API.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.api\\controllers\\v1\\currenciescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27D75A09-40AB-C42C-4449-90BEAA68764C}|CoreBanking.API\\CoreBanking.API.csproj|solutionrelative:corebanking.api\\controllers\\v1\\currenciescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27D75A09-40AB-C42C-4449-90BEAA68764C}|CoreBanking.API\\CoreBanking.API.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.api\\controllers\\v1\\transactionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27D75A09-40AB-C42C-4449-90BEAA68764C}|CoreBanking.API\\CoreBanking.API.csproj|solutionrelative:corebanking.api\\controllers\\v1\\transactionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{719092A8-37D4-41A8-BE72-A5669C8EBF2E}|Application.UnitTests\\Application.UnitTests.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\application.unittests\\servicetests\\accountservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{719092A8-37D4-41A8-BE72-A5669C8EBF2E}|Application.UnitTests\\Application.UnitTests.csproj|solutionrelative:application.unittests\\servicetests\\accountservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.infrastructure\\persistence\\seed\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|solutionrelative:corebanking.infrastructure\\persistence\\seed\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{719092A8-37D4-41A8-BE72-A5669C8EBF2E}|Application.UnitTests\\Application.UnitTests.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\application.unittests\\servicetests\\transactionservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{719092A8-37D4-41A8-BE72-A5669C8EBF2E}|Application.UnitTests\\Application.UnitTests.csproj|solutionrelative:application.unittests\\servicetests\\transactionservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{719092A8-37D4-41A8-BE72-A5669C8EBF2E}|Application.UnitTests\\Application.UnitTests.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\application.unittests\\servicetests\\accountservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{719092A8-37D4-41A8-BE72-A5669C8EBF2E}|Application.UnitTests\\Application.UnitTests.csproj|solutionrelative:application.unittests\\servicetests\\accountservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.infrastructure\\persistence\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|solutionrelative:corebanking.infrastructure\\persistence\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.infrastructure\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|solutionrelative:corebanking.infrastructure\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.infrastructure\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|solutionrelative:corebanking.infrastructure\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{719092A8-37D4-41A8-BE72-A5669C8EBF2E}|Application.UnitTests\\Application.UnitTests.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\application.unittests\\servicetests\\currencyservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{719092A8-37D4-41A8-BE72-A5669C8EBF2E}|Application.UnitTests\\Application.UnitTests.csproj|solutionrelative:application.unittests\\servicetests\\currencyservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D37850BF-5FB4-4A40-A13E-35A7D120E28F}|CoreBanking.Application\\CoreBanking.Application.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.application\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D37850BF-5FB4-4A40-A13E-35A7D120E28F}|CoreBanking.Application\\CoreBanking.Application.csproj|solutionrelative:corebanking.application\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D37850BF-5FB4-4A40-A13E-35A7D120E28F}|CoreBanking.Application\\CoreBanking.Application.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.application\\services\\accountbalanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D37850BF-5FB4-4A40-A13E-35A7D120E28F}|CoreBanking.Application\\CoreBanking.Application.csproj|solutionrelative:corebanking.application\\services\\accountbalanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19247816-944C-5AAB-B0E4-371A199FE56B}|CoreBanking.Domain\\CoreBanking.Domain.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.domain\\constants\\bankclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19247816-944C-5AAB-B0E4-371A199FE56B}|CoreBanking.Domain\\CoreBanking.Domain.csproj|solutionrelative:corebanking.domain\\constants\\bankclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D37850BF-5FB4-4A40-A13E-35A7D120E28F}|CoreBanking.Application\\CoreBanking.Application.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.application\\interfaces\\irepositories\\icurrencyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D37850BF-5FB4-4A40-A13E-35A7D120E28F}|CoreBanking.Application\\CoreBanking.Application.csproj|solutionrelative:corebanking.application\\interfaces\\irepositories\\icurrencyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{19247816-944C-5AAB-B0E4-371A199FE56B}|CoreBanking.Domain\\CoreBanking.Domain.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.domain\\common\\isoftdeletable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,10 +95,6 @@
       "RelativeMoniker": "D:0:0:{19247816-944C-5AAB-B0E4-371A199FE56B}|CoreBanking.Domain\\CoreBanking.Domain.csproj|solutionrelative:corebanking.domain\\constants\\bankaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{19247816-944C-5AAB-B0E4-371A199FE56B}|CoreBanking.Domain\\CoreBanking.Domain.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.domain\\constants\\bankclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{19247816-944C-5AAB-B0E4-371A199FE56B}|CoreBanking.Domain\\CoreBanking.Domain.csproj|solutionrelative:corebanking.domain\\constants\\bankclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{19247816-944C-5AAB-B0E4-371A199FE56B}|CoreBanking.Domain\\CoreBanking.Domain.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.domain\\constants\\basecurrency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{19247816-944C-5AAB-B0E4-371A199FE56B}|CoreBanking.Domain\\CoreBanking.Domain.csproj|solutionrelative:corebanking.domain\\constants\\basecurrency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -59,32 +107,12 @@
       "RelativeMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|solutionrelative:corebanking.infrastructure\\repositories\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.infrastructure\\persistence\\seed\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|solutionrelative:corebanking.infrastructure\\persistence\\seed\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D37850BF-5FB4-4A40-A13E-35A7D120E28F}|CoreBanking.Application\\CoreBanking.Application.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.application\\services\\clinetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D37850BF-5FB4-4A40-A13E-35A7D120E28F}|CoreBanking.Application\\CoreBanking.Application.csproj|solutionrelative:corebanking.application\\services\\clinetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{27D75A09-40AB-C42C-4449-90BEAA68764C}|CoreBanking.API\\CoreBanking.API.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.api\\controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27D75A09-40AB-C42C-4449-90BEAA68764C}|CoreBanking.API\\CoreBanking.API.csproj|solutionrelative:corebanking.api\\controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27D75A09-40AB-C42C-4449-90BEAA68764C}|CoreBanking.API\\CoreBanking.API.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.api\\filters\\idempotencyfilter\\idempotentfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27D75A09-40AB-C42C-4449-90BEAA68764C}|CoreBanking.API\\CoreBanking.API.csproj|solutionrelative:corebanking.api\\filters\\idempotencyfilter\\idempotentfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D37850BF-5FB4-4A40-A13E-35A7D120E28F}|CoreBanking.Application\\CoreBanking.Application.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.application\\services\\transactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D37850BF-5FB4-4A40-A13E-35A7D120E28F}|CoreBanking.Application\\CoreBanking.Application.csproj|solutionrelative:corebanking.application\\services\\transactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D37850BF-5FB4-4A40-A13E-35A7D120E28F}|CoreBanking.Application\\CoreBanking.Application.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.application\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D37850BF-5FB4-4A40-A13E-35A7D120E28F}|CoreBanking.Application\\CoreBanking.Application.csproj|solutionrelative:corebanking.application\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D37850BF-5FB4-4A40-A13E-35A7D120E28F}|CoreBanking.Application\\CoreBanking.Application.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.application\\services\\accountbalanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D37850BF-5FB4-4A40-A13E-35A7D120E28F}|CoreBanking.Application\\CoreBanking.Application.csproj|solutionrelative:corebanking.application\\services\\accountbalanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D37850BF-5FB4-4A40-A13E-35A7D120E28F}|CoreBanking.Application\\CoreBanking.Application.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.application\\interfaces\\irepositories\\iclientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -103,16 +131,8 @@
       "RelativeMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|solutionrelative:corebanking.infrastructure\\repositories\\transactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.infrastructure\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|solutionrelative:corebanking.infrastructure\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.infrastructure\\repositories\\currencyraterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|solutionrelative:corebanking.infrastructure\\repositories\\currencyraterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.infrastructure\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|solutionrelative:corebanking.infrastructure\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D37850BF-5FB4-4A40-A13E-35A7D120E28F}|CoreBanking.Application\\CoreBanking.Application.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.application\\interfaces\\irepositories\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -155,28 +175,8 @@
       "RelativeMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|solutionrelative:corebanking.infrastructure\\persistence\\configurations\\currencyconfigurations\\currencyrateconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20261102132957_AddedIsBankAccountColumn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CoreBanking.Infrastructure\\Migrations\\20261102132957_AddedIsBankAccountColumn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.infrastructure\\persistence\\configurations\\accountconfigurations\\accountbalanceconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|solutionrelative:corebanking.infrastructure\\persistence\\configurations\\accountconfigurations\\accountbalanceconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.infrastructure\\persistence\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|solutionrelative:corebanking.infrastructure\\persistence\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27D75A09-40AB-C42C-4449-90BEAA68764C}|CoreBanking.API\\CoreBanking.API.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.api\\controllers\\transactionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27D75A09-40AB-C42C-4449-90BEAA68764C}|CoreBanking.API\\CoreBanking.API.csproj|solutionrelative:corebanking.api\\controllers\\transactionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27D75A09-40AB-C42C-4449-90BEAA68764C}|CoreBanking.API\\CoreBanking.API.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.api\\controllers\\currenciescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27D75A09-40AB-C42C-4449-90BEAA68764C}|CoreBanking.API\\CoreBanking.API.csproj|solutionrelative:corebanking.api\\controllers\\currenciescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27D75A09-40AB-C42C-4449-90BEAA68764C}|CoreBanking.API\\CoreBanking.API.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.api\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27D75A09-40AB-C42C-4449-90BEAA68764C}|CoreBanking.API\\CoreBanking.API.csproj|solutionrelative:corebanking.api\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.infrastructure\\persistence\\databaseinitializerextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -187,16 +187,8 @@
       "RelativeMoniker": "D:0:0:{19247816-944C-5AAB-B0E4-371A199FE56B}|CoreBanking.Domain\\CoreBanking.Domain.csproj|solutionrelative:corebanking.domain\\entities\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20261102121742_AddingIsBaseCurrencyColumn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CoreBanking.Infrastructure\\Migrations\\20261102121742_AddingIsBaseCurrencyColumn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{19247816-944C-5AAB-B0E4-371A199FE56B}|CoreBanking.Domain\\CoreBanking.Domain.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.domain\\entities\\currencyentities\\currency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{19247816-944C-5AAB-B0E4-371A199FE56B}|CoreBanking.Domain\\CoreBanking.Domain.csproj|solutionrelative:corebanking.domain\\entities\\currencyentities\\currency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20261102091652_ChangedTransaction2ToTransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CoreBanking.Infrastructure\\Migrations\\20261102091652_ChangedTransaction2ToTransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.infrastructure\\migrations\\20261029141558_changednewidtoid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -375,10 +367,6 @@
       "RelativeMoniker": "D:0:0:{19247816-944C-5AAB-B0E4-371A199FE56B}|CoreBanking.Domain\\CoreBanking.Domain.csproj|solutionrelative:corebanking.domain\\entities\\currencyentities\\currencyrate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{27D75A09-40AB-C42C-4449-90BEAA68764C}|CoreBanking.API\\CoreBanking.API.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27D75A09-40AB-C42C-4449-90BEAA68764C}|CoreBanking.API\\CoreBanking.API.csproj|solutionrelative:corebanking.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\docker-compose.dcproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|solutionrelative:docker-compose.dcproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
@@ -393,10 +381,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.infrastructure\\corebanking.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|solutionrelative:corebanking.infrastructure\\corebanking.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20261029135724_RemovedOldPkAndFks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CoreBanking.Infrastructure\\Migrations\\20261029135724_RemovedOldPkAndFks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{27D75A09-40AB-C42C-4449-90BEAA68764C}|CoreBanking.API\\CoreBanking.API.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.api\\validators\\transactionvalidators\\daterangerequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -453,14 +437,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.infrastructure\\migrations\\20261029080318_changingtransactionv1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|solutionrelative:corebanking.infrastructure\\migrations\\20261029080318_changingtransactionv1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20261029123246_NewIdToFK.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CoreBanking.Infrastructure\\Migrations\\20261029123246_NewIdToFK.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20261029122138_AddingNewIntId.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CoreBanking.Infrastructure\\Migrations\\20261029122138_AddingNewIntId.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.infrastructure\\migrations\\20261029093840_test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -619,6 +595,26 @@
     {
       "AbsoluteMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.infrastructure\\migrations\\20261023062353_changedprecicion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|solutionrelative:corebanking.infrastructure\\migrations\\20261023062353_changedprecicion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.infrastructure\\migrations\\20261102121742_addingisbasecurrencycolumn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|solutionrelative:corebanking.infrastructure\\migrations\\20261102121742_addingisbasecurrencycolumn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.infrastructure\\migrations\\20261102091652_changedtransaction2totransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|solutionrelative:corebanking.infrastructure\\migrations\\20261102091652_changedtransaction2totransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.infrastructure\\migrations\\20261029135724_removedoldpkandfks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|solutionrelative:corebanking.infrastructure\\migrations\\20261029135724_removedoldpkandfks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.infrastructure\\migrations\\20261029123246_newidtofk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|solutionrelative:corebanking.infrastructure\\migrations\\20261029123246_newidtofk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|c:\\users\\haykpetrosyan\\source\\repos\\corebanking\\corebanking.infrastructure\\migrations\\20261029122138_addingnewintid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B241A34-6C20-4044-BB54-88CA1DEFED79}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|solutionrelative:corebanking.infrastructure\\migrations\\20261029122138_addingnewintid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -628,7 +624,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -644,54 +640,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ISoftDeletable.cs",
-              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Common\\ISoftDeletable.cs",
-              "RelativeDocumentMoniker": "CoreBanking.Domain\\Common\\ISoftDeletable.cs",
-              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Common\\ISoftDeletable.cs",
-              "RelativeToolTip": "CoreBanking.Domain\\Common\\ISoftDeletable.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Program.cs",
+              "RelativeDocumentMoniker": "CoreBanking.API\\Program.cs",
+              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Program.cs",
+              "RelativeToolTip": "CoreBanking.API\\Program.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAwwI0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-12T13:55:11.665Z",
+              "WhenOpened": "2026-09-12T15:19:55.42Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "AccountServiceTests.cs",
-              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\Application.UnitTests\\ServiceTests\\AccountServiceTests.cs",
-              "RelativeDocumentMoniker": "Application.UnitTests\\ServiceTests\\AccountServiceTests.cs",
-              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\Application.UnitTests\\ServiceTests\\AccountServiceTests.cs",
-              "RelativeToolTip": "Application.UnitTests\\ServiceTests\\AccountServiceTests.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAEQAAAAAAAAAAAAAAA==",
+              "Title": "ClientsController.cs",
+              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Controllers\\V1\\ClientsController.cs",
+              "RelativeDocumentMoniker": "CoreBanking.API\\Controllers\\V1\\ClientsController.cs",
+              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Controllers\\V1\\ClientsController.cs",
+              "RelativeToolTip": "CoreBanking.API\\Controllers\\V1\\ClientsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-27T19:28:23.18Z",
+              "WhenOpened": "2026-09-12T15:36:50.211Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CurrencyServiceTests.cs",
-              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\Application.UnitTests\\ServiceTests\\CurrencyServiceTests.cs",
-              "RelativeDocumentMoniker": "Application.UnitTests\\ServiceTests\\CurrencyServiceTests.cs",
-              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\Application.UnitTests\\ServiceTests\\CurrencyServiceTests.cs",
-              "RelativeToolTip": "Application.UnitTests\\ServiceTests\\CurrencyServiceTests.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAQwFMAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "CurrenciesController.cs",
+              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Controllers\\V1\\CurrenciesController.cs",
+              "RelativeDocumentMoniker": "CoreBanking.API\\Controllers\\V1\\CurrenciesController.cs",
+              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Controllers\\V1\\CurrenciesController.cs",
+              "RelativeToolTip": "CoreBanking.API\\Controllers\\V1\\CurrenciesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-27T19:47:22.005Z",
+              "WhenOpened": "2026-09-22T08:05:35.891Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TransactionServiceTests.cs",
-              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\Application.UnitTests\\ServiceTests\\TransactionServiceTests.cs",
-              "RelativeDocumentMoniker": "Application.UnitTests\\ServiceTests\\TransactionServiceTests.cs",
-              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\Application.UnitTests\\ServiceTests\\TransactionServiceTests.cs",
-              "RelativeToolTip": "Application.UnitTests\\ServiceTests\\TransactionServiceTests.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAnwCoAAAA3AAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "TransactionsController.cs",
+              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Controllers\\V1\\TransactionsController.cs",
+              "RelativeDocumentMoniker": "CoreBanking.API\\Controllers\\V1\\TransactionsController.cs",
+              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Controllers\\V1\\TransactionsController.cs",
+              "RelativeToolTip": "CoreBanking.API\\Controllers\\V1\\TransactionsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-01T10:31:37.787Z",
+              "WhenOpened": "2026-09-23T16:12:01.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IdempotentFilter.cs",
+              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Filters\\IdempotencyFilter\\IdempotentFilter.cs",
+              "RelativeDocumentMoniker": "CoreBanking.API\\Filters\\IdempotencyFilter\\IdempotentFilter.cs",
+              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Filters\\IdempotencyFilter\\IdempotentFilter.cs",
+              "RelativeToolTip": "CoreBanking.API\\Filters\\IdempotencyFilter\\IdempotentFilter.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAhwC4AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-18T09:15:28.988Z",
               "EditorCaption": ""
             },
             {
@@ -702,183 +711,125 @@
               "RelativeDocumentMoniker": "CoreBanking.Application\\Services\\CurrencyService.cs",
               "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\Services\\CurrencyService.cs",
               "RelativeToolTip": "CoreBanking.Application\\Services\\CurrencyService.cs",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAjwHEAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAhwBcAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-22T08:17:08.606Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ICurrencyRepository.cs",
-              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\Interfaces\\IRepositories\\ICurrencyRepository.cs",
-              "RelativeDocumentMoniker": "CoreBanking.Application\\Interfaces\\IRepositories\\ICurrencyRepository.cs",
-              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\Interfaces\\IRepositories\\ICurrencyRepository.cs",
-              "RelativeToolTip": "CoreBanking.Application\\Interfaces\\IRepositories\\ICurrencyRepository.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAIA9wA0AAAAeAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "AccountsController.cs",
+              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Controllers\\V1\\AccountsController.cs",
+              "RelativeDocumentMoniker": "CoreBanking.API\\Controllers\\V1\\AccountsController.cs",
+              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Controllers\\V1\\AccountsController.cs",
+              "RelativeToolTip": "CoreBanking.API\\Controllers\\V1\\AccountsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-26T09:06:01.742Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IEntity.cs",
-              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Common\\IEntity.cs",
-              "RelativeDocumentMoniker": "CoreBanking.Domain\\Common\\IEntity.cs",
-              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Common\\IEntity.cs",
-              "RelativeToolTip": "CoreBanking.Domain\\Common\\IEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-12T13:59:28.827Z",
+              "WhenOpened": "2026-09-22T07:44:30.09Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "IAudited.cs",
-              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Common\\IAudited.cs",
-              "RelativeDocumentMoniker": "CoreBanking.Domain\\Common\\IAudited.cs",
-              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Common\\IAudited.cs",
-              "RelativeToolTip": "CoreBanking.Domain\\Common\\IAudited.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Title": "AccountServiceTests.cs",
+              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\Application.UnitTests\\ServiceTests\\AccountServiceTests.cs",
+              "RelativeDocumentMoniker": "Application.UnitTests\\ServiceTests\\AccountServiceTests.cs",
+              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\Application.UnitTests\\ServiceTests\\AccountServiceTests.cs",
+              "RelativeToolTip": "Application.UnitTests\\ServiceTests\\AccountServiceTests.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAlwEIAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-12T14:01:24.56Z",
+              "WhenOpened": "2026-09-27T19:28:23.18Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "BaseEntity.cs",
-              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Common\\BaseEntity.cs",
-              "RelativeDocumentMoniker": "CoreBanking.Domain\\Common\\BaseEntity.cs",
-              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Common\\BaseEntity.cs",
-              "RelativeToolTip": "CoreBanking.Domain\\Common\\BaseEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-12T14:02:59.521Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "BankAccount.cs",
-              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Constants\\BankAccount.cs",
-              "RelativeDocumentMoniker": "CoreBanking.Domain\\Constants\\BankAccount.cs",
-              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Constants\\BankAccount.cs",
-              "RelativeToolTip": "CoreBanking.Domain\\Constants\\BankAccount.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T14:48:34.537Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "BankClient.cs",
-              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Constants\\BankClient.cs",
-              "RelativeDocumentMoniker": "CoreBanking.Domain\\Constants\\BankClient.cs",
-              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Constants\\BankClient.cs",
-              "RelativeToolTip": "CoreBanking.Domain\\Constants\\BankClient.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T14:40:00.419Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "BaseCurrency.cs",
-              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Constants\\BaseCurrency.cs",
-              "RelativeDocumentMoniker": "CoreBanking.Domain\\Constants\\BaseCurrency.cs",
-              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Constants\\BaseCurrency.cs",
-              "RelativeToolTip": "CoreBanking.Domain\\Constants\\BaseCurrency.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAWwAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T16:03:19.119Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "FinancialPrecision.cs",
-              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Constants\\FinancialPrecision.cs",
-              "RelativeDocumentMoniker": "CoreBanking.Domain\\Constants\\FinancialPrecision.cs",
-              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Constants\\FinancialPrecision.cs",
-              "RelativeToolTip": "CoreBanking.Domain\\Constants\\FinancialPrecision.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-26T11:54:28.856Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "AccountRepository.cs",
-              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Repositories\\AccountRepository.cs",
-              "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Repositories\\AccountRepository.cs",
-              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Repositories\\AccountRepository.cs",
-              "RelativeToolTip": "CoreBanking.Infrastructure\\Repositories\\AccountRepository.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-28T12:40:58.622Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
               "Title": "DbInitializer.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Persistence\\Seed\\DbInitializer.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Persistence\\Seed\\DbInitializer.cs",
               "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Persistence\\Seed\\DbInitializer.cs",
               "RelativeToolTip": "CoreBanking.Infrastructure\\Persistence\\Seed\\DbInitializer.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAApwCcAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAhwBIAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-22T14:10:28.029Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ClientsController.cs",
-              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Controllers\\ClientsController.cs",
-              "RelativeDocumentMoniker": "CoreBanking.API\\Controllers\\ClientsController.cs",
-              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Controllers\\ClientsController.cs",
-              "RelativeToolTip": "CoreBanking.API\\Controllers\\ClientsController.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAowEAAAAAMAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "TransactionServiceTests.cs",
+              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\Application.UnitTests\\ServiceTests\\TransactionServiceTests.cs",
+              "RelativeDocumentMoniker": "Application.UnitTests\\ServiceTests\\TransactionServiceTests.cs",
+              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\Application.UnitTests\\ServiceTests\\TransactionServiceTests.cs",
+              "RelativeToolTip": "Application.UnitTests\\ServiceTests\\TransactionServiceTests.cs",
+              "ViewState": "AgIAAFQBAAAAAAAAAAApwGQBAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-12T15:36:50.211Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-01T10:31:37.787Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Persistence\\Context\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Persistence\\Context\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Persistence\\Context\\ApplicationDbContext.cs",
+              "RelativeToolTip": "CoreBanking.Infrastructure\\Persistence\\Context\\ApplicationDbContext.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwDIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-12T14:49:28.16Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Repositories\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Repositories\\UnitOfWork.cs",
+              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Repositories\\UnitOfWork.cs",
+              "RelativeToolTip": "CoreBanking.Infrastructure\\Repositories\\UnitOfWork.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAgwB0AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-24T10:38:29.328Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "BaseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Repositories\\BaseRepository.cs",
+              "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Repositories\\BaseRepository.cs",
+              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Repositories\\BaseRepository.cs",
+              "RelativeToolTip": "CoreBanking.Infrastructure\\Repositories\\BaseRepository.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAWwA4AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-22T12:15:52.335Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CurrencyServiceTests.cs",
+              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\Application.UnitTests\\ServiceTests\\CurrencyServiceTests.cs",
+              "RelativeDocumentMoniker": "Application.UnitTests\\ServiceTests\\CurrencyServiceTests.cs",
+              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\Application.UnitTests\\ServiceTests\\CurrencyServiceTests.cs",
+              "RelativeToolTip": "Application.UnitTests\\ServiceTests\\CurrencyServiceTests.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAlwFEAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-27T19:47:22.005Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AccountService.cs",
+              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\Services\\AccountService.cs",
+              "RelativeDocumentMoniker": "CoreBanking.Application\\Services\\AccountService.cs",
+              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\Services\\AccountService.cs",
+              "RelativeToolTip": "CoreBanking.Application\\Services\\AccountService.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAAwEIAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-22T07:56:12.247Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
-              "Title": "ClinetService.cs",
-              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\Services\\ClinetService.cs",
-              "RelativeDocumentMoniker": "CoreBanking.Application\\Services\\ClinetService.cs",
-              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\Services\\ClinetService.cs",
-              "RelativeToolTip": "CoreBanking.Application\\Services\\ClinetService.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAUwFcAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-21T11:56:29.481Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "IdempotentFilter.cs",
-              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Filters\\IdempotencyFilter\\IdempotentFilter.cs",
-              "RelativeDocumentMoniker": "CoreBanking.API\\Filters\\IdempotencyFilter\\IdempotentFilter.cs",
-              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Filters\\IdempotencyFilter\\IdempotentFilter.cs",
-              "RelativeToolTip": "CoreBanking.API\\Filters\\IdempotencyFilter\\IdempotentFilter.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAawC4AAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-18T09:15:28.988Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
               "Title": "AccountBalanceService.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\Services\\AccountBalanceService.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\Services\\AccountBalanceService.cs",
@@ -886,25 +837,143 @@
               "RelativeToolTip": "CoreBanking.Application\\Services\\AccountBalanceService.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAlwB8AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T14:33:15.285Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-27T14:33:15.285Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "AccountService.cs",
-              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\Services\\AccountService.cs",
-              "RelativeDocumentMoniker": "CoreBanking.Application\\Services\\AccountService.cs",
-              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\Services\\AccountService.cs",
-              "RelativeToolTip": "CoreBanking.Application\\Services\\AccountService.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAlwGcAAAAQAAAAAAAAAA==",
+              "DocumentIndex": 16,
+              "Title": "BankClient.cs",
+              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Constants\\BankClient.cs",
+              "RelativeDocumentMoniker": "CoreBanking.Domain\\Constants\\BankClient.cs",
+              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Constants\\BankClient.cs",
+              "RelativeToolTip": "CoreBanking.Domain\\Constants\\BankClient.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAkwA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T07:56:12.247Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-22T14:40:00.419Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ICurrencyRepository.cs",
+              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\Interfaces\\IRepositories\\ICurrencyRepository.cs",
+              "RelativeDocumentMoniker": "CoreBanking.Application\\Interfaces\\IRepositories\\ICurrencyRepository.cs",
+              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\Interfaces\\IRepositories\\ICurrencyRepository.cs",
+              "RelativeToolTip": "CoreBanking.Application\\Interfaces\\IRepositories\\ICurrencyRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAIA9wA0AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T09:06:01.742Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
+              "Title": "ISoftDeletable.cs",
+              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Common\\ISoftDeletable.cs",
+              "RelativeDocumentMoniker": "CoreBanking.Domain\\Common\\ISoftDeletable.cs",
+              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Common\\ISoftDeletable.cs",
+              "RelativeToolTip": "CoreBanking.Domain\\Common\\ISoftDeletable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-12T13:55:11.665Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IEntity.cs",
+              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Common\\IEntity.cs",
+              "RelativeDocumentMoniker": "CoreBanking.Domain\\Common\\IEntity.cs",
+              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Common\\IEntity.cs",
+              "RelativeToolTip": "CoreBanking.Domain\\Common\\IEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-12T13:59:28.827Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IAudited.cs",
+              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Common\\IAudited.cs",
+              "RelativeDocumentMoniker": "CoreBanking.Domain\\Common\\IAudited.cs",
+              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Common\\IAudited.cs",
+              "RelativeToolTip": "CoreBanking.Domain\\Common\\IAudited.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-12T14:01:24.56Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Common\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "CoreBanking.Domain\\Common\\BaseEntity.cs",
+              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Common\\BaseEntity.cs",
+              "RelativeToolTip": "CoreBanking.Domain\\Common\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-12T14:02:59.521Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "BankAccount.cs",
+              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Constants\\BankAccount.cs",
+              "RelativeDocumentMoniker": "CoreBanking.Domain\\Constants\\BankAccount.cs",
+              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Constants\\BankAccount.cs",
+              "RelativeToolTip": "CoreBanking.Domain\\Constants\\BankAccount.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-22T14:48:34.537Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "BaseCurrency.cs",
+              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Constants\\BaseCurrency.cs",
+              "RelativeDocumentMoniker": "CoreBanking.Domain\\Constants\\BaseCurrency.cs",
+              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Constants\\BaseCurrency.cs",
+              "RelativeToolTip": "CoreBanking.Domain\\Constants\\BaseCurrency.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAWwAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-22T16:03:19.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "FinancialPrecision.cs",
+              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Constants\\FinancialPrecision.cs",
+              "RelativeDocumentMoniker": "CoreBanking.Domain\\Constants\\FinancialPrecision.cs",
+              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Constants\\FinancialPrecision.cs",
+              "RelativeToolTip": "CoreBanking.Domain\\Constants\\FinancialPrecision.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T11:54:28.856Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "AccountRepository.cs",
+              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Repositories\\AccountRepository.cs",
+              "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Repositories\\AccountRepository.cs",
+              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Repositories\\AccountRepository.cs",
+              "RelativeToolTip": "CoreBanking.Infrastructure\\Repositories\\AccountRepository.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-28T12:40:58.622Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ClinetService.cs",
+              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\Services\\ClinetService.cs",
+              "RelativeDocumentMoniker": "CoreBanking.Application\\Services\\ClinetService.cs",
+              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\Services\\ClinetService.cs",
+              "RelativeToolTip": "CoreBanking.Application\\Services\\ClinetService.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAUwFcAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-21T11:56:29.481Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
               "Title": "TransactionService.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\Services\\TransactionService.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\Services\\TransactionService.cs",
@@ -912,12 +981,11 @@
               "RelativeToolTip": "CoreBanking.Application\\Services\\TransactionService.cs",
               "ViewState": "AgIAAB8AAAAAAAAAAAAAwCoAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T17:47:51.731Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-23T17:47:51.731Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 28,
               "Title": "IClientRepository.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\Interfaces\\IRepositories\\IClientRepository.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\Interfaces\\IRepositories\\IClientRepository.cs",
@@ -925,12 +993,11 @@
               "RelativeToolTip": "CoreBanking.Application\\Interfaces\\IRepositories\\IClientRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-12T14:44:27.402Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-12T14:44:27.402Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 29,
               "Title": "ClientRepository.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Repositories\\ClientRepository.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Repositories\\ClientRepository.cs",
@@ -938,12 +1005,11 @@
               "RelativeToolTip": "CoreBanking.Infrastructure\\Repositories\\ClientRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-12T15:02:23.729Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-12T15:02:23.729Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 30,
               "Title": "CurrencyRepository.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Repositories\\CurrencyRepository.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Repositories\\CurrencyRepository.cs",
@@ -951,12 +1017,11 @@
               "RelativeToolTip": "CoreBanking.Infrastructure\\Repositories\\CurrencyRepository.cs",
               "ViewState": "AgIAAEMAAAAAAAAAAAAcwE8AAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T10:12:38.037Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-22T10:12:38.037Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 31,
               "Title": "TransactionRepository.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Repositories\\TransactionRepository.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Repositories\\TransactionRepository.cs",
@@ -964,25 +1029,11 @@
               "RelativeToolTip": "CoreBanking.Infrastructure\\Repositories\\TransactionRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T16:53:36.467Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-24T16:53:36.467Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "BaseRepository.cs",
-              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Repositories\\BaseRepository.cs",
-              "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Repositories\\BaseRepository.cs",
-              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Repositories\\BaseRepository.cs",
-              "RelativeToolTip": "CoreBanking.Infrastructure\\Repositories\\BaseRepository.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAjwCEAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-22T12:15:52.335Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 32,
               "Title": "CurrencyRateRepository.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Repositories\\CurrencyRateRepository.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Repositories\\CurrencyRateRepository.cs",
@@ -990,25 +1041,11 @@
               "RelativeToolTip": "CoreBanking.Infrastructure\\Repositories\\CurrencyRateRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-30T11:01:42.42Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-30T11:01:42.42Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "UnitOfWork.cs",
-              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Repositories\\UnitOfWork.cs",
-              "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Repositories\\UnitOfWork.cs",
-              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Repositories\\UnitOfWork.cs",
-              "RelativeToolTip": "CoreBanking.Infrastructure\\Repositories\\UnitOfWork.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAgwCAAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T10:38:29.328Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 33,
               "Title": "IBaseRepository.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\Interfaces\\IRepositories\\IBaseRepository.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\Interfaces\\IRepositories\\IBaseRepository.cs",
@@ -1016,12 +1053,11 @@
               "RelativeToolTip": "CoreBanking.Application\\Interfaces\\IRepositories\\IBaseRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-12T14:42:24.026Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-12T14:42:24.026Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 34,
               "Title": "TransactionMapper.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\Mappers\\TransactionMapper.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\Mappers\\TransactionMapper.cs",
@@ -1029,12 +1065,11 @@
               "RelativeToolTip": "CoreBanking.Application\\Mappers\\TransactionMapper.cs",
               "ViewState": "AgIAACUAAAAAAAAAAAAIwCYAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T15:51:07.965Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-24T15:51:07.965Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 35,
               "Title": "TestEntityFactory.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\TestHelper\\TestEntityFactory.cs",
               "RelativeDocumentMoniker": "TestHelper\\TestEntityFactory.cs",
@@ -1042,12 +1077,11 @@
               "RelativeToolTip": "TestHelper\\TestEntityFactory.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAjwC0AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-27T17:40:17.083Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-27T17:40:17.083Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 36,
               "Title": "IAccountRepository.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\Interfaces\\IRepositories\\IAccountRepository.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\Interfaces\\IRepositories\\IAccountRepository.cs",
@@ -1055,12 +1089,11 @@
               "RelativeToolTip": "CoreBanking.Application\\Interfaces\\IRepositories\\IAccountRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T07:53:26.927Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-23T07:53:26.927Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 37,
               "Title": "AccountBalance.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Entities\\AccountEntities\\AccountBalance.cs",
               "RelativeDocumentMoniker": "CoreBanking.Domain\\Entities\\AccountEntities\\AccountBalance.cs",
@@ -1068,12 +1101,11 @@
               "RelativeToolTip": "CoreBanking.Domain\\Entities\\AccountEntities\\AccountBalance.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-19T17:55:02.721Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-19T17:55:02.721Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 38,
               "Title": "Account.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Entities\\AccountEntities\\Account.cs",
               "RelativeDocumentMoniker": "CoreBanking.Domain\\Entities\\AccountEntities\\Account.cs",
@@ -1081,12 +1113,11 @@
               "RelativeToolTip": "CoreBanking.Domain\\Entities\\AccountEntities\\Account.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-10T10:36:37.226Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-10T10:36:37.226Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 39,
               "Title": "AccountConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Persistence\\Configurations\\AccountConfigurations\\AccountConfiguration.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Persistence\\Configurations\\AccountConfigurations\\AccountConfiguration.cs",
@@ -1094,12 +1125,11 @@
               "RelativeToolTip": "CoreBanking.Infrastructure\\Persistence\\Configurations\\AccountConfigurations\\AccountConfiguration.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAQwCEAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-16T15:35:58.068Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-16T15:35:58.068Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 40,
               "Title": "CurrencyConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Persistence\\Configurations\\CurrencyConfigurations\\CurrencyConfiguration.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Persistence\\Configurations\\CurrencyConfigurations\\CurrencyConfiguration.cs",
@@ -1107,12 +1137,11 @@
               "RelativeToolTip": "CoreBanking.Infrastructure\\Persistence\\Configurations\\CurrencyConfigurations\\CurrencyConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwBYAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-17T09:36:57.981Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-17T09:36:57.981Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 41,
               "Title": "BaseEntityConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Persistence\\Configurations\\BaseEntityConfiguration.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Persistence\\Configurations\\BaseEntityConfiguration.cs",
@@ -1120,12 +1149,11 @@
               "RelativeToolTip": "CoreBanking.Infrastructure\\Persistence\\Configurations\\BaseEntityConfiguration.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-16T15:46:08.974Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-16T15:46:08.974Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 42,
               "Title": "CurrencyRateConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Persistence\\Configurations\\CurrencyConfigurations\\CurrencyRateConfiguration.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Persistence\\Configurations\\CurrencyConfigurations\\CurrencyRateConfiguration.cs",
@@ -1133,25 +1161,11 @@
               "RelativeToolTip": "CoreBanking.Infrastructure\\Persistence\\Configurations\\CurrencyConfigurations\\CurrencyRateConfiguration.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAAABIAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-20T09:29:20.84Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-20T09:29:20.84Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "20261102132957_AddedIsBankAccountColumn.cs",
-              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20261102132957_AddedIsBankAccountColumn.cs",
-              "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Migrations\\20261102132957_AddedIsBankAccountColumn.cs",
-              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20261102132957_AddedIsBankAccountColumn.cs",
-              "RelativeToolTip": "CoreBanking.Infrastructure\\Migrations\\20261102132957_AddedIsBankAccountColumn.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-02T13:29:57.386Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 43,
               "Title": "AccountBalanceConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Persistence\\Configurations\\AccountConfigurations\\AccountBalanceConfiguration.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Persistence\\Configurations\\AccountConfigurations\\AccountBalanceConfiguration.cs",
@@ -1159,60 +1173,7 @@
               "RelativeToolTip": "CoreBanking.Infrastructure\\Persistence\\Configurations\\AccountConfigurations\\AccountBalanceConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-20T09:09:38.115Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Persistence\\Context\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Persistence\\Context\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Persistence\\Context\\ApplicationDbContext.cs",
-              "RelativeToolTip": "CoreBanking.Infrastructure\\Persistence\\Context\\ApplicationDbContext.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAIwDsAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-12T14:49:28.16Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "TransactionsController.cs",
-              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Controllers\\TransactionsController.cs",
-              "RelativeDocumentMoniker": "CoreBanking.API\\Controllers\\TransactionsController.cs",
-              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Controllers\\TransactionsController.cs",
-              "RelativeToolTip": "CoreBanking.API\\Controllers\\TransactionsController.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAwwFIAAABaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T16:12:01.671Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "CurrenciesController.cs",
-              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Controllers\\CurrenciesController.cs",
-              "RelativeDocumentMoniker": "CoreBanking.API\\Controllers\\CurrenciesController.cs",
-              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Controllers\\CurrenciesController.cs",
-              "RelativeToolTip": "CoreBanking.API\\Controllers\\CurrenciesController.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAwwBcAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T08:05:35.891Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "AccountsController.cs",
-              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Controllers\\AccountsController.cs",
-              "RelativeDocumentMoniker": "CoreBanking.API\\Controllers\\AccountsController.cs",
-              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Controllers\\AccountsController.cs",
-              "RelativeToolTip": "CoreBanking.API\\Controllers\\AccountsController.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAwwEQAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T07:44:30.09Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-20T09:09:38.115Z"
             },
             {
               "$type": "Document",
@@ -1224,8 +1185,7 @@
               "RelativeToolTip": "CoreBanking.Infrastructure\\Persistence\\DatabaseInitializerExtensions.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAawA0AAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-19T07:33:20.4Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-19T07:33:20.4Z"
             },
             {
               "$type": "Document",
@@ -1237,12 +1197,11 @@
               "RelativeToolTip": "CoreBanking.Domain\\Entities\\Client.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-10T09:37:21.534Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-10T09:37:21.534Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 150,
               "Title": "20261102121742_AddingIsBaseCurrencyColumn.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20261102121742_AddingIsBaseCurrencyColumn.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Migrations\\20261102121742_AddingIsBaseCurrencyColumn.cs",
@@ -1250,12 +1209,11 @@
               "RelativeToolTip": "CoreBanking.Infrastructure\\Migrations\\20261102121742_AddingIsBaseCurrencyColumn.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAzwCAAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-02T12:17:42.771Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-02T12:17:42.771Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 46,
               "Title": "Currency.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Entities\\CurrencyEntities\\Currency.cs",
               "RelativeDocumentMoniker": "CoreBanking.Domain\\Entities\\CurrencyEntities\\Currency.cs",
@@ -1263,12 +1221,11 @@
               "RelativeToolTip": "CoreBanking.Domain\\Entities\\CurrencyEntities\\Currency.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-17T08:08:21.867Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-17T08:08:21.867Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 151,
               "Title": "20261102091652_ChangedTransaction2ToTransaction.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20261102091652_ChangedTransaction2ToTransaction.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Migrations\\20261102091652_ChangedTransaction2ToTransaction.cs",
@@ -1276,12 +1233,11 @@
               "RelativeToolTip": "CoreBanking.Infrastructure\\Migrations\\20261102091652_ChangedTransaction2ToTransaction.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAGkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-02T09:16:52.848Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-02T09:16:52.848Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 47,
               "Title": "20261029141558_ChangedNewIdToId.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20261029141558_ChangedNewIdToId.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Migrations\\20261029141558_ChangedNewIdToId.cs",
@@ -1289,12 +1245,11 @@
               "RelativeToolTip": "CoreBanking.Infrastructure\\Migrations\\20261029141558_ChangedNewIdToId.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAQwAoAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-29T14:15:58.867Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-29T14:15:58.867Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 48,
               "Title": "TransactionConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Persistence\\Configurations\\TransactionConfigurations\\TransactionConfiguration.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Persistence\\Configurations\\TransactionConfigurations\\TransactionConfiguration.cs",
@@ -1302,25 +1257,23 @@
               "RelativeToolTip": "CoreBanking.Infrastructure\\Persistence\\Configurations\\TransactionConfigurations\\TransactionConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-17T16:57:26.253Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-17T16:57:26.253Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "CoreBanking.Domain",
+              "DocumentIndex": 50,
+              "Title": "CoreBanking.Domain.csproj",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\CoreBanking.Domain.csproj",
               "RelativeDocumentMoniker": "CoreBanking.Domain\\CoreBanking.Domain.csproj",
               "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\CoreBanking.Domain.csproj",
               "RelativeToolTip": "CoreBanking.Domain\\CoreBanking.Domain.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-10-29T13:29:27.782Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-29T13:29:27.782Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 49,
               "Title": "Transaction.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Entities\\TransactionEntities\\Transaction.cs",
               "RelativeDocumentMoniker": "CoreBanking.Domain\\Entities\\TransactionEntities\\Transaction.cs",
@@ -1328,12 +1281,11 @@
               "RelativeToolTip": "CoreBanking.Domain\\Entities\\TransactionEntities\\Transaction.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAjwAUAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-17T16:34:27.753Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-17T16:34:27.753Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 51,
               "Title": "Application.UnitTests.csproj",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\Application.UnitTests\\Application.UnitTests.csproj",
               "RelativeDocumentMoniker": "Application.UnitTests\\Application.UnitTests.csproj",
@@ -1341,12 +1293,11 @@
               "RelativeToolTip": "Application.UnitTests\\Application.UnitTests.csproj",
               "ViewState": "AgIAAA4AAAAAAAAAAAAAAA4AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-10-23T06:30:05.658Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-23T06:30:05.658Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 52,
               "Title": "ClinetConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Persistence\\Configurations\\ClinetConfiguration.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Persistence\\Configurations\\ClinetConfiguration.cs",
@@ -1354,12 +1305,11 @@
               "RelativeToolTip": "CoreBanking.Infrastructure\\Persistence\\Configurations\\ClinetConfiguration.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAA+wAkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-13T10:54:45.009Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-13T10:54:45.009Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 53,
               "Title": "MoneyCalculator.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\Common\\MoneyCalculator.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\Common\\MoneyCalculator.cs",
@@ -1367,12 +1317,11 @@
               "RelativeToolTip": "CoreBanking.Application\\Common\\MoneyCalculator.cs",
               "ViewState": "AgIAACwAAAAAAAAAAAAswEIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-26T11:40:33.124Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-26T11:40:33.124Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 54,
               "Title": "TransactionResponseModel.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\DTOs\\Transaction\\TransactionResponseModel.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\DTOs\\Transaction\\TransactionResponseModel.cs",
@@ -1380,12 +1329,11 @@
               "RelativeToolTip": "CoreBanking.Application\\DTOs\\Transaction\\TransactionResponseModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-20T13:44:02.828Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-20T13:44:02.828Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 55,
               "Title": "TransactionDetailResponseModel.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\DTOs\\Transaction\\TransactionDetailResponseModel.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\DTOs\\Transaction\\TransactionDetailResponseModel.cs",
@@ -1393,12 +1341,11 @@
               "RelativeToolTip": "CoreBanking.Application\\DTOs\\Transaction\\TransactionDetailResponseModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T16:35:00.383Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-23T16:35:00.383Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 56,
               "Title": "DateRangeRequest.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\DTOs\\Transaction\\DateRangeRequest.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\DTOs\\Transaction\\DateRangeRequest.cs",
@@ -1406,12 +1353,11 @@
               "RelativeToolTip": "CoreBanking.Application\\DTOs\\Transaction\\DateRangeRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-27T08:22:45.015Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-27T08:22:45.015Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 57,
               "Title": "CreateTransactionRequest.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\DTOs\\Transaction\\CreateTransactionRequest.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\DTOs\\Transaction\\CreateTransactionRequest.cs",
@@ -1419,12 +1365,11 @@
               "RelativeToolTip": "CoreBanking.Application\\DTOs\\Transaction\\CreateTransactionRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T16:21:34.257Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-23T16:21:34.257Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 58,
               "Title": "AccountTransactionCashFlowResponseModel.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\DTOs\\Transaction\\AccountTransactionCashFlowResponseModel.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\DTOs\\Transaction\\AccountTransactionCashFlowResponseModel.cs",
@@ -1432,12 +1377,11 @@
               "RelativeToolTip": "CoreBanking.Application\\DTOs\\Transaction\\AccountTransactionCashFlowResponseModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T17:41:43.25Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-23T17:41:43.25Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 59,
               "Title": "AccountTotalWithdrawalsResponseModel.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\DTOs\\Transaction\\AccountTotalWithdrawalsResponseModel.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\DTOs\\Transaction\\AccountTotalWithdrawalsResponseModel.cs",
@@ -1445,12 +1389,11 @@
               "RelativeToolTip": "CoreBanking.Application\\DTOs\\Transaction\\AccountTotalWithdrawalsResponseModel.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAuwAQAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T17:01:22.872Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-23T17:01:22.872Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 60,
               "Title": "AccountTotalDepositesResponseModel.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\DTOs\\Transaction\\AccountTotalDepositesResponseModel.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\DTOs\\Transaction\\AccountTotalDepositesResponseModel.cs",
@@ -1458,12 +1401,11 @@
               "RelativeToolTip": "CoreBanking.Application\\DTOs\\Transaction\\AccountTotalDepositesResponseModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T16:17:33.909Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-24T16:17:33.909Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 61,
               "Title": "UpdateCurrencyRateByCodeRequest.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\DTOs\\Currency\\UpdateCurrencyRateByCodeRequest.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\DTOs\\Currency\\UpdateCurrencyRateByCodeRequest.cs",
@@ -1471,12 +1413,11 @@
               "RelativeToolTip": "CoreBanking.Application\\DTOs\\Currency\\UpdateCurrencyRateByCodeRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-26T14:01:07.275Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-26T14:01:07.275Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 62,
               "Title": "GetCurrencyRateByCodeRequest.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\DTOs\\Currency\\GetCurrencyRateByCodeRequest.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\DTOs\\Currency\\GetCurrencyRateByCodeRequest.cs",
@@ -1484,12 +1425,11 @@
               "RelativeToolTip": "CoreBanking.Application\\DTOs\\Currency\\GetCurrencyRateByCodeRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-27T07:57:35.419Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-27T07:57:35.419Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 63,
               "Title": "CurrencyWithAllRatesResponseModel.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\DTOs\\Currency\\CurrencyWithAllRatesResponseModel.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\DTOs\\Currency\\CurrencyWithAllRatesResponseModel.cs",
@@ -1497,12 +1437,11 @@
               "RelativeToolTip": "CoreBanking.Application\\DTOs\\Currency\\CurrencyWithAllRatesResponseModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-28T07:25:13.057Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-28T07:25:13.057Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 64,
               "Title": "CurrencyWithActiveRateResponseModel.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\DTOs\\Currency\\CurrencyWithActiveRateResponseModel.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\DTOs\\Currency\\CurrencyWithActiveRateResponseModel.cs",
@@ -1510,12 +1449,11 @@
               "RelativeToolTip": "CoreBanking.Application\\DTOs\\Currency\\CurrencyWithActiveRateResponseModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-30T09:12:23.062Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-30T09:12:23.062Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 65,
               "Title": "CurrencyResponseModel.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\DTOs\\Currency\\CurrencyResponseModel.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\DTOs\\Currency\\CurrencyResponseModel.cs",
@@ -1523,12 +1461,11 @@
               "RelativeToolTip": "CoreBanking.Application\\DTOs\\Currency\\CurrencyResponseModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T08:12:36.272Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-22T08:12:36.272Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 66,
               "Title": "CurrencyRateResponseModel.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\DTOs\\Currency\\CurrencyRateResponseModel.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\DTOs\\Currency\\CurrencyRateResponseModel.cs",
@@ -1536,12 +1473,11 @@
               "RelativeToolTip": "CoreBanking.Application\\DTOs\\Currency\\CurrencyRateResponseModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-28T07:53:43.056Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-28T07:53:43.056Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 67,
               "Title": "CreateCurrencyRequest.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\DTOs\\Currency\\CreateCurrencyRequest.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\DTOs\\Currency\\CreateCurrencyRequest.cs",
@@ -1549,12 +1485,11 @@
               "RelativeToolTip": "CoreBanking.Application\\DTOs\\Currency\\CreateCurrencyRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T08:13:01.256Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-22T08:13:01.256Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 68,
               "Title": "UpdateClientRequest.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\DTOs\\Client\\UpdateClientRequest.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\DTOs\\Client\\UpdateClientRequest.cs",
@@ -1562,12 +1497,11 @@
               "RelativeToolTip": "CoreBanking.Application\\DTOs\\Client\\UpdateClientRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-21T17:40:34.62Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-21T17:40:34.62Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 69,
               "Title": "CreateClientRequest.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\DTOs\\Client\\CreateClientRequest.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\DTOs\\Client\\CreateClientRequest.cs",
@@ -1575,12 +1509,11 @@
               "RelativeToolTip": "CoreBanking.Application\\DTOs\\Client\\CreateClientRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-21T11:48:12.284Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-21T11:48:12.284Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 70,
               "Title": "ClientResponseModel.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\DTOs\\Client\\ClientResponseModel.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\DTOs\\Client\\ClientResponseModel.cs",
@@ -1588,12 +1521,11 @@
               "RelativeToolTip": "CoreBanking.Application\\DTOs\\Client\\ClientResponseModel.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAuwAQAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-21T11:52:51.672Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-21T11:52:51.672Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 71,
               "Title": "CreateAccountRequest.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\DTOs\\Account\\CreateAccountRequest.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\DTOs\\Account\\CreateAccountRequest.cs",
@@ -1601,12 +1533,11 @@
               "RelativeToolTip": "CoreBanking.Application\\DTOs\\Account\\CreateAccountRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T07:51:58.767Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-22T07:51:58.767Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 72,
               "Title": "ClientWithAccountResponseModel.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\DTOs\\Account\\ClientWithAccountResponseModel.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\DTOs\\Account\\ClientWithAccountResponseModel.cs",
@@ -1614,12 +1545,11 @@
               "RelativeToolTip": "CoreBanking.Application\\DTOs\\Account\\ClientWithAccountResponseModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T08:10:19.097Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-23T08:10:19.097Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 73,
               "Title": "CashFlowRequest.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\DTOs\\Account\\CashFlowRequest.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\DTOs\\Account\\CashFlowRequest.cs",
@@ -1627,12 +1557,11 @@
               "RelativeToolTip": "CoreBanking.Application\\DTOs\\Account\\CashFlowRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-26T17:38:33.025Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-26T17:38:33.025Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 74,
               "Title": "AccountResponseModel.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\DTOs\\Account\\AccountResponseModel.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\DTOs\\Account\\AccountResponseModel.cs",
@@ -1640,12 +1569,11 @@
               "RelativeToolTip": "CoreBanking.Application\\DTOs\\Account\\AccountResponseModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T07:48:56.925Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-22T07:48:56.925Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 75,
               "Title": "EntityNotFoundException.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\Exceptions\\EntityNotFoundException.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\Exceptions\\EntityNotFoundException.cs",
@@ -1653,12 +1581,11 @@
               "RelativeToolTip": "CoreBanking.Application\\Exceptions\\EntityNotFoundException.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T07:05:35.192Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-22T07:05:35.192Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 76,
               "Title": "CustomValidationException.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\Exceptions\\CustomValidationException.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\Exceptions\\CustomValidationException.cs",
@@ -1666,12 +1593,11 @@
               "RelativeToolTip": "CoreBanking.Application\\Exceptions\\CustomValidationException.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwBEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-19T06:14:20.441Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-19T06:14:20.441Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 77,
               "Title": "ICurrencyRateRepository.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\Interfaces\\IRepositories\\ICurrencyRateRepository.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\Interfaces\\IRepositories\\ICurrencyRateRepository.cs",
@@ -1679,12 +1605,11 @@
               "RelativeToolTip": "CoreBanking.Application\\Interfaces\\IRepositories\\ICurrencyRateRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-30T11:01:12.739Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-30T11:01:12.739Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 78,
               "Title": "ITransactionService.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\Interfaces\\IServices\\ITransactionService.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\Interfaces\\IServices\\ITransactionService.cs",
@@ -1692,12 +1617,11 @@
               "RelativeToolTip": "CoreBanking.Application\\Interfaces\\IServices\\ITransactionService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T16:12:59.971Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-23T16:12:59.971Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 79,
               "Title": "ICurrencyService.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\Interfaces\\IServices\\ICurrencyService.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\Interfaces\\IServices\\ICurrencyService.cs",
@@ -1705,12 +1629,11 @@
               "RelativeToolTip": "CoreBanking.Application\\Interfaces\\IServices\\ICurrencyService.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAjwAwAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T08:04:38.887Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-22T08:04:38.887Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 80,
               "Title": "IClinetService.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\Interfaces\\IServices\\IClinetService.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\Interfaces\\IServices\\IClinetService.cs",
@@ -1718,12 +1641,11 @@
               "RelativeToolTip": "CoreBanking.Application\\Interfaces\\IServices\\IClinetService.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAiwAoAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-21T11:31:59.278Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-21T11:31:59.278Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 81,
               "Title": "IAccountService.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\Interfaces\\IServices\\IAccountService.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\Interfaces\\IServices\\IAccountService.cs",
@@ -1731,12 +1653,11 @@
               "RelativeToolTip": "CoreBanking.Application\\Interfaces\\IServices\\IAccountService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T07:47:28.482Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-22T07:47:28.482Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 82,
               "Title": "IAccountBalanceService.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\Interfaces\\IServices\\IAccountBalanceService.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\Interfaces\\IServices\\IAccountBalanceService.cs",
@@ -1744,12 +1665,11 @@
               "RelativeToolTip": "CoreBanking.Application\\Interfaces\\IServices\\IAccountBalanceService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T14:41:09.675Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-27T14:41:09.675Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 83,
               "Title": "ITransactionRepository.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\Interfaces\\IRepositories\\ITransactionRepository.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\Interfaces\\IRepositories\\ITransactionRepository.cs",
@@ -1757,12 +1677,11 @@
               "RelativeToolTip": "CoreBanking.Application\\Interfaces\\IRepositories\\ITransactionRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAUwAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T17:49:11.615Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-23T17:49:11.615Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 84,
               "Title": "IUnitOfWork.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\Interfaces\\IRepositories\\IUnitOfWork.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\Interfaces\\IRepositories\\IUnitOfWork.cs",
@@ -1770,12 +1689,11 @@
               "RelativeToolTip": "CoreBanking.Application\\Interfaces\\IRepositories\\IUnitOfWork.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T10:37:28.728Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-24T10:37:28.728Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 85,
               "Title": "IMoneyCalculator.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\Interfaces\\Common\\IMoneyCalculator.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\Interfaces\\Common\\IMoneyCalculator.cs",
@@ -1783,12 +1701,11 @@
               "RelativeToolTip": "CoreBanking.Application\\Interfaces\\Common\\IMoneyCalculator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAnwAsAAABdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-26T11:31:42.203Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-26T11:31:42.203Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 86,
               "Title": "CurrencyMapper.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\Mappers\\CurrencyMapper.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\Mappers\\CurrencyMapper.cs",
@@ -1796,12 +1713,11 @@
               "RelativeToolTip": "CoreBanking.Application\\Mappers\\CurrencyMapper.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwBAAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T08:20:59.276Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-22T08:20:59.276Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 87,
               "Title": "ClientMapper.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\Mappers\\ClientMapper.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\Mappers\\ClientMapper.cs",
@@ -1809,12 +1725,11 @@
               "RelativeToolTip": "CoreBanking.Application\\Mappers\\ClientMapper.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAtwAsAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-21T15:21:53.161Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-21T15:21:53.161Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 88,
               "Title": "AccountMapper.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\Mappers\\AccountMapper.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\Mappers\\AccountMapper.cs",
@@ -1822,12 +1737,11 @@
               "RelativeToolTip": "CoreBanking.Application\\Mappers\\AccountMapper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T08:58:50.842Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-23T08:58:50.842Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 89,
               "Title": "UnprocessableException.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Exceptions\\UnprocessableException.cs",
               "RelativeDocumentMoniker": "CoreBanking.Domain\\Exceptions\\UnprocessableException.cs",
@@ -1835,12 +1749,11 @@
               "RelativeToolTip": "CoreBanking.Domain\\Exceptions\\UnprocessableException.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-19T08:14:56.89Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-19T08:14:56.89Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 90,
               "Title": "CurrencyRate.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Domain\\Entities\\CurrencyEntities\\CurrencyRate.cs",
               "RelativeDocumentMoniker": "CoreBanking.Domain\\Entities\\CurrencyEntities\\CurrencyRate.cs",
@@ -1848,25 +1761,11 @@
               "RelativeToolTip": "CoreBanking.Domain\\Entities\\CurrencyEntities\\CurrencyRate.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-20T08:04:36.629Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-20T08:04:36.629Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Program.cs",
-              "RelativeDocumentMoniker": "CoreBanking.API\\Program.cs",
-              "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Program.cs",
-              "RelativeToolTip": "CoreBanking.API\\Program.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAAACYAAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-12T15:19:55.42Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 94,
+              "DocumentIndex": 91,
               "Title": "docker-compose.dcproj",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\docker-compose.dcproj",
               "RelativeDocumentMoniker": "docker-compose.dcproj",
@@ -1874,12 +1773,11 @@
               "RelativeToolTip": "docker-compose.dcproj",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAMAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-10-18T09:20:04.536Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-18T09:20:04.536Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 95,
+              "DocumentIndex": 92,
               "Title": "GetCurrencyRateByCodeRequest.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Validators\\CurrencyValidators\\GetCurrencyRateByCodeRequest.cs",
               "RelativeDocumentMoniker": "CoreBanking.API\\Validators\\CurrencyValidators\\GetCurrencyRateByCodeRequest.cs",
@@ -1887,12 +1785,11 @@
               "RelativeToolTip": "CoreBanking.API\\Validators\\CurrencyValidators\\GetCurrencyRateByCodeRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-27T08:06:37.25Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-27T08:06:37.25Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 96,
+              "DocumentIndex": 93,
               "Title": "ApplicationDbContextModelSnapshot.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\ApplicationDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Migrations\\ApplicationDbContextModelSnapshot.cs",
@@ -1900,25 +1797,23 @@
               "RelativeToolTip": "CoreBanking.Infrastructure\\Migrations\\ApplicationDbContextModelSnapshot.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAASwB8AAABmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T14:34:15.346Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-23T14:34:15.346Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 97,
-              "Title": "CoreBanking.Infrastructure",
+              "DocumentIndex": 94,
+              "Title": "CoreBanking.Infrastructure.csproj",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj",
               "ToolTip": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj",
               "RelativeToolTip": "CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-10-29T14:07:03.713Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-29T14:07:03.713Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 98,
+              "DocumentIndex": 152,
               "Title": "20261029135724_RemovedOldPkAndFks.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20261029135724_RemovedOldPkAndFks.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Migrations\\20261029135724_RemovedOldPkAndFks.cs",
@@ -1926,12 +1821,11 @@
               "RelativeToolTip": "CoreBanking.Infrastructure\\Migrations\\20261029135724_RemovedOldPkAndFks.cs",
               "ViewState": "AgIAAKEAAAAAAAAAAAAYwLUAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-29T13:57:24.8Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-29T13:57:24.8Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 99,
+              "DocumentIndex": 95,
               "Title": "DateRangeRequestValidator.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Validators\\TransactionValidators\\DateRangeRequestValidator.cs",
               "RelativeDocumentMoniker": "CoreBanking.API\\Validators\\TransactionValidators\\DateRangeRequestValidator.cs",
@@ -1939,12 +1833,11 @@
               "RelativeToolTip": "CoreBanking.API\\Validators\\TransactionValidators\\DateRangeRequestValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-27T08:35:17.055Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-27T08:35:17.055Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 100,
+              "DocumentIndex": 96,
               "Title": "CreateTransactionRequestValidator.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Validators\\TransactionValidators\\CreateTransactionRequestValidator.cs",
               "RelativeDocumentMoniker": "CoreBanking.API\\Validators\\TransactionValidators\\CreateTransactionRequestValidator.cs",
@@ -1952,12 +1845,11 @@
               "RelativeToolTip": "CoreBanking.API\\Validators\\TransactionValidators\\CreateTransactionRequestValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAB/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-27T08:29:02.023Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-27T08:29:02.023Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 101,
+              "DocumentIndex": 97,
               "Title": "CurrencyCodeValidatorExtensions.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Validators\\Extensions\\CurrencyCodeValidatorExtensions.cs",
               "RelativeDocumentMoniker": "CoreBanking.API\\Validators\\Extensions\\CurrencyCodeValidatorExtensions.cs",
@@ -1965,12 +1857,11 @@
               "RelativeToolTip": "CoreBanking.API\\Validators\\Extensions\\CurrencyCodeValidatorExtensions.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAMwB8AAAC/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-27T07:17:45.995Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-27T07:17:45.995Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 102,
+              "DocumentIndex": 98,
               "Title": "UpdateCurrencyRateByIdRequestValidator.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Validators\\CurrencyValidators\\UpdateCurrencyRateByIdRequestValidator.cs",
               "RelativeDocumentMoniker": "CoreBanking.API\\Validators\\CurrencyValidators\\UpdateCurrencyRateByIdRequestValidator.cs",
@@ -1978,12 +1869,11 @@
               "RelativeToolTip": "CoreBanking.API\\Validators\\CurrencyValidators\\UpdateCurrencyRateByIdRequestValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-27T07:26:00.926Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-27T07:26:00.926Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 103,
+              "DocumentIndex": 99,
               "Title": "UpdateCurrencyRateByCodeRequestValidator.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Validators\\CurrencyValidators\\UpdateCurrencyRateByCodeRequestValidator.cs",
               "RelativeDocumentMoniker": "CoreBanking.API\\Validators\\CurrencyValidators\\UpdateCurrencyRateByCodeRequestValidator.cs",
@@ -1991,12 +1881,11 @@
               "RelativeToolTip": "CoreBanking.API\\Validators\\CurrencyValidators\\UpdateCurrencyRateByCodeRequestValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-27T07:51:11.209Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-27T07:51:11.209Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 104,
+              "DocumentIndex": 100,
               "Title": "CreateCurrencyRequestValidator.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Validators\\CurrencyValidators\\CreateCurrencyRequestValidator.cs",
               "RelativeDocumentMoniker": "CoreBanking.API\\Validators\\CurrencyValidators\\CreateCurrencyRequestValidator.cs",
@@ -2004,12 +1893,11 @@
               "RelativeToolTip": "CoreBanking.API\\Validators\\CurrencyValidators\\CreateCurrencyRequestValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwA0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-27T06:38:43.371Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-27T06:38:43.371Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 105,
+              "DocumentIndex": 101,
               "Title": "UpdateClientRequestValidator.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Validators\\ClientValidators\\UpdateClientRequestValidator.cs",
               "RelativeDocumentMoniker": "CoreBanking.API\\Validators\\ClientValidators\\UpdateClientRequestValidator.cs",
@@ -2017,12 +1905,11 @@
               "RelativeToolTip": "CoreBanking.API\\Validators\\ClientValidators\\UpdateClientRequestValidator.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAuwBMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-26T16:27:24.287Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-26T16:27:24.287Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 106,
+              "DocumentIndex": 102,
               "Title": "CreateClientRequestValidator.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Validators\\ClientValidators\\CreateClientRequestValidator.cs",
               "RelativeDocumentMoniker": "CoreBanking.API\\Validators\\ClientValidators\\CreateClientRequestValidator.cs",
@@ -2030,12 +1917,11 @@
               "RelativeToolTip": "CoreBanking.API\\Validators\\ClientValidators\\CreateClientRequestValidator.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAABkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-26T15:44:11.311Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-26T15:44:11.311Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 107,
+              "DocumentIndex": 103,
               "Title": "CreateAccountRequestValidator.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Validators\\AccountValidators\\CreateAccountRequestValidator.cs",
               "RelativeDocumentMoniker": "CoreBanking.API\\Validators\\AccountValidators\\CreateAccountRequestValidator.cs",
@@ -2043,12 +1929,11 @@
               "RelativeToolTip": "CoreBanking.API\\Validators\\AccountValidators\\CreateAccountRequestValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-26T17:23:13.284Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-26T17:23:13.284Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 108,
+              "DocumentIndex": 104,
               "Title": "CashFlowRequestValidator.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Validators\\AccountValidators\\CashFlowRequestValidator.cs",
               "RelativeDocumentMoniker": "CoreBanking.API\\Validators\\AccountValidators\\CashFlowRequestValidator.cs",
@@ -2056,12 +1941,11 @@
               "RelativeToolTip": "CoreBanking.API\\Validators\\AccountValidators\\CashFlowRequestValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-26T17:41:34.851Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-26T17:41:34.851Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 109,
+              "DocumentIndex": 105,
               "Title": "UpdateCurrencyRateByIdRequest.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Application\\DTOs\\Currency\\UpdateCurrencyRateByIdRequest.cs",
               "RelativeDocumentMoniker": "CoreBanking.Application\\DTOs\\Currency\\UpdateCurrencyRateByIdRequest.cs",
@@ -2069,12 +1953,11 @@
               "RelativeToolTip": "CoreBanking.Application\\DTOs\\Currency\\UpdateCurrencyRateByIdRequest.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAuwAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-22T10:03:16.216Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-22T10:03:16.216Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 110,
+              "DocumentIndex": 106,
               "Title": "20261029124628_NewFkRelation.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20261029124628_NewFkRelation.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Migrations\\20261029124628_NewFkRelation.cs",
@@ -2082,12 +1965,11 @@
               "RelativeToolTip": "CoreBanking.Infrastructure\\Migrations\\20261029124628_NewFkRelation.cs",
               "ViewState": "AgIAADsAAAAAAAAAAAAhwEwAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-29T12:46:28.295Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-29T12:46:28.295Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 111,
+              "DocumentIndex": 107,
               "Title": "20261029085106_ReplaceOldTransactionId.Designer.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20261029085106_ReplaceOldTransactionId.Designer.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Migrations\\20261029085106_ReplaceOldTransactionId.Designer.cs",
@@ -2095,12 +1977,11 @@
               "RelativeToolTip": "CoreBanking.Infrastructure\\Migrations\\20261029085106_ReplaceOldTransactionId.Designer.cs",
               "ViewState": "AgIAAEsBAAAAAAAAAAAAAEsBAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-29T12:51:50.522Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-29T12:51:50.522Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 112,
+              "DocumentIndex": 108,
               "Title": "20261029080318_ChangingTransactionV1.Designer.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20261029080318_ChangingTransactionV1.Designer.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Migrations\\20261029080318_ChangingTransactionV1.Designer.cs",
@@ -2108,12 +1989,11 @@
               "RelativeToolTip": "CoreBanking.Infrastructure\\Migrations\\20261029080318_ChangingTransactionV1.Designer.cs",
               "ViewState": "AgIAAEsBAAAAAAAAAAAAAEsBAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-29T12:51:49.405Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-29T12:51:49.405Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 113,
+              "DocumentIndex": 153,
               "Title": "20261029123246_NewIdToFK.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20261029123246_NewIdToFK.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Migrations\\20261029123246_NewIdToFK.cs",
@@ -2121,12 +2001,11 @@
               "RelativeToolTip": "CoreBanking.Infrastructure\\Migrations\\20261029123246_NewIdToFK.cs",
               "ViewState": "AgIAAEAAAAAAAAAAAAAQwDcAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-29T12:32:46.48Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-29T12:32:46.48Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 114,
+              "DocumentIndex": 154,
               "Title": "20261029122138_AddingNewIntId.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20261029122138_AddingNewIntId.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Migrations\\20261029122138_AddingNewIntId.cs",
@@ -2134,12 +2013,11 @@
               "RelativeToolTip": "CoreBanking.Infrastructure\\Migrations\\20261029122138_AddingNewIntId.cs",
               "ViewState": "AgIAAC8AAAAAAAAAAAAAAFAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-29T12:21:38.37Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-29T12:21:38.37Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 116,
+              "DocumentIndex": 110,
               "Title": "20261029080318_ChangingTransactionV1.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20261029080318_ChangingTransactionV1.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Migrations\\20261029080318_ChangingTransactionV1.cs",
@@ -2147,12 +2025,11 @@
               "RelativeToolTip": "CoreBanking.Infrastructure\\Migrations\\20261029080318_ChangingTransactionV1.cs",
               "ViewState": "AgIAAEcAAAAAAAAAAAA8wJAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-29T08:03:18.299Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-29T08:03:18.299Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 115,
+              "DocumentIndex": 109,
               "Title": "20261029093840_test.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20261029093840_test.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Migrations\\20261029093840_test.cs",
@@ -2160,12 +2037,11 @@
               "RelativeToolTip": "CoreBanking.Infrastructure\\Migrations\\20261029093840_test.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAcwBgAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-29T09:38:40.338Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-29T09:38:40.338Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 117,
+              "DocumentIndex": 111,
               "Title": "20261027090958_SwitchedEmailToString.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20261027090958_SwitchedEmailToString.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Migrations\\20261027090958_SwitchedEmailToString.cs",
@@ -2173,12 +2049,11 @@
               "RelativeToolTip": "CoreBanking.Infrastructure\\Migrations\\20261027090958_SwitchedEmailToString.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-27T09:09:58.965Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-27T09:09:58.965Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 118,
+              "DocumentIndex": 112,
               "Title": "20261029085106_ReplaceOldTransactionId.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20261029085106_ReplaceOldTransactionId.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Migrations\\20261029085106_ReplaceOldTransactionId.cs",
@@ -2186,12 +2061,11 @@
               "RelativeToolTip": "CoreBanking.Infrastructure\\Migrations\\20261029085106_ReplaceOldTransactionId.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAACEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-29T08:51:06.452Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-29T08:51:06.452Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 119,
+              "DocumentIndex": 113,
               "Title": "20261023133815_AddingCurrencyView.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20261023133815_AddingCurrencyView.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Migrations\\20261023133815_AddingCurrencyView.cs",
@@ -2199,12 +2073,11 @@
               "RelativeToolTip": "CoreBanking.Infrastructure\\Migrations\\20261023133815_AddingCurrencyView.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-23T13:38:15.934Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-23T13:38:15.934Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 120,
+              "DocumentIndex": 114,
               "Title": "GlobalExceptionHandler.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Exceptions\\GlobalExceptionHandler.cs",
               "RelativeDocumentMoniker": "CoreBanking.API\\Exceptions\\GlobalExceptionHandler.cs",
@@ -2212,12 +2085,11 @@
               "RelativeToolTip": "CoreBanking.API\\Exceptions\\GlobalExceptionHandler.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAuwB4AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T19:54:21.89Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-24T19:54:21.89Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 121,
+              "DocumentIndex": 115,
               "Title": "IdempotencyKeyOperationFilter.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Swagger\\IdempotencyKeyOperationFilter.cs",
               "RelativeDocumentMoniker": "CoreBanking.API\\Swagger\\IdempotencyKeyOperationFilter.cs",
@@ -2225,12 +2097,11 @@
               "RelativeToolTip": "CoreBanking.API\\Swagger\\IdempotencyKeyOperationFilter.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-18T10:02:14.087Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-18T10:02:14.087Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 122,
+              "DocumentIndex": 116,
               "Title": "IdempotentAttribute.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Filters\\IdempotencyFilter\\IdempotentAttribute.cs",
               "RelativeDocumentMoniker": "CoreBanking.API\\Filters\\IdempotencyFilter\\IdempotentAttribute.cs",
@@ -2238,12 +2109,11 @@
               "RelativeToolTip": "CoreBanking.API\\Filters\\IdempotencyFilter\\IdempotentAttribute.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-18T09:34:18.028Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-18T09:34:18.028Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 123,
+              "DocumentIndex": 117,
               "Title": "AccountMapper.g.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\AppData\\Local\\Temp\\.vsdbgsrc\\b81d795d7d86d85cd139e693393a8e56d5511e4e8cd955228b6d6f0a0c5d405f\\AccountMapper.g.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\b81d795d7d86d85cd139e693393a8e56d5511e4e8cd955228b6d6f0a0c5d405f\\AccountMapper.g.cs",
@@ -2256,7 +2126,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 124,
+              "DocumentIndex": 118,
               "Title": "IdempotentResponse.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Filters\\IdempotencyFilter\\IdempotentResponse.cs",
               "RelativeDocumentMoniker": "CoreBanking.API\\Filters\\IdempotencyFilter\\IdempotentResponse.cs",
@@ -2264,12 +2134,11 @@
               "RelativeToolTip": "CoreBanking.API\\Filters\\IdempotencyFilter\\IdempotentResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-19T09:09:56.782Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-19T09:09:56.782Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 125,
+              "DocumentIndex": 119,
               "Title": "20261023114229_CreateActiveEntityViews.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20261023114229_CreateActiveEntityViews.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Migrations\\20261023114229_CreateActiveEntityViews.cs",
@@ -2281,7 +2150,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 154,
+              "DocumentIndex": 148,
               "Title": "20261023111944_ClientRulesFixed.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20261023111944_ClientRulesFixed.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Migrations\\20261023111944_ClientRulesFixed.cs",
@@ -2293,7 +2162,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 126,
+              "DocumentIndex": 120,
               "Title": "CoreBanking.API.csproj",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\CoreBanking.API.csproj",
               "RelativeDocumentMoniker": "CoreBanking.API\\CoreBanking.API.csproj",
@@ -2301,12 +2170,11 @@
               "RelativeToolTip": "CoreBanking.API\\CoreBanking.API.csproj",
               "ViewState": "AgIAAAIAAAAAAAAAAAAhwBEAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-09-14T08:26:53.237Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T08:26:53.237Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 127,
+              "DocumentIndex": 121,
               "Title": "docker-compose.yml",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\docker-compose.yml",
               "RelativeDocumentMoniker": "docker-compose.yml",
@@ -2318,7 +2186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 128,
+              "DocumentIndex": 122,
               "Title": "20261019085657_UseSnakeCaseNaming.Designer.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20261019085657_UseSnakeCaseNaming.Designer.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Migrations\\20261019085657_UseSnakeCaseNaming.Designer.cs",
@@ -2330,7 +2198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 129,
+              "DocumentIndex": 123,
               "Title": "20260927135136_addedHasPrecision.Designer.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20260927135136_addedHasPrecision.Designer.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Migrations\\20260927135136_addedHasPrecision.Designer.cs",
@@ -2342,7 +2210,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 130,
+              "DocumentIndex": 124,
               "Title": "20260927135136_addedHasPrecision.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\C# examples\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20260927135136_addedHasPrecision.cs",
               "RelativeDocumentMoniker": "..\\C# examples\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20260927135136_addedHasPrecision.cs",
@@ -2354,7 +2222,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 131,
+              "DocumentIndex": 125,
               "Title": "20260927135136_addedHasPrecision.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20260927135136_addedHasPrecision.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Migrations\\20260927135136_addedHasPrecision.cs",
@@ -2366,7 +2234,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 155,
+              "DocumentIndex": 149,
               "Title": "20261023062353_ChangedPrecicion.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20261023062353_ChangedPrecicion.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Migrations\\20261023062353_ChangedPrecicion.cs",
@@ -2378,7 +2246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 133,
+              "DocumentIndex": 127,
               "Title": "FluentValidationExceptionHandler .cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Exceptions\\FluentValidationExceptionHandler .cs",
               "RelativeDocumentMoniker": "CoreBanking.API\\Exceptions\\FluentValidationExceptionHandler .cs",
@@ -2390,7 +2258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 132,
+              "DocumentIndex": 126,
               "Title": "NotFoundExceptionHandler .cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Exceptions\\NotFoundExceptionHandler .cs",
               "RelativeDocumentMoniker": "CoreBanking.API\\Exceptions\\NotFoundExceptionHandler .cs",
@@ -2402,7 +2270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 134,
+              "DocumentIndex": 128,
               "Title": "CustomValidationExceptionHandler.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Exceptions\\CustomValidationExceptionHandler.cs",
               "RelativeDocumentMoniker": "CoreBanking.API\\Exceptions\\CustomValidationExceptionHandler.cs",
@@ -2410,12 +2278,11 @@
               "RelativeToolTip": "CoreBanking.API\\Exceptions\\CustomValidationExceptionHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-22T12:36:29.176Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-22T12:36:29.176Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 135,
+              "DocumentIndex": 129,
               "Title": "BusinessLogicExceptionHandler.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Exceptions\\BusinessLogicExceptionHandler.cs",
               "RelativeDocumentMoniker": "CoreBanking.API\\Exceptions\\BusinessLogicExceptionHandler.cs",
@@ -2427,7 +2294,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 153,
+              "DocumentIndex": 147,
               "Title": "20261019085657_UseSnakeCaseNaming.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20261019085657_UseSnakeCaseNaming.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Migrations\\20261019085657_UseSnakeCaseNaming.cs",
@@ -2439,7 +2306,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 136,
+              "DocumentIndex": 130,
               "Title": "CoreBanking.API.http",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\CoreBanking.API.http",
               "RelativeDocumentMoniker": "CoreBanking.API\\CoreBanking.API.http",
@@ -2451,7 +2318,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 137,
+              "DocumentIndex": 131,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\appsettings.json",
               "RelativeDocumentMoniker": "CoreBanking.API\\appsettings.json",
@@ -2463,7 +2330,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 138,
+              "DocumentIndex": 132,
               "Title": ".env",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\.env",
               "RelativeDocumentMoniker": ".env",
@@ -2475,7 +2342,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 139,
+              "DocumentIndex": 133,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\appsettings.Development.json",
               "RelativeDocumentMoniker": "CoreBanking.API\\appsettings.Development.json",
@@ -2487,7 +2354,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 140,
+              "DocumentIndex": 134,
               "Title": ".dockerignore",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\.dockerignore",
               "RelativeDocumentMoniker": ".dockerignore",
@@ -2499,7 +2366,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 152,
+              "DocumentIndex": 146,
               "Title": "20260927133212_CreatedAt_To_InsertedAt.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20260927133212_CreatedAt_To_InsertedAt.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Migrations\\20260927133212_CreatedAt_To_InsertedAt.cs",
@@ -2511,7 +2378,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 149,
+              "DocumentIndex": 143,
               "Title": "20260925111044_ChangedCreatedAt2.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20260925111044_ChangedCreatedAt2.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Migrations\\20260925111044_ChangedCreatedAt2.cs",
@@ -2523,7 +2390,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 150,
+              "DocumentIndex": 144,
               "Title": "20260925092603_RemovedClock_timestamp.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20260925092603_RemovedClock_timestamp.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Migrations\\20260925092603_RemovedClock_timestamp.cs",
@@ -2535,7 +2402,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 151,
+              "DocumentIndex": 145,
               "Title": "20260925091951_ChangedToclock_timestamp.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20260925091951_ChangedToclock_timestamp.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Migrations\\20260925091951_ChangedToclock_timestamp.cs",
@@ -2547,7 +2414,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 148,
+              "DocumentIndex": 142,
               "Title": "20260924181555_updateTransactions.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20260924181555_updateTransactions.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Migrations\\20260924181555_updateTransactions.cs",
@@ -2559,7 +2426,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 141,
+              "DocumentIndex": 135,
               "Title": "ClientMapper.g.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\AppData\\Local\\Temp\\.vsdbgsrc\\ed101235c2538ca864742754365f9ad29aee2e989c65d8bd979169cbddfbcbb6\\ClientMapper.g.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\ed101235c2538ca864742754365f9ad29aee2e989c65d8bd979169cbddfbcbb6\\ClientMapper.g.cs",
@@ -2572,7 +2439,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 142,
+              "DocumentIndex": 136,
               "Title": "AccountMapper.g.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\AppData\\Local\\Temp\\.vsdbgsrc\\83a5280958d1943a4c9269367414cf067cd54c96a47aaf4d3d0253a4de2052e4\\AccountMapper.g.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\83a5280958d1943a4c9269367414cf067cd54c96a47aaf4d3d0253a4de2052e4\\AccountMapper.g.cs",
@@ -2580,12 +2447,11 @@
               "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\83a5280958d1943a4c9269367414cf067cd54c96a47aaf4d3d0253a4de2052e4\\AccountMapper.g.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T15:29:08.816Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-23T15:29:08.816Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 143,
+              "DocumentIndex": 137,
               "Title": "20260922172539_AddedSeed.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20260922172539_AddedSeed.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Migrations\\20260922172539_AddedSeed.cs",
@@ -2597,7 +2463,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 144,
+              "DocumentIndex": 138,
               "Title": "20260920115721_Init.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.Infrastructure\\Migrations\\20260920115721_Init.cs",
               "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Migrations\\20260920115721_Init.cs",
@@ -2609,7 +2475,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 145,
+              "DocumentIndex": 139,
               "Title": "ClientMapper.g.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\AppData\\Local\\Temp\\.vsdbgsrc\\c237f337e8071140fce2367677ef46f6bab6a37122dd2ea56ec816138b2e8b88\\ClientMapper.g.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\c237f337e8071140fce2367677ef46f6bab6a37122dd2ea56ec816138b2e8b88\\ClientMapper.g.cs",
@@ -2621,7 +2487,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 146,
+              "DocumentIndex": 140,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "CoreBanking.API\\Properties\\launchSettings.json",
@@ -2633,7 +2499,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 147,
+              "DocumentIndex": 141,
               "Title": "OpenApiXmlCommentSupport.generated.cs",
               "DocumentMoniker": "C:\\Users\\HaykPetrosyan\\AppData\\Local\\Temp\\.vsdbgsrc\\08150aab2b921fe4b0c48ac8e379b7b266ce7de48b63ea62eea30e2798d46701\\OpenApiXmlCommentSupport.generated.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\08150aab2b921fe4b0c48ac8e379b7b266ce7de48b63ea62eea30e2798d46701\\OpenApiXmlCommentSupport.generated.cs",

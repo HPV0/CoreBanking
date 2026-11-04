@@ -1,9 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "houQ4b26Ub0=",
+  "dgSpecHash": "ovMU90h3UPs=",
   "success": true,
   "projectFilePath": "C:\\Users\\HaykPetrosyan\\source\\repos\\CoreBanking\\CoreBanking.API\\CoreBanking.API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\HaykPetrosyan\\.nuget\\packages\\asp.versioning.abstractions\\10.2.1\\asp.versioning.abstractions.10.2.1.nupkg.sha512",
+    "C:\\Users\\HaykPetrosyan\\.nuget\\packages\\asp.versioning.http\\10.2.3\\asp.versioning.http.10.2.3.nupkg.sha512",
+    "C:\\Users\\HaykPetrosyan\\.nuget\\packages\\asp.versioning.mvc\\10.2.1\\asp.versioning.mvc.10.2.1.nupkg.sha512",
+    "C:\\Users\\HaykPetrosyan\\.nuget\\packages\\asp.versioning.mvc.apiexplorer\\10.2.1\\asp.versioning.mvc.apiexplorer.10.2.1.nupkg.sha512",
     "C:\\Users\\HaykPetrosyan\\.nuget\\packages\\efcore.namingconventions\\10.0.1\\efcore.namingconventions.10.0.1.nupkg.sha512",
     "C:\\Users\\HaykPetrosyan\\.nuget\\packages\\fluentvalidation\\12.1.1\\fluentvalidation.12.1.1.nupkg.sha512",
     "C:\\Users\\HaykPetrosyan\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\12.1.1\\fluentvalidation.dependencyinjectionextensions.12.1.1.nupkg.sha512",

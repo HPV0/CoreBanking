@@ -1,3 +1,4 @@
+using Asp.Versioning;
 using CoreBanking.API.Exceptions;
 using CoreBanking.API.Swagger;
 using CoreBanking.Application.Common;
@@ -11,7 +12,9 @@ using CoreBanking.Infrastructure.Persistence;
 using CoreBanking.Infrastructure.Repositories;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi;
 using StackExchange.Redis;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -70,9 +73,43 @@ builder.Services.AddSingleton<IConnectionMultiplexer>(_ =>
         builder.Configuration.GetConnectionString("Redis")!));
 
 
+builder.Services
+    .AddApiVersioning(options =>
+    {
+        options.DefaultApiVersion = new ApiVersion(1, 0);
+
+        options.AssumeDefaultVersionWhenUnspecified = true;
+
+        options.ReportApiVersions = true;
+
+        options.ApiVersionReader = new UrlSegmentApiVersionReader();
+    })
+    .AddMvc()
+    .AddApiExplorer(options =>
+    {
+        options.GroupNameFormat = "'v'VVV";
+
+        options.SubstituteApiVersionInUrl = true;
+    });
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
+    options.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "Core Banking API V1",
+        Version = "v1"
+    });
+
+    options.SwaggerDoc("v2", new OpenApiInfo
+    {
+        Title = "Core Banking API V2",
+        Version = "v2"
+    });
+
+    options.DocInclusionPredicate((documentName, apiDescription) =>
+        apiDescription.GroupName == documentName);
+
     options.OperationFilter<IdempotencyKeyOperationFilter>();
 });
 
@@ -88,7 +125,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI(options =>
     {
-        options.SwaggerEndpoint("/swagger/v1/swagger.json", "Core Banking API v1");
+        options.SwaggerEndpoint("/swagger/v1/swagger.json", "API V1");
+        options.SwaggerEndpoint("/swagger/v2/swagger.json", "API V2");
     });
 }
 

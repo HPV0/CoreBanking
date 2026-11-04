@@ -8,6 +8,9 @@
     ".NETCoreApp,Version=v10.0": {
       "CoreBanking.API/1.0.0": {
         "dependencies": {
+          "Asp.Versioning.Http": "10.2.3",
+          "Asp.Versioning.Mvc": "10.2.1",
+          "Asp.Versioning.Mvc.ApiExplorer": "10.2.1",
           "CoreBanking.Infrastructure": "1.0.0",
           "EFCore.NamingConventions": "10.0.1",
           "FluentValidation": "12.1.1",
@@ -22,6 +25,47 @@
         },
         "runtime": {
           "CoreBanking.API.dll": {}
+        }
+      },
+      "Asp.Versioning.Abstractions/10.2.1": {
+        "runtime": {
+          "lib/net10.0/Asp.Versioning.Abstractions.dll": {
+            "assemblyVersion": "10.2.0.0",
+            "fileVersion": "10.2.9714.15149"
+          }
+        }
+      },
+      "Asp.Versioning.Http/10.2.3": {
+        "dependencies": {
+          "Asp.Versioning.Abstractions": "10.2.1"
+        },
+        "runtime": {
+          "lib/net10.0/Asp.Versioning.Http.dll": {
+            "assemblyVersion": "10.2.0.0",
+            "fileVersion": "10.2.9730.38217"
+          }
+        }
+      },
+      "Asp.Versioning.Mvc/10.2.1": {
+        "dependencies": {
+          "Asp.Versioning.Http": "10.2.3"
+        },
+        "runtime": {
+          "lib/net10.0/Asp.Versioning.Mvc.dll": {
+            "assemblyVersion": "10.2.0.0",
+            "fileVersion": "10.2.9714.15157"
+          }
+        }
+      },
+      "Asp.Versioning.Mvc.ApiExplorer/10.2.1": {
+        "dependencies": {
+          "Asp.Versioning.Mvc": "10.2.1"
+        },
+        "runtime": {
+          "lib/net10.0/Asp.Versioning.Mvc.ApiExplorer.dll": {
+            "assemblyVersion": "10.2.0.0",
+            "fileVersion": "10.2.9714.15157"
+          }
         }
       },
       "EFCore.NamingConventions/10.0.1": {
@@ -645,6 +689,34 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Asp.Versioning.Abstractions/10.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jMBztsVim+rYVrkNY23dMuOjTGXGQ9+je1xb3i17KgUof7OcBZtMMDduEWoCQ52SpTlYqKsuzgJyUMCMOFCBfg==",
+      "path": "asp.versioning.abstractions/10.2.1",
+      "hashPath": "asp.versioning.abstractions.10.2.1.nupkg.sha512"
+    },
+    "Asp.Versioning.Http/10.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tx/OIyp39OP2uM57MHn8GqRSCi7+XYFU3/KqcPeiqt8rQE+oiK4bRcMXZvShtiS+SbtifqXy4zg6vr5+LPubNQ==",
+      "path": "asp.versioning.http/10.2.3",
+      "hashPath": "asp.versioning.http.10.2.3.nupkg.sha512"
+    },
+    "Asp.Versioning.Mvc/10.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fMzUraYZOAobKQn2PffrgPsULbCWFeWroYRYndPasxPsiQl1+i8x5qYRuMYZAbzDrBnymPUMBxT2gZG2PwbkcQ==",
+      "path": "asp.versioning.mvc/10.2.1",
+      "hashPath": "asp.versioning.mvc.10.2.1.nupkg.sha512"
+    },
+    "Asp.Versioning.Mvc.ApiExplorer/10.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Tv1megkpUy+3FN9yfVJKIcYMLXTe5CPs4zftBxGaZhADJe6h9CJZ2Okh5cG4PoE7wzHTef+AK++8IuZta3Ppog==",
+      "path": "asp.versioning.mvc.apiexplorer/10.2.1",
+      "hashPath": "asp.versioning.mvc.apiexplorer.10.2.1.nupkg.sha512"
     },
     "EFCore.NamingConventions/10.0.1": {
       "type": "package",
